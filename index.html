@@ -2,82 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ABS Representative</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: Arial, sans-serif;
-      text-align: center;
       background-color: #ffffff;
-      color: #000000;
     }
-    img.main-image {
+
+    .container {
+      position: relative;
       width: 100%;
       max-width: 1200px;
-      height: auto;
+      margin: 0 auto;
     }
-    .text-overlay {
+
+    .main-image {
+      width: 100%;
+      display: block;
+    }
+
+    .overlay-text {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 80%;
-      color: #000;
-      font-weight: 600; /* semibold */
-      text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
+      color: white;
+      text-align: center;
+      font-size: 1.2em;
+      line-height: 1.5em;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.4); /* fondo semitransparente para legibilidad */
+      border-radius: 10px;
     }
-    .contact-icons {
-      margin-top: 20px;
-    }
-    .contact-icons a {
-      margin: 0 10px;
-      display: inline-block;
-    }
-    .contact-icons img {
+
+    .icon {
+      position: absolute;
+      bottom: 20px;
       width: 40px;
       height: 40px;
+      cursor: pointer;
     }
-    .container {
-      position: relative;
-      display: inline-block;
-      width: 100%;
+
+    .linkedin {
+      left: 45%;
     }
+
+    .gmail {
+      left: 55%;
+    }
+
+    /* links invisibles sobre los iconos */
+    .link-overlay {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      top: auto;
+      bottom: 20px;
+    }
+
+    .link-linkedin {
+      left: 45%;
+    }
+
+    .link-gmail {
+      left: 55%;
+    }
+
   </style>
 </head>
 <body>
-
   <div class="container">
     <!-- Imagen principal -->
     <img src="Abs.png" alt="ABS Representative" class="main-image">
-    
-    <!-- Texto central -->
-    <div class="text-overlay">
-      <p>ABS is not a broker. ABS is not an agent. ABS represents buyer interests.</p>
-      <p>Strategic commercial representation for international agricultural buyers in Argentina.</p>
-      <p>The market protects the seller by default. ABS exists to protect the buyer.</p>
-      <p>ABS manages the entire purchasing process from the buyer’s side: market intelligence, supplier selection, negotiation, contractual control, execution oversight and risk management.</p>
-      <p>ABS operates as an extension of the buyer’s commercial office in Argentina.</p>
-      <p>Why ABS:</p>
-      <ul>
-        <li>100% aligned with the buyer’s interest</li>
-        <li>No seller commissions. No hidden incentives.</li>
-        <li>Continuous negotiation & contractual control</li>
-        <li>Integrated risk management</li>
-        <li>Long-term strategic relationship</li>
-      </ul>
+
+    <!-- Texto sobre la imagen -->
+    <div class="overlay-text">
+      ABS is not a broker. ABS is not an agent. ABS represents buyer interests.<br>
+      Strategic commercial representation for international agricultural buyers in Argentina.<br>
+      The market protects the seller by default. ABS exists to protect the buyer.<br>
+      ABS manages the entire purchasing process from the buyer’s side: market intelligence, supplier selection, negotiation, contractual control, execution oversight and risk management.<br>
+      Why ABS:<br>
+      • 100% aligned with the buyer’s interest<br>
+      • No seller commissions. No hidden incentives.<br>
+      • Continuous negotiation & contractual control<br>
+      • Integrated risk management<br>
+      • Long-term strategic relationship.<br>
+      ABS operates as an extension of the buyer’s commercial office in Argentina.
     </div>
-  </div>
 
-  <!-- Contactos -->
-  <div class="contact-icons">
-    <a href="https://www.linkedin.com/in/leandro-bazan-2a4771393?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-      <img src="linkedin-logo.png" alt="LinkedIn">
-    </a>
-    <a href="mailto:absrepresentative@gmail.com">
-      <img src="gmail-logo.png" alt="Email">
-    </a>
-  </div>
+    <!-- Iconos -->
+    <img src="linkedin-icon.png" alt="LinkedIn" class="icon linkedin">
+    <img src="gmail-icon.png" alt="Gmail" class="icon gmail">
 
+    <!-- Links invisibles -->
+    <a href="https://www.linkedin.com/in/leandro-bazan-2a4771393?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="link-overlay link-linkedin"></a>
+    <a href="mailto:absrepresentative@gmail.com" class="link-overlay link-gmail"></a>
+  </div>
 </body>
 </html>
