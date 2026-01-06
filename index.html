@@ -7,21 +7,19 @@
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: Arial, sans-serif;
       background-color: #ffffff;
-      color: #111111;
       text-align: center;
     }
 
-    .container {
+    .hero-image {
       position: relative;
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    .hero-image {
+    .hero-image img {
       width: 100%;
       height: auto;
       display: block;
@@ -32,12 +30,10 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
       width: 80%;
-      background-color: rgba(255, 255, 255, 0.7); /* fondo semitransparente para legibilidad */
-      padding: 20px;
-      border-radius: 8px;
-      text-align: left;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.5;
     }
 
@@ -47,27 +43,31 @@
       left: 50%;
       transform: translateX(-50%);
       display: flex;
-      gap: 20px;
+      gap: 40px;
     }
 
-    .contact-icons a img {
+    .contact-icons a {
+      display: block;
       width: 40px;
       height: 40px;
+    }
+
+    .contact-icons img {
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <!-- Imagen principal -->
-    <img src="abs.png" alt="ABS Representative" class="hero-image">
+  <div class="hero-image">
+    <img src="Abs.png" alt="ABS Representative">
 
-    <!-- Texto central -->
     <div class="text-overlay">
-      <strong>ABS is not a broker. ABS is not an agent. ABS represents buyer interests.</strong><br><br>
-      Strategic commercial representation for international agricultural buyers in Argentina.<br><br>
-      The market protects the seller by default. ABS exists to protect the buyer.<br><br>
-      ABS manages the entire purchasing process from the buyer’s side: market intelligence, supplier selection, negotiation, contractual control, execution oversight and risk management.<br><br>
+      ABS is not a broker. ABS is not an agent. ABS represents buyer interests.<br>
+      Strategic commercial representation for international agricultural buyers in Argentina.<br>
+      The market protects the seller by default. ABS exists to protect the buyer.<br>
+      ABS manages the entire purchasing process from the buyer’s side: market intelligence, supplier selection, negotiation, contractual control, execution oversight, and risk management.<br><br>
       <strong>Why ABS</strong><br>
       • 100% aligned with the buyer’s interest<br>
       • No seller commissions. No hidden incentives.<br>
@@ -77,13 +77,12 @@
       ABS operates as an extension of the buyer’s commercial office in Argentina.
     </div>
 
-    <!-- Íconos de contacto con links invisibles -->
     <div class="contact-icons">
       <a href="https://www.linkedin.com/in/leandro-bazan-2a4771393?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-        <img src="linkedin.png" alt="LinkedIn">
+        <img src="linkedin-logo.png" alt="LinkedIn">
       </a>
       <a href="mailto:absrepresentative@gmail.com">
-        <img src="gmail.png" alt="Email">
+        <img src="gmail-logo.png" alt="Email">
       </a>
     </div>
   </div>
