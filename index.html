@@ -25,11 +25,11 @@
     /* Links invisibles sobre los iconos */
     .link-overlay {
       position: absolute;
-      width: 40px;  /* ajusta según tamaño del icono */
-      height: 40px; /* ajusta según tamaño del icono */
+      width: 50px;  /* ajusta según tamaño del icono en la imagen */
+      height: 50px; /* ajusta según tamaño del icono en la imagen */
       cursor: pointer;
-      background-color: transparent;
-      text-decoration: none;
+      background-color: transparent; /* totalmente invisible */
+      display: block;
     }
 
     /* Posición de los links sobre los iconos dentro de la imagen */
@@ -48,7 +48,7 @@
   <div class="container">
     <img src="Abs.png" alt="" class="main-image">
 
-    <!-- Links invisibles -->
+    <!-- Links invisibles (sin contenido dentro) -->
     <a href="https://www.linkedin.com/in/leandro-bazan-2a4771393?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="link-overlay link-linkedin"></a>
     <a href="mailto:absrepresentative@gmail.com" class="link-overlay link-gmail"></a>
   </div>
