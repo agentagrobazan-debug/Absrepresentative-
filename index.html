@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ABS Representative</title>
+
   <style>
     body {
       margin: 0;
-      background: #fff;
+      background: #ffffff;
     }
 
     .container {
@@ -19,23 +20,22 @@
 
     .main-image {
       width: 100%;
+      height: auto;
       display: block;
     }
 
     /* Links invisibles sobre los iconos */
     .link-overlay {
       position: absolute;
-      width: 50px;  /* ajusta según tamaño del icono en la imagen */
-      height: 50px; /* ajusta según tamaño del icono en la imagen */
+      width: 50px;
+      height: 50px;
       cursor: pointer;
-      background-color: transparent; /* totalmente invisible */
-      display: block;
+      background: transparent;
     }
 
-    /* Posición de los links sobre los iconos dentro de la imagen */
     .link-linkedin {
-      bottom: 20px; /* distancia desde el fondo */
-      left: 45%;    /* posición horizontal aproximada */
+      bottom: 20px;
+      left: 45%;
     }
 
     .link-gmail {
@@ -44,13 +44,23 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container">
-    <img src="abs.jpg" alt="" class="main-image">
+    <img src="Abs.jpg" alt="ABS – Buyer Side Representation" class="main-image">
 
-    <!-- Links invisibles (sin contenido dentro) -->
-    <a href="https://www.linkedin.com/company/abs-representative/" target="_blank" class="link-overlay link-linkedin"></a>
-    <a href="mailto:info@absrepresentative.com.ar" class="link-overlay link-gmail"></a>
+    <a
+      href="https://www.linkedin.com/company/abs-representative/"
+      target="_blank"
+      class="link-overlay link-linkedin"
+      aria-label="ABS LinkedIn"
+    ></a>
+
+    <a
+      href="mailto:info@absrepresentative.com.ar"
+      class="link-overlay link-gmail"
+      aria-label="Email ABS"
+    ></a>
   </div>
 </body>
 </html>
