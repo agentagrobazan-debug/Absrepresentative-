@@ -24,21 +24,23 @@
       display: block;
     }
 
-    /* Links invisibles sobre los iconos */
+    /* overlays invisibles */
     .link-overlay {
       position: absolute;
       width: 50px;
       height: 50px;
       cursor: pointer;
       background: transparent;
+      display: block;
     }
 
+    /* Ajustar estas posiciones si hace falta */
     .link-linkedin {
       bottom: 20px;
       left: 45%;
     }
 
-    .link-gmail {
+    .link-mail {
       bottom: 20px;
       left: 55%;
     }
@@ -47,20 +49,25 @@
 
 <body>
   <div class="container">
-    <img src="Abs.jpg" alt="ABS – Buyer Side Representation" class="main-image">
 
+    <!-- IMAGEN PRINCIPAL -->
+    <img src="Abs.jpg" alt="ABS Buyer-Side Representation" class="main-image">
+
+    <!-- LINK LINKEDIN -->
     <a
       href="https://www.linkedin.com/company/abs-representative/"
       target="_blank"
       class="link-overlay link-linkedin"
-      aria-label="ABS LinkedIn"
+      aria-label="LinkedIn ABS"
     ></a>
 
+    <!-- LINK EMAIL -->
     <a
       href="mailto:info@absrepresentative.com.ar"
-      class="link-overlay link-gmail"
+      class="link-overlay link-mail"
       aria-label="Email ABS"
     ></a>
+
   </div>
 </body>
 </html>
