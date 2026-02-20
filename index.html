@@ -1,69 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ABS Representative</title>
-
-  <style>
-    body {
-      margin: 0;
-      background: #ffffff;
-    }
-
-    .container {
-      position: relative;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .main-image {
-      width: 100%;
-      display: block;
-    }
-
-    /* Base para overlays */
-    .link-overlay {
-      position: absolute;
-      width: 6%;
-      aspect-ratio: 1 / 1;
-      cursor: pointer;
-      background: transparent;
-    }
-
-    /* LinkedIn icon */
-    .link-linkedin {
-      bottom: 15%;
-      left: 40%;
-      transform: translate(-50%, 0);
-    }
-
-    /* Email icon */
-    .link-gmail {
-      bottom: 15%;
-      left: 52%;
-      transform: translate(-50%, 0);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABS Representative | Structured Buyer-Side Control at Origin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--font-serif:'Cormorant Garamond',Georgia,serif;--font-sans:'Inter',-apple-system,sans-serif;--color-text:#1a1a1a;--color-text-light:#666;--color-text-muted:#999;--color-accent:#c9a227;--color-accent-dark:#a88420;--color-bg:#fff;--color-bg-warm:#faf9f7;--color-border:#e5e5e5}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:var(--font-sans);color:var(--color-text);line-height:1.6;background:var(--color-bg);-webkit-font-smoothing:antialiased}
+        .container{max-width:1200px;margin:0 auto;padding:0 2rem}
+        h1,h2,h3,h4{font-family:var(--font-serif);font-weight:500;line-height:1.2}
+        h1{font-size:2.5rem}h2{font-size:2rem}h3{font-size:1.5rem}
+        .navbar{position:fixed;top:0;left:0;right:0;background:var(--color-bg);z-index:100;border-bottom:1px solid var(--color-border)}
+        .navbar .container{display:flex;justify-content:space-between;align-items:center;height:70px}
+        .nav-links-left{display:flex;gap:1.5rem}
+        .nav-links-left a{text-decoration:none;color:var(--color-text-light);font-size:0.8rem;font-weight:500;letter-spacing:0.5px}
+        .nav-links-left a:hover{color:var(--color-text)}
+        .logo img{height:40px;width:auto}
+        .hero{padding-top:70px;min-height:100vh;display:flex;align-items:center}
+        .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+        .hero-content h1{margin-bottom:1rem;font-weight:600}
+        .hero-lead{font-size:1.1rem;color:var(--color-text-light);margin-bottom:0.75rem}
+        .hero-sub{font-size:0.9rem;color:var(--color-text-muted);margin-bottom:2rem;line-height:1.6}
+        .btn-outline{display:inline-block;padding:0.875rem 1.5rem;border:1px solid var(--color-text);color:var(--color-text);text-decoration:none;font-size:0.8rem;font-weight:500;letter-spacing:0.5px}
+        .hero-image img{width:100%;height:auto;display:block}
+        section{padding:4rem 0}
+        .section-header{margin-bottom:3rem}
+        .section-header.centered{text-align:center}
+        .section-label{display:block;font-size:0.7rem;text-transform:uppercase;letter-spacing:2px;color:var(--color-text-muted);margin-bottom:0.75rem}
+        .section-lead{font-size:1rem;color:var(--color-text-light);max-width:600px;margin-top:0.75rem}
+        .what-is{background:var(--color-bg-warm)}
+        .what-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+        .what-col h3{margin-bottom:1rem;font-size:1.1rem}
+        .what-col ul{list-style:none}
+        .what-col li{padding:0.5rem 0;border-bottom:1px solid var(--color-border);font-size:0.9rem}
+        .what-col.is-not li{color:var(--color-text-light)}
+        .principle{margin-top:1.5rem;padding:1rem;background:var(--color-text);color:var(--color-bg);font-family:var(--font-serif);font-size:1rem}
+        .stages{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2rem}
+        .stage{padding:1.5rem;border:1px solid var(--color-border)}
+        .stage.featured{border-color:var(--color-accent);box-shadow:0 10px 25px rgba(0,0,0,0.06)}
+        .stage-num{display:block;font-family:var(--font-serif);font-size:1.5rem;color:var(--color-accent);margin-bottom:0.75rem}
+        .stage h3{margin-bottom:0.75rem;font-size:1.1rem}
+        .stage p{font-size:0.85rem;color:var(--color-text-light);margin-bottom:1rem}
+        .stage ul{list-style:none;margin-bottom:1rem}
+        .stage li{padding:0.2rem 0;font-size:0.8rem;color:var(--color-text-light)}
+        .stage li:before{content:"— ";color:var(--color-accent)}
+        .link-download{color:var(--color-accent-dark);text-decoration:none;font-size:0.8rem;font-weight:500}
+        .stage-note{font-size:0.8rem!important;font-style:italic;color:var(--color-text)!important}
+        .structure-principle{text-align:center;font-family:var(--font-serif);font-size:1.25rem;font-style:italic;letter-spacing:0.5px}
+        .process-list{max-width:700px}
+        .process-item{display:flex;gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid var(--color-border)}
+        .process-num{font-family:var(--font-serif);font-size:1.25rem;color:var(--color-accent);min-width:1.5rem}
+        .process-content h4{margin-bottom:0.25rem;font-size:1rem}
+        .process-content p{font-size:0.85rem;color:var(--color-text-light)}
+        .benefits{background:var(--color-bg-warm)}
+        .benefits-tabs{display:flex;gap:2rem;margin-bottom:2rem;border-bottom:1px solid var(--color-border)}
+        .tab-btn{padding:0.75rem 0;background:none;border:none;font-size:0.8rem;font-weight:500;color:var(--color-text-muted);cursor:pointer;border-bottom:2px solid transparent}
+        .tab-btn.active{color:var(--color-text);border-bottom-color:var(--color-accent)}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .benefits-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+        .benefit-item h4{margin-bottom:0.5rem;font-size:1rem}
+        .benefit-item p{font-size:0.85rem;color:var(--color-text-light)}
+        .team{background:var(--color-bg-warm)}
+        .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+        .team-member h3{font-size:1.25rem;margin-bottom:0.2rem}
+        .role{display:block;font-size:0.75rem;color:var(--color-text-muted);margin-bottom:1rem;text-transform:uppercase;letter-spacing:1px}
+        .team-member ul{list-style:none;margin-bottom:1rem}
+        .team-member li{padding:0.4rem 0;font-size:0.8rem;color:var(--color-text-light);border-bottom:1px solid var(--color-border)}
+        .role-desc{font-style:italic;color:var(--color-text);margin-bottom:1rem;font-size:0.85rem}
+        .email{color:var(--color-accent-dark);text-decoration:none;font-size:0.8rem;font-weight:500}
+        .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+        .contact-lead{font-size:1rem;color:var(--color-text-light);margin-bottom:2rem}
+        .contact-emails{margin-bottom:2rem}
+        .email-block{margin-bottom:1.5rem}
+        .email-block .label{display:block;font-size:0.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--color-text-muted);margin-bottom:0.25rem}
+        .email-block a{color:var(--color-text);text-decoration:none;font-size:1rem;font-weight:500}
+        .linkedin{color:var(--color-accent-dark);text-decoration:none;font-weight:500;font-size:0.8rem}
+        .contact-form{padding:2rem;background:var(--color-bg-warm);border:1px solid var(--color-border)}
+        .contact-form h3{margin-bottom:0.5rem;font-size:1.1rem}
+        .contact-form>p{color:var(--color-text-light);font-size:0.85rem;margin-bottom:1.5rem}
+        .form-group{margin-bottom:0.75rem}
+        .form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem}
+        .contact-form input,.contact-form textarea{width:100%;padding:0.75rem;border:1px solid var(--color-border);font-family:var(--font-sans);font-size:0.85rem;background:var(--color-bg)}
+        .contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--color-accent)}
+        .contact-form textarea{min-height:100px;resize:vertical;margin-bottom:0.75rem}
+        .btn-submit{width:100%;padding:0.875rem;background:var(--color-text);color:var(--color-bg);border:none;font-size:0.8rem;font-weight:500;letter-spacing:0.5px;cursor:pointer}
+        footer{padding:1.5rem 0;border-top:1px solid var(--color-border);text-align:center}
+        footer p{font-size:0.8rem;color:var(--color-text-muted)}
+        @media(max-width:768px){.hero-grid,.what-grid,.stages,.benefits-grid,.team-grid,.contact-grid{grid-template-columns:1fr}.hero{padding-top:80px}.hero-grid{gap:2rem}h1{font-size:2rem}h2{font-size:1.75rem}.nav-links-left{display:none}.stages{gap:1rem}.stage.featured{order:-1}.form-row{grid-template-columns:1fr}.contact-grid{gap:2rem}.hero-image{order:-1}}
+    </style>
 </head>
-
 <body>
-  <div class="container">
-    <img src="abs.jpg" alt="ABS Buyer-Side Representation" class="main-image">
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-links-left">
+                <a href="#what-is">What is ABS</a>
+                <a href="#structure">Structure</a>
+                <a href="#process">How We Work</a>
+                <a href="#benefits">Benefits</a>
+                <a href="#team">Team</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="logo">
+                <img src="logo-abs.png" alt="ABS Representative">
+            </div>
+        </div>
+    </nav>
 
-    <a
-      href="https://www.linkedin.com/company/abs-representative/"
-      target="_blank"
-      class="link-overlay link-linkedin"
-      aria-label="ABS LinkedIn"
-    ></a>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1>Structured Buyer-Side Control at Origin</h1>
+                    <p class="hero-lead">Exclusive representation for international agri-industrial buyers in Argentina.</p>
+                    <p class="hero-sub">Mandatory feasibility validation before representation. Aligned interests. Zero conflicts. Full execution control.</p>
+                    <a href="#structure" class="btn-outline">Request Feasibility Assessment</a>
+                </div>
+                <div class="hero-image">
+                    <img src="hero-negocios.jpg" alt="ABS Representative">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <a
-      href="mailto:info@absrepresentative.com.ar"
-      class="link-overlay link-gmail"
-      aria-label="Contact ABS"
-    ></a>
-  </div>
+    <section id="what-is" class="what-is">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">What we are</span>
+                <h2>Your control at origin.<br>Not a broker. Not a trader.</h2>
+            </div>
+            <div class="what-grid">
+                <div class="what-col is">
+                    <h3>What ABS Is</h3>
+                    <ul>
+                        <li>Your professional local presence without opening your own structure</li>
+                        <li>Exclusive buyer-side representation — we act only for the buyer</li>
+                        <li>Aligned interests — no conflicts, no margin on product</li>
+                        <li>End-to-end management — from market intelligence to shipment</li>
+                    </ul>
+                </div>
+                <div class="what-col is-not">
+                    <h3>What ABS Is Not</h3>
+                    <ul>
+                        <li>We are not brokers</li>
+                        <li>We are not traders</li>
+                        <li>We do not intermediate operations</li>
+                        <li>We do not represent sellers</li>
+                        <li>We do not compete with the buyer</li>
+                    </ul>
+                    <p class="principle">ABS operates without conflicts of interest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="structure" class="structure">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">Our process</span>
+                <h2>Buyer-Side Structure</h2>
+                <p class="section-lead">ABS operates through a structured and mandatory buyer-side process. Representation begins only after feasibility validation.</p>
+            </div>
+            <div class="stages">
+                <div class="stage">
+                    <span class="stage-num">00</span>
+                    <h3>Before You Buy From Argentina</h3>
+                    <p>Educational buyer-side document identifying the five most common structural risks international buyers underestimate.</p>
+                    <a href="#" class="link-download">Download document</a>
+                </div>
+                <div class="stage featured">
+                    <span class="stage-num">01</span>
+                    <h3>Buyer-Side Feasibility Assessment</h3>
+                    <p>Mandatory and paid assessment. Determines whether Argentina is viable for your specific purchasing objectives.</p>
+                    <ul>
+                        <li>Viable supply validation</li>
+                        <li>Achievable quality parameters</li>
+                        <li>Executable volumes</li>
+                        <li>Reference FOB / CFR pricing</li>
+                        <li>Execution risk mapping</li>
+                    </ul>
+                    <p class="stage-note">This stage is mandatory and quoted case by case. If feasibility is not confirmed, we advise not to proceed.</p>
+                </div>
+                <div class="stage">
+                    <span class="stage-num">02</span>
+                    <h3>Local Buyer Representation</h3>
+                    <p>Full buyer-side execution management at origin through shipment, after feasibility has been validated.</p>
+                </div>
+            </div>
+            <p class="structure-principle">ABS does not initiate representation without feasibility validation.</p>
+        </div>
+    </section>
+
+    <section id="process" class="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Method</span>
+                <h2>How We Work</h2>
+            </div>
+            <div class="process-list">
+                <div class="process-item">
+                    <span class="process-num">0</span>
+                    <div class="process-content">
+                        <h4>Before You Buy From Argentina</h4>
+                        <p>Free buyer-side guide to identify hidden risks. No commitment.</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <span class="process-num">1</span>
+                    <div class="process-content">
+                        <h4>Buyer-Side Feasibility Assessment</h4>
+                        <p><strong>Mandatory and paid.</strong> Real market analysis: viable supply, achievable quality, executable volumes, reference pricing.</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <span class="process-num">2</span>
+                    <div class="process-content">
+                        <h4>Supplier Validation</h4>
+                        <p>Complete mapping: real producers vs. intermediaries, execution capacity verification, due diligence at origin.</p>
+                    </div>
+                </div>
+                <div class="process-item">
+                    <span class="process-num">3</span>
+                    <div class="process-content">
+                        <h4>Local Buyer Representation</h4>
+                        <p>End-to-end management: negotiation, pre-shipment quality control, documentation, logistics, operational tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-label">Value</span>
+                <h2>Why ABS Benefits Everyone</h2>
+                <p class="section-lead">When demand arrives structured from the start, the entire ecosystem works better.</p>
+            </div>
+            <div class="benefits-tabs">
+                <button class="tab-btn active" onclick="showTab('buyers',event)">For Buyers</button>
+                <button class="tab-btn" onclick="showTab('suppliers',event)">For Suppliers</button>
+            </div>
+            <div id="buyers" class="tab-content active">
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <h4>Informed Decisions</h4>
+                        <p>You understand the real market before committing capital. No last-minute surprises.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Aligned Interests</h4>
+                        <p>Your representative does not sell product or earn commission from the seller. Works for you.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Presence Without Structure</h4>
+                        <p>You operate as if you had your own team in Argentina, without opening a company or hiring staff.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Efficiency</h4>
+                        <p>Single technical-commercial point of contact. Less friction, more control.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="suppliers" class="tab-content">
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <h4>Validated Buyers</h4>
+                        <p>Less speculative inquiries, more operations with real decision-making capacity.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Clear Requirements</h4>
+                        <p>You receive validated technical and commercial specifications, not ambiguous ones.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Professional Relationship</h4>
+                        <p>One interlocutor organizes the process and respects your commercial structure.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Market Access</h4>
+                        <p>Connection with serious international buyers without investment in prospecting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">People</span>
+                <h2>Technical Team</h2>
+                <p class="section-lead">Deliberately compact structure. No unnecessary layers.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h3>Leandro Bazán</h3>
+                    <span class="role">Founder | Buyer-Side Strategy</span>
+                    <ul>
+                        <li>Grain and oilseed market operator (cereal plant)</li>
+                        <li>Grain classifier — direct quality reading at origin</li>
+                        <li>B2B agri-industrial sales closing with direct negotiation</li>
+                        <li>Commodities marketing: positioning Argentine origin</li>
+                    </ul>
+                    <p class="role-desc">Structures buyer-side operations from origin knowledge. Knows what can be promised, what cannot, and how it is controlled.</p>
+                    <a href="mailto:leandrobazan@absrepresentative.com.ar" class="email">leandrobazan@absrepresentative.com.ar</a>
+                </div>
+                <div class="team-member">
+                    <h3>Victoria del Valle</h3>
+                    <span class="role">Operations | International Trade</span>
+                    <ul>
+                        <li>International trade analyst — containerized and bulk operations</li>
+                        <li>Complex documentation: SENASA, certificates, CRT, bills of lading</li>
+                        <li>Coordination with quality inspectors in food operations</li>
+                        <li>Contingency resolution: critical document logistics at border</li>
+                    </ul>
+                    <p class="role-desc">End-to-end operational execution. Manages what others only process.</p>
+                    <a href="mailto:victoria.delvalle@absrepresentative.com.ar" class="email">victoria.delvalle@absrepresentative.com.ar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="section-header">
+                        <span class="section-label">Start</span>
+                        <h2>Contact</h2>
+                    </div>
+                    <p class="contact-lead">For international buyers evaluating Argentina, or structuring existing operations.</p>
+                    <div class="contact-emails">
+                        <div class="email-block">
+                            <span class="label">Buyer Representation</span>
+                            <a href="mailto:leandrobazan@absrepresentative.com.ar">leandrobazan@absrepresentative.com.ar</a>
+                        </div>
+                        <div class="email-block">
+                            <span class="label">Operations</span>
+                            <a href="mailto:victoria.delvalle@absrepresentative.com.ar">victoria.delvalle@absrepresentative.com.ar</a>
+                        </div>
+                        <div class="email-block">
+                            <span class="label">General</span>
+                            <a href="mailto:info@absrepresentative.com.ar">info@absrepresentative.com.ar</a>
+                        </div>
+                    </div>
+                    <a href="https://linkedin.com/company/abs-representative" target="_blank" class="linkedin">LinkedIn →</a>
+                </div>
+                <div class="contact-form">
+                    <h3>Request Feasibility Assessment</h3>
+                    <p>Representation begins only after feasibility validation.</p>
+                    <form action="https://formsubmit.co/leandrobazan@absrepresentative.com.ar" method="POST">
+                        <input type="hidden" name="_subject" value="New Feasibility Assessment Request">
+                        <input type="hidden" name="_captcha" value="false">
+                        <div class="form-group">
+                            <input type="text" name="Company" placeholder="Company" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="text" name="Country" placeholder="Country" required>
+                            <input type="text" name="Product" placeholder="Product" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="text" name="Volume" placeholder="Volume">
+                            <input type="text" name="Incoterm" placeholder="Incoterm">
+                        </div>
+                        <textarea name="Message" placeholder="Additional information"></textarea>
+                        <button type="submit" class="btn-submit">Request Assessment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 ABS Representative. Structured buyer-side control at origin.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showTab(t,e){document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.getElementById(t).classList.add('active');e.currentTarget.classList.add('active')}
+        document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+    </script>
 </body>
 </html>
