@@ -266,3 +266,51 @@
                         <a href="mailto:info@absrepresentative.com.ar" style="color: #1a1a1a; text-decoration: none; font-size: 1.1rem; font-weight: 500;">info@absrepresentative.com.ar</a>
                     </div>
                     <a href="https://linkedin.com/company/abs-representative" target="_blank" style="color: #a88420; text-decoration: none; font-weight: 600; font-size: 0.8rem; letter-spacing: 1px;">LINKEDIN →</a>
+                </div>
+                
+                <div class="form-box">
+                    <h3 style="margin-bottom: 1rem;">Request Structured Feasibility Review</h3>
+                    <p style="color: #666; margin-bottom: 0.5rem; font-size: 0.95rem;">Representation begins only after feasibility validation.</p>
+                    
+                    <p class="form-confidential">All information is treated with strict confidentiality.</p>
+                    
+                    <form action="https://formsubmit.co/leandrobazan@absrepresentative.com.ar" method="POST">
+                        <input type="hidden" name="_subject" value="New Feasibility Assessment Request">
+                        <input type="hidden" name="_captcha" value="false">
+                        
+                        <input type="text" name="Company" placeholder="Company Name" required>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <input type="text" name="Country" placeholder="Country" required>
+                            <input type="text" name="Product" placeholder="Product" required>
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <input type="text" name="Volume" placeholder="Volume">
+                            <input type="text" name="Incoterm" placeholder="Incoterm">
+                        </div>
+                        
+                        <textarea name="Message" placeholder="Additional information"></textarea>
+                        
+                        <button type="submit">Request Assessment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 ABS Representative. Structured buyer-side control at origin.</p>
+    </footer>
+
+    <script>
+        function showTab(tabName, event) {
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
