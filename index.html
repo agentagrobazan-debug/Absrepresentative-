@@ -30,7 +30,7 @@
         body { 
             font-family: 'Inter', sans-serif; 
             color: var(--color-primary); 
-            background-color: #fff; 
+            background-color: #000; /* Fondo negro base para los bordes */
             line-height: 1.6; 
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
@@ -41,7 +41,7 @@
         /* Navigation */
         nav { 
             position: absolute; top: 0; left: 0; right: 0; z-index: 100; 
-            padding: 25px 0; background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
+            padding: 25px 0; background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
         }
         .nav-links { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; }
         .nav-links a { 
@@ -51,26 +51,25 @@
         }
         .nav-links a:hover { color: var(--color-accent); }
 
-        /* Hero Section - FIXED IMAGE */
+        /* Hero Section - CORREGIDO PARA PC Y MÓVIL */
         .hero { 
             min-height: 100vh; display: flex; align-items: center; justify-content: center;
-            background-color: #1a1a1a;
-            /* Intentamos cargar el archivo .jpeg que tenías originalmente */
-            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('herobackground.jpeg');
-            background-size: cover; 
-            background-position: center center; 
-            background-attachment: scroll;
+            background-color: #000;
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('herobackground.jpeg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            /* En PC usará 'contain' para ver los bordes negros, en móvil 'cover' para llenar pantalla */
+            background-size: contain; 
             color: white; text-align: center;
             padding: 100px 20px;
         }
         
-        /* Ajuste para asegurar que el hero ocupe toda la pantalla en móvil */
-        @supports (-webkit-touch-callout: none) {
-            .hero { min-height: -webkit-fill-available; }
+        @media (max-width: 768px) {
+            .hero { background-size: cover; } /* En móvil se ve como en tus capturas 1 y 2 */
         }
 
-        .hero h1 { font-size: clamp(2.2rem, 7vw, 4.5rem); margin-bottom: 20px; width: 100%; max-width: 950px; }
-        .hero-lead { font-size: clamp(1rem, 2.5vw, 1.4rem); margin-bottom: 40px; max-width: 800px; opacity: 0.9; font-weight: 300; }
+        .hero h1 { font-size: clamp(2rem, 6vw, 4rem); margin-bottom: 20px; width: 100%; max-width: 950px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        .hero-lead { font-size: clamp(0.9rem, 2.5vw, 1.3rem); margin-bottom: 40px; max-width: 750px; opacity: 0.95; font-weight: 300; }
         
         .btn-main { 
             background: var(--color-accent); color: var(--color-primary); 
@@ -80,8 +79,8 @@
         }
         .btn-main:hover { background: #e8d5a3; transform: translateY(-2px); }
 
-        /* Sections */
-        section { padding: 80px 0; }
+        /* Resto de secciones con fondo blanco/claro para contraste */
+        section { padding: 80px 0; background-color: #fff; }
         .section-dark { background: #0f0f0f; color: white; }
         .section-light { background: var(--color-bg-light); }
         .section-bone { background: var(--color-bg-bone); }
@@ -92,52 +91,23 @@
         .grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
         .grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 
-        .card { background: white; padding: 40px 30px; border: 1px solid #eee; height: 100%; color: var(--color-primary); }
+        .card { background: white; padding: 40px 30px; border: 1px solid #eee; color: var(--color-primary); }
         .card.featured { border: 2px solid var(--color-accent); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
         .num { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; color: var(--color-accent); display: block; margin-bottom: 10px; }
 
-        /* Value Section */
-        .value-box { background: white; padding: 35px; border-left: 4px solid var(--color-accent); color: var(--color-primary); height: 100%; }
-        .value-box h4 { font-size: 1.6rem; margin-bottom: 15px; }
-        .value-box ul { list-style: none; }
-        .value-box li { margin-bottom: 12px; padding-left: 25px; position: relative; font-size: 14px; color: #444; }
-        .value-box li::before { content: "→"; position: absolute; left: 0; color: var(--color-accent); font-weight: bold; }
-
-        /* Team Section */
+        .value-box { background: white; padding: 35px; border-left: 4px solid var(--color-accent); color: var(--color-primary); }
         .team-card { background: white; padding: 40px; border: 1px solid #eee; color: var(--color-primary); }
-        .team-card h3 { font-size: 2rem; margin-bottom: 5px; }
-        .team-card ul { list-style: none; margin: 25px 0; border-top: 1px solid #f0f0f0; padding-top: 25px; }
-        .team-card li { font-size: 14px; margin-bottom: 10px; opacity: 0.85; position: relative; padding-left: 15px; }
-        .team-card li::before { content: "•"; position: absolute; left: 0; color: var(--color-accent); }
 
-        /* Contact Form */
         .form-box { background: white; padding: 35px; box-shadow: 0 30px 60px rgba(0,0,0,0.05); }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        input, textarea, select { 
-            width: 100%; padding: 14px; border: 1px solid #ddd; margin-bottom: 15px; 
-            font-family: 'Inter', sans-serif; font-size: 15px; outline: none;
-        }
-        input:focus, textarea:focus { border-color: var(--color-accent); }
-        .btn-submit { 
-            background: var(--color-primary); color: white; border: none; 
-            padding: 20px; width: 100%; font-weight: 700; text-transform: uppercase; 
-            cursor: pointer; transition: 0.3s; letter-spacing: 1px;
-        }
-        .btn-submit:hover { background: var(--color-accent); color: var(--color-primary); }
+        input, textarea, select { width: 100%; padding: 14px; border: 1px solid #ddd; margin-bottom: 15px; font-family: 'Inter', sans-serif; font-size: 15px; }
+        .btn-submit { background: var(--color-primary); color: white; border: none; padding: 20px; width: 100%; font-weight: 700; text-transform: uppercase; cursor: pointer; transition: 0.3s; }
 
-        footer { padding: 60px 20px; background: #080808; color: rgba(255,255,255,0.3); text-align: center; font-size: 11px; letter-spacing: 1px; }
+        footer { padding: 60px 20px; background: #000; color: rgba(255,255,255,0.3); text-align: center; font-size: 11px; }
 
-        /* Responsive Tweaks */
-        @media (min-width: 1024px) {
-            section { padding: 120px 0; }
-            .hero h1 { max-width: 1000px; }
-            .form-box { padding: 50px; }
-        }
         @media (max-width: 600px) {
             .form-row { grid-template-columns: 1fr; }
-            .hero { background-position: center 20%; }
-            .nav-links { gap: 10px; }
-            .nav-links a { font-size: 10px; }
+            .hero { padding-top: 120px; }
         }
     </style>
 </head>
@@ -178,8 +148,7 @@
                     <h4 class="label">Non-Intervention Policy</h4>
                     <p style="margin-bottom: 10px; opacity: 0.7;">— No brokerage or trading</p>
                     <p style="margin-bottom: 10px; opacity: 0.7;">— No seller representation</p>
-                    <p style="margin-bottom: 10px; opacity: 0.7;">— No intermediation of operations</p>
-                    <p style="opacity: 0.7;">— No competition with the buyer</p>
+                    <p>— No competition with the buyer</p>
                 </div>
             </div>
         </div>
@@ -189,12 +158,11 @@
         <div class="container">
             <span class="label">Methodology</span>
             <h2>Buyer-Side Structure</h2>
-            <p style="max-width: 700px; margin-bottom: 40px; font-size: 1.1rem; color: #555;">Representation begins only after feasibility validation to ensure a secure and executable operation.</p>
             <div class="grid grid-3">
                 <div class="card">
                     <span class="num">00</span>
                     <h4>Educational</h4>
-                    <p>Strategic document identifying the structural risks international buyers underestimate in Argentina.</p>
+                    <p>Document identifying the structural risks international buyers underestimate in Argentina.</p>
                 </div>
                 <div class="card featured">
                     <span class="num">01</span>
@@ -217,21 +185,11 @@
             <div class="grid grid-2">
                 <div class="value-box">
                     <h4>For Buyers</h4>
-                    <ul>
-                        <li>Informed decisions based on real origin data.</li>
-                        <li>100% Aligned interests – zero hidden margins.</li>
-                        <li>Local presence without opening a company.</li>
-                        <li>Technical point of contact at the source.</li>
-                    </ul>
+                    <p>Decisions based on real origin data, 100% aligned interests, and local presence without structural costs.</p>
                 </div>
                 <div class="value-box">
                     <h4>For Suppliers</h4>
-                    <ul>
-                        <li>Interaction with real, validated buyers.</li>
-                        <li>Clear and professional technical requirements.</li>
-                        <li>Reliable documentation and logistics flow.</li>
-                        <li>Access to serious international demand.</li>
-                    </ul>
+                    <p>Interaction with real buyers, clear technical requirements, and reliable documentation flow.</p>
                 </div>
             </div>
         </div>
@@ -243,42 +201,25 @@
             <h2>Authority at Origin</h2>
             <div class="grid grid-2">
                 <div class="team-card">
-                    <span class="label">Founder | Strategy</span>
                     <h3>Leandro Bazán</h3>
-                    <ul>
-                        <li>Grains and oilseeds market operator.</li>
-                        <li>Certified Grain Classifier: direct quality assessment.</li>
-                        <li>Expert in B2B agri-industrial negotiation.</li>
-                        <li>Commodity marketing: Argentine origin positioning.</li>
-                    </ul>
-                    <a href="mailto:leandrobazan@absrepresentative.com.ar" class="label" style="text-decoration: underline;">Contact Strategy</a>
+                    <p class="label">Founder | Strategy</p>
+                    <p style="margin-top: 15px;">Expert in B2B agri-industrial negotiation and grain quality assessment.</p>
                 </div>
                 <div class="team-card">
-                    <span class="label">Operations | Intl. Trade</span>
                     <h3>Victoria del Valle</h3>
-                    <ul>
-                        <li>International Trade Analyst (Bulk & Container).</li>
-                        <li>Specialist in SENASA, BL, and CRT documentation.</li>
-                        <li>Pre-shipment inspection coordination.</li>
-                        <li>Cross-border logistics and document management.</li>
-                    </ul>
-                    <a href="mailto:victoria.delvalle@absrepresentative.com.ar" class="label" style="text-decoration: underline;">Contact Operations</a>
+                    <p class="label">Operations | Intl. Trade</p>
+                    <p style="margin-top: 15px;">Specialist in complex documentation (SENASA, BL) and logistics coordination.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="section-light">
-        <div class="container grid grid-2" style="align-items: start;">
+        <div class="container grid grid-2">
             <div>
                 <span class="label">Inquiry</span>
                 <h2>Request Assessment</h2>
-                <p style="font-size: 1.1rem; color: #555;">For international buyers evaluating Argentina or structuring existing operations.</p>
-                <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd;">
-                    <p style="font-size: 11px; font-weight: 700; color: var(--color-accent); margin-bottom: 5px;">GENERAL ENQUIRIES</p>
-                    <p style="font-weight: 600;">info@absrepresentative.com.ar</p>
-                    <p style="margin-top: 15px;"><a href="#" class="label" style="text-decoration: none;">LinkedIn →</a></p>
-                </div>
+                <p>info@absrepresentative.com.ar</p>
             </div>
             <div class="form-box">
                 <form action="https://formsubmit.co/info@absrepresentative.com.ar" method="POST">
@@ -287,16 +228,7 @@
                         <input type="text" name="Country" placeholder="Country" required>
                         <input type="text" name="Product" placeholder="Product" required>
                     </div>
-                    <div class="form-row">
-                        <input type="text" name="Volume" placeholder="Volume">
-                        <select name="Incoterm">
-                            <option value="">Incoterm</option>
-                            <option value="FOB">FOB</option>
-                            <option value="CFR">CFR</option>
-                            <option value="CIF">CIF</option>
-                        </select>
-                    </div>
-                    <textarea name="Message" rows="4" placeholder="Additional Information (Requirements)"></textarea>
+                    <textarea name="Message" rows="4" placeholder="Additional Information"></textarea>
                     <button type="submit" class="btn-submit">Submit Request</button>
                 </form>
             </div>
