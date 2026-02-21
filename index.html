@@ -20,7 +20,6 @@
         :root {
             --color-primary: #1a1a1a;
             --color-accent: #c9a227;
-            --color-bg-light: #f4f4f4;
             --max-width: 1100px;
         }
 
@@ -28,42 +27,41 @@
         html { scroll-behavior: smooth; }
         body { 
             font-family: 'Inter', sans-serif; 
-            color: var(--color-primary); 
             background-color: #000;
+            color: white;
             line-height: 1.6; 
             overflow-x: hidden;
         }
 
-        /* --- NAVIGATION --- */
+        /* --- NAVEGACIÓN MEJORADA --- */
         nav { 
             position: absolute; 
             top: 0; left: 0; right: 0; 
             z-index: 100; 
-            padding: 40px 0; /* Más espacio arriba */
-            /* Degradado más oscuro y profundo para legibilidad */
-            background: linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 50%, transparent 100%);
+            padding: 45px 0; /* Más espacio */
+            /* Fondo degrade oscuro para que resalten las pestañas */
+            background: linear-gradient(to bottom, 
+                rgba(0,0,0,0.98) 0%, 
+                rgba(0,0,0,0.8) 60%, 
+                transparent 100%);
         }
         .nav-links { 
             display: flex; 
             justify-content: center; 
-            gap: 45px; /* Más separación entre pestañas */
+            gap: clamp(20px, 5vw, 55px); /* Mucho más separados */
         }
         .nav-links a { 
             text-decoration: none; 
-            color: white; 
-            font-size: 13px; /* Pestañas un poco más grandes */
+            color: #fff; 
+            font-size: 14px; /* Más grandes */
             text-transform: uppercase; 
-            letter-spacing: 3px; /* Más aire entre letras */
-            font-weight: 600;
+            letter-spacing: 3px; 
+            font-weight: 700;
             transition: 0.3s;
-            opacity: 0.9;
         }
-        .nav-links a:hover {
-            color: var(--color-accent);
-            opacity: 1;
-        }
+        .nav-links a:hover { color: var(--color-accent); }
 
-        /* --- HERO SECTION --- */
+        /* --- HERO --- */
         .hero { 
             position: relative;
             height: 100vh; 
@@ -71,93 +69,79 @@
             align-items: center; 
             justify-content: center;
             overflow: hidden;
-            background-color: #000;
         }
 
         .hero-bg {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('herobackground.jpeg');
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('herobackground.jpeg');
             background-size: cover;
             background-position: center 30%;
             z-index: 1;
-        }
-
-        @media (min-width: 1024px) {
-            .hero-bg { background-attachment: fixed; }
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
             text-align: center;
-            color: white;
-            padding: 80px 20px 0; /* Empujamos todo el contenido hacia abajo */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            padding-top: 100px; /* Para que el logo baje y no toque el menú */
+            width: 90%;
+            max-width: 1000px;
         }
 
-        /* --- LOGO OFICIAL (CON MÁS ESPACIO) --- */
+        /* --- EL LOGO --- */
         .main-logo {
-            width: clamp(160px, 20vw, 220px); 
+            width: 220px; /* Tamaño imponente */
             height: auto;
-            margin-bottom: 40px; /* Espacio entre logo y el H1 */
-            margin-top: 40px;    /* Espacio extra para que no toque las pestañas */
-            filter: drop-shadow(0 4px 15px rgba(0,0,0,0.5));
+            margin-bottom: 35px;
+            display: inline-block;
+            /* Filtro para que el logo se vea nítido */
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
         }
 
         .hero h1 { 
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(2.2rem, 7vw, 4.2rem); 
-            margin-bottom: 25px; 
+            font-size: clamp(2.4rem, 8vw, 4.5rem); 
             line-height: 1.1; 
-            text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+            margin-bottom: 25px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
         }
 
         .hero-lead { 
-            font-size: clamp(1rem, 2.5vw, 1.4rem); 
+            font-size: clamp(1rem, 2.8vw, 1.4rem); 
             margin-bottom: 45px; 
-            max-width: 800px; 
-            opacity: 0.95; 
-            font-weight: 300;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            opacity: 0.9;
+            max-width: 850px;
+            margin-inline: auto;
         }
 
         .btn-main { 
             background: var(--color-accent); 
             color: var(--color-primary); 
-            padding: 20px 45px; 
+            padding: 22px 50px; 
             text-decoration: none; 
-            font-weight: 700; 
+            font-weight: 800; 
             text-transform: uppercase; 
-            font-size: 12px; 
+            font-size: 13px; 
             letter-spacing: 2px;
-            transition: 0.3s;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
-        .btn-main:hover { transform: translateY(-3px); background: #e8d5a3; }
-
-        /* Estilos de secciones para que no se pierdan */
-        section { padding: 100px 0; background: #fff; }
-        .section-dark { background: #0f0f0f; color: white; }
-        .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 25px; }
 
         @media (max-width: 768px) {
-            nav { padding: 25px 0; }
-            .nav-links { gap: 20px; }
-            .nav-links a { font-size: 11px; letter-spacing: 1px; }
-            .hero-content { padding-top: 40px; }
-            .main-logo { margin-top: 20px; width: 150px; }
+            nav { padding: 30px 10px; }
+            .nav-links { gap: 15px; }
+            .nav-links a { font-size: 10px; letter-spacing: 1px; }
+            .main-logo { width: 160px; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="container nav-links">
+        <div class="nav-links">
             <a href="#abs">Concept</a>
             <a href="#process">Process</a>
+            <a href="#value">Value</a>
             <a href="#team">Team</a>
             <a href="#contact">Contact</a>
         </div>
@@ -167,25 +151,13 @@
         <div class="hero-bg"></div>
         <div class="container hero-content">
             
-            <img src="Logo.png" alt="ABS Representative Logo" class="main-logo">
+            <img src="Logo.png" alt="ABS Logo" class="main-logo">
             
             <h1>Your professional local presence in Argentina</h1>
             <p class="hero-lead">Operating without opening your own structure. Exclusive representation for the buyer side.</p>
-            <a href="#contact" class="btn-main">Request Assessment</a>
+            <a href="#contact" class="btn-main">Request Feasibility Assessment</a>
         </div>
     </header>
-
-    <section id="abs" class="section-dark">
-        <div class="container">
-            <p style="font-size: 1.3rem; text-align: center; max-width: 800px; margin: 0 auto; opacity: 0.9;">
-                ABS is not a broker nor a trader. We function as your own technical arm, ensuring transparency without conflicts of interest.
-            </p>
-        </div>
-    </section>
-
-    <footer style="padding: 60px 20px; text-align: center; background: #000; color: rgba(255,255,255,0.4); font-size: 11px;">
-        <p>© 2026 ABS Representative. All rights reserved.</p>
-    </footer>
 
 </body>
 </html>
