@@ -34,7 +34,7 @@
         .logo-box img { 
             width: 100%; 
             display: block; 
-            filter: brightness(0) invert(1); /* Fuerza el logo a blanco */
+            filter: brightness(0) invert(1); /* Convierte el logo a blanco */
         }
 
         .nav-links { display: flex; gap: 20px; }
@@ -60,18 +60,17 @@
         }
         .hero-content { position: relative; z-index: 10; max-width: 1100px; margin: 0 auto; padding: 0 25px; }
 
-        h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 8vw, 60px); line-height: 1.1; margin-bottom: 20px; max-width: 800px; }
-        .hero-lead { font-size: clamp(16px, 4vw, 20px); font-weight: 300; margin-bottom: 35px; max-width: 600px; opacity: 0.9; }
+        h1 { font-family: 'Cormorant Garamond', serif; font-size: 50px; line-height: 1.1; margin-bottom: 20px; max-width: 800px; }
+        .hero-lead { font-size: 20px; font-weight: 300; margin-bottom: 35px; max-width: 600px; opacity: 0.9; }
 
-        .btn { display: inline-block; padding: 18px 35px; background: var(--color-accent); color: var(--color-primary); text-decoration: none; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
-        .btn:hover { background: #e8d5a3; transform: translateY(-2px); }
+        .btn { display: inline-block; padding: 18px 35px; background: var(--color-accent); color: var(--color-primary); text-decoration: none; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
 
         /* SECCIONES */
         section { padding: 100px 0; }
         .section-dark { background: #0f0f0f; color: #fff; }
         .section-light { background: var(--color-bg-light); }
         .label { color: var(--color-accent); font-size: 11px; text-transform: uppercase; letter-spacing: 3px; font-weight: 600; margin-bottom: 20px; display: block; }
-        h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 6vw, 45px); margin-bottom: 30px; }
+        h2 { font-family: 'Cormorant Garamond', serif; font-size: 40px; margin-bottom: 30px; }
 
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
         .card { background: #fff; padding: 40px; border: 1px solid #eee; color: var(--color-primary); }
@@ -79,22 +78,16 @@
 
         .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 50px; }
         .team-member { background: #fff; padding: 35px; border: 1px solid #eee; }
-        .team-member h4 { font-family: 'Cormorant Garamond', serif; font-size: 24px; margin-bottom: 5px; }
         .role { font-size: 11px; text-transform: uppercase; color: var(--color-accent); letter-spacing: 1px; font-weight: 600; display: block; margin-bottom: 15px; }
         .email-link { color: var(--color-primary); text-decoration: none; font-size: 14px; font-weight: 600; border-bottom: 1px solid var(--color-accent); }
 
-        /* CONTACT FORM */
-        .contact-box { background: #fff; padding: 50px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        input, textarea { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; font-family: 'Inter', sans-serif; }
-
         footer { padding: 60px 0; background: #080808; color: rgba(255,255,255,0.3); text-align: center; font-size: 12px; }
 
-        /* MOBILE FIXES */
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .hero-bg { background-position: center 20%; }
+            .hero-bg { background-size: cover; background-position: center 20%; }
+            h1 { font-size: 32px; }
             .team-grid { grid-template-columns: 1fr; }
-            section { padding: 70px 0; }
         }
     </style>
 </head>
@@ -124,7 +117,7 @@
     </div>
 
     <section id="identity" class="section-dark">
-        <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
+        <div class="nav-container">
             <span class="label">Identity</span>
             <h2>Your control at origin.</h2>
             <p style="font-size: 20px; opacity: 0.8; max-width: 800px; margin-bottom: 40px;">ABS is not a broker nor a trader. We function as your professional local presence, operating without conflicts of interest.</p>
@@ -132,7 +125,6 @@
                 <div>
                     <p>• Exclusive buyer-side representation.</p>
                     <p>• Aligned interests — no margins on product.</p>
-                    <p>• End-to-end management at origin.</p>
                 </div>
                 <div style="opacity: 0.6;">
                     <p>— No intermediation of operations.</p>
@@ -143,7 +135,7 @@
     </section>
 
     <section id="structure" class="section-light">
-        <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
+        <div class="nav-container">
             <span class="label">Methodology</span>
             <h2>Buyer-Side Structure</h2>
             <div class="grid">
@@ -160,7 +152,7 @@
     </section>
 
     <section id="team">
-        <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
+        <div class="nav-container">
             <span class="label">Authority</span>
             <h2>Technical Team</h2>
             <div class="team-grid">
@@ -175,26 +167,6 @@
                     <h4>Victoria del Valle</h4>
                     <p style="margin-bottom: 20px;">Specialist in documentation and operational coordination for exports.</p>
                     <a href="mailto:victoria.delvalle@absrepresentative.com.ar" class="email-link">victoria.delvalle@absrepresentative.com.ar</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section-light">
-        <div class="container" style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
-            <div class="grid">
-                <div>
-                    <span class="label">Contact</span>
-                    <h2>Request Assessment</h2>
-                    <p>Direct Inquiries: <br><strong>info@absrepresentative.com.ar</strong></p>
-                </div>
-                <div class="contact-box">
-                    <form action="https://formsubmit.co/leandrobazan@absrepresentative.com.ar" method="POST">
-                        <input type="text" name="Company" placeholder="Company Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="4" placeholder="How can we help?"></textarea>
-                        <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Send Request</button>
-                    </form>
                 </div>
             </div>
         </div>
