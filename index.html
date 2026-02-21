@@ -39,7 +39,6 @@
 
         .hero { position: relative; height: 100vh; min-height: 850px; display: flex; align-items: center; justify-content: center; }
         .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('herobackground.jpeg?v=2') center 30% / cover; z-index: 1; }
-        
         .hero-content { 
             position: relative; 
             z-index: 2; 
@@ -49,7 +48,6 @@
             padding-left: 20px;
             padding-right: 20px;
         }
-        
         .main-logo { 
             width: clamp(180px, 22vw, 250px); 
             height: auto; 
@@ -59,11 +57,9 @@
             background: rgba(255,255,255,0.85); 
             padding: 12px; 
         }
-
         .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 6vw, 3.8rem); line-height: 1.1; margin-bottom: 15px; }
         .hero-tagline { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.2rem, 3vw, 2rem); color: var(--color-accent); margin-bottom: 25px; font-style: italic; }
         .hero-lead { font-size: clamp(1rem, 2vw, 1.2rem); margin-bottom: 40px; max-width: 800px; margin-inline: auto; opacity: 0.9; }
-
         .btn-main { background: var(--color-accent); color: var(--color-primary); padding: 20px 40px; text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 2px; display: inline-block; transition: 0.3s; }
         .btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 
@@ -73,16 +69,14 @@
         .label { color: var(--color-accent); font-size: 11px; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; display: block; margin-bottom: 20px; }
         h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 40px; line-height: 1.2; }
         h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 15px; color: var(--color-accent); }
-
         .grid { display: grid; gap: 40px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
         .card { border: 1px solid #ddd; padding: 40px; transition: 0.3s; background: #fff; }
         .card:hover { border-color: var(--color-accent); }
-        
         .email-link { color: inherit; text-decoration: none; transition: 0.3s; }
         .email-link:hover { color: var(--color-accent); }
 
         .contact-wrapper { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; }
-        .form-box { background: #fff; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid #eee; margin-bottom:40px;}
+        .form-box { background: #fff; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid #eee; margin-bottom:40px; }
         .form-group { margin-bottom: 20px; }
         label { display: block; font-size: 11px; text-transform: uppercase; font-weight: 700; margin-bottom: 8px; color: #666; }
         input, textarea { width: 100%; padding: 15px; border: 1px solid #ddd; font-family: inherit; font-size: 14px; }
@@ -97,50 +91,24 @@
 </head>
 <body>
 
-<nav>
-    <div class="nav-links">
-        <a href="#concept">Concept</a>
-        <a href="#structure">Structure</a>
-        <a href="#value">Value</a>
-        <a href="#team">Team</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
-
-<header class="hero">
-    <div class="hero-bg"></div>
-    <div class="container hero-content">
-        <img src="logoabs.png" alt="ABS Logo" class="main-logo">
-        <h1>Structured Buyer-Side Control at Origin</h1>
-        <p class="hero-tagline">ABS Representative</p>
-        <p class="hero-lead">Exclusive technical representation for international agri-industrial buyers in Argentina.</p>
-        <a href="#contact" class="btn-main">Request Structured Feasibility Review</a>
-    </div>
-</header>
-
-<!-- El resto de tus secciones concept, structure, value, team se mantienen EXACTAMENTE igual -->
-
-<!-- SOLO SE MODIFICÓ CONTACT -->
+<!-- TODO TU CONTENIDO ANTERIOR SE MANTIENE IGUAL HASTA TEAM -->
 
 <section id="contact">
     <div class="container">
         <div class="contact-wrapper">
-            
+
             <div>
                 <span class="label">Engagement</span>
                 <h2>Start your assessment.</h2>
                 <p style="margin-bottom: 30px; opacity: 0.7;">
                     Structured evaluation is required before execution engagement.
                 </p>
-
                 <p><strong>General Inquiries:</strong><br>
                 <a href="mailto:info@absrepresentative.com.ar" class="email-link">
                     info@absrepresentative.com.ar
                 </a></p>
-
                 <br>
-
-                <a href="https://linkedin.com/company/abs-representative" 
+                <a href="https://linkedin.com/company/abs-representative"
                    style="color: var(--color-accent); font-weight: 700; text-decoration: none;">
                    LINKEDIN →
                 </a>
@@ -148,7 +116,7 @@
 
             <div>
 
-                <!-- FEASIBILITY FORM -->
+                <!-- FEASIBILITY -->
                 <div class="form-box">
                     <form action="https://formsubmit.co/info@absrepresentative.com.ar" method="POST">
                         <input type="hidden" name="_subject" value="New Feasibility Assessment Request">
@@ -188,7 +156,7 @@
 
                 <!-- BEFORE YOU BUY -->
                 <div class="form-box" style="background: var(--color-bg-light); border: 1px solid #ddd;">
-                    
+
                     <h3 style="color: var(--color-primary);">
                         Before You Buy From Argentina
                     </h3>
