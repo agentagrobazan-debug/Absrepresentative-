@@ -36,42 +36,39 @@
         /* Navigation */
         nav { 
             position: absolute; top: 0; left: 0; right: 0; z-index: 100; 
-            padding: 30px 0; background: linear-gradient(to bottom, rgba(0,0,0,0.85), transparent);
+            padding: 25px 0; background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
         }
-        .nav-links { display: flex; justify-content: center; gap: clamp(15px, 4vw, 35px); }
+        .nav-links { display: flex; justify-content: center; gap: 25px; }
         .nav-links a { 
             text-decoration: none; color: white; font-size: 11px; 
             text-transform: uppercase; letter-spacing: 2px; font-weight: 600;
         }
 
-        /* Hero Section - LA SOLUCIÓN DEFINITIVA */
+        /* --- HERO SECTION RE-DISEÑADO --- */
         .hero { 
             position: relative;
-            /* Forzamos un alto que permita ver la foto incluso en pantallas anchas */
-            min-height: 100vh; 
+            height: 100vh; /* Ocupa exactamente el alto de la pantalla */
             width: 100%;
             display: flex; 
             align-items: center; 
             justify-content: center;
-            background-color: #000;
             overflow: hidden;
         }
 
         .hero-bg {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('herobackground.jpeg');
-            background-repeat: no-repeat;
-            /* 'cover' es necesario, pero el 'center 15%' asegura que el escritorio no se pierda abajo */
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('herobackground.jpeg');
             background-size: cover;
-            background-position: center 15%; 
+            background-position: center 30%; /* Ajuste crucial para ver las manos en PC */
+            background-repeat: no-repeat;
             z-index: 1;
         }
 
-        /* Ajuste específico para PC: si la pantalla es muy ancha, movemos el encuadre */
-        @media (min-width: 1200px) {
+        /* Efecto de profundidad para PC */
+        @media (min-width: 1024px) {
             .hero-bg {
-                background-position: center 10%;
+                background-attachment: fixed; /* La imagen se queda fija al bajar, muy elegante */
             }
         }
 
@@ -80,54 +77,55 @@
             z-index: 2;
             text-align: center;
             color: white;
-            padding: 120px 20px 60px; /* Más espacio arriba para no tapar el logo/cara */
+            padding: 0 20px;
             width: 100%;
-            max-width: 900px;
+            max-width: 1000px;
         }
 
         .hero h1 { 
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(2rem, 7vw, 4rem); 
+            font-size: clamp(2.2rem, 8vw, 4.5rem); 
             margin-bottom: 20px; 
             line-height: 1.1;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            text-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
 
         .hero-lead { 
-            font-size: clamp(1rem, 2.5vw, 1.35rem); 
-            margin-bottom: 40px; 
+            font-size: clamp(1rem, 2.8vw, 1.4rem); 
+            margin-bottom: 45px; 
             font-weight: 300; 
-            opacity: 0.95; 
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            opacity: 0.9;
+            max-width: 800px;
+            margin-inline: auto;
         }
 
         .btn-main { 
             background: var(--color-accent); 
             color: var(--color-primary); 
-            padding: 18px 35px; 
+            padding: 20px 40px; 
             text-decoration: none; 
             font-weight: 700; 
             text-transform: uppercase; 
             font-size: 12px; 
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             display: inline-block; 
-            transition: 0.4s;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
         }
-        .btn-main:hover { background: #e8d5a3; transform: translateY(-3px); }
+        .btn-main:hover { background: #e8d5a3; transform: scale(1.05); }
 
-        /* Sections */
-        section { padding: 90px 0; background: #fff; }
+        /* Estructura de secciones */
+        section { padding: 100px 0; background: #fff; }
         .section-dark { background: #0f0f0f; color: white; }
+        .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 25px; }
         .label { color: var(--color-accent); font-size: 11px; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; display: block; margin-bottom: 20px; }
-        h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 40px; }
-        .grid { display: grid; gap: 40px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-
-        footer { padding: 50px 20px; background: #000; color: rgba(255,255,255,0.4); text-align: center; font-size: 10px; letter-spacing: 1px; }
+        h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 5vw, 3.2rem); margin-bottom: 40px; }
+        
+        footer { padding: 60px 20px; background: #000; color: rgba(255,255,255,0.4); text-align: center; font-size: 11px; }
 
         @media (max-width: 768px) {
-            .hero-bg { background-position: center center; }
-            .hero-content { padding-top: 100px; }
+            .hero-bg { background-position: center center; background-attachment: scroll; }
+            .hero-content { padding-top: 50px; }
         }
     </style>
 </head>
@@ -155,24 +153,7 @@
         <div class="container">
             <span class="label">Identity</span>
             <h2>Your control at origin.</h2>
-            <div class="grid">
-                <div>
-                    <p style="font-size: 1.15rem; margin-bottom: 25px; opacity: 0.9;">ABS is not a broker nor a trader. We function as your own technical arm, ensuring transparency without conflicts of interest.</p>
-                </div>
-                <div style="background: rgba(255,255,255,0.05); padding: 30px; border-left: 3px solid var(--color-accent);">
-                    <h4 class="label" style="margin-bottom: 10px;">Non-Intervention</h4>
-                    <p style="opacity: 0.7; font-size: 14px;">— No brokerage or trading<br>— No seller representation<br>— No competition with the buyer</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container" style="text-align: center;">
-            <span class="label">Contact</span>
-            <h2>Start your evaluation</h2>
-            <p style="margin-bottom: 30px; font-weight: 500;">info@absrepresentative.com.ar</p>
-            <a href="mailto:info@absrepresentative.com.ar" class="btn-main" style="background: #1a1a1a; color: #fff;">Send Inquiry</a>
+            <p style="font-size: 1.2rem; max-width: 700px; opacity: 0.9;">ABS is not a broker nor a trader. We function as your own technical arm, ensuring transparency without conflicts of interest.</p>
         </div>
     </section>
 
