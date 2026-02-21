@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,9 +13,7 @@
       gtag('config', 'G-44K7ZV4WVB');
     </script>
 
-    <meta name="robots" content="index, follow">
     <link rel="icon" type="image/png" href="Favicon.png">
-    
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
@@ -23,89 +21,82 @@
             --color-primary: #1a1a1a;
             --color-accent: #c9a227;
             --color-accent-hover: #e8d5a3;
-            --color-text-muted: #666;
             --color-bg-light: #f4f4f4;
             --color-bg-bone: #f9f7f2;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--color-primary); line-height: 1.6; -webkit-font-smoothing: antialiased; background-color: white; }
-        h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-height: 1.1; }
+        body { font-family: 'Inter', sans-serif; color: var(--color-primary); background-color: #fff; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 
         /* NAV - Centered without Logo */
         nav { position: absolute; top: 0; left: 0; right: 0; z-index: 100; padding: 3rem 0; }
-        .nav-centered { display: flex; justify-content: center; align-items: center; width: 100%; }
-        .nav-links { display: flex; gap: 3rem; }
-        .nav-links a { text-decoration: none; color: white; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 3px; opacity: 0.8; transition: 0.3s; font-weight: 500; }
+        .nav-centered { display: flex; justify-content: center; align-items: center; }
+        .nav-links { display: flex; gap: 2.5rem; }
+        .nav-links a { text-decoration: none; color: white; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.8; transition: 0.3s; }
         .nav-links a:hover { opacity: 1; color: var(--color-accent); }
 
-        /* HERO - Optimized Background */
+        /* HERO */
         .hero { 
             min-height: 100vh; 
             background-color: #1a1a1a;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('herobackground.jpeg'); 
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('herobackground.jpeg'); 
             background-size: cover; 
             background-position: center 30%; 
-            background-repeat: no-repeat;
-            display: flex; 
-            align-items: center; 
-            color: white; 
-            text-align: center; /* Centramos el contenido del hero también */
+            display: flex; align-items: center; color: white; text-align: center;
         }
+        .hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); margin-bottom: 1.5rem; width: 100%; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .hero-lead { font-size: clamp(1.1rem, 3vw, 1.5rem); margin-bottom: 3rem; opacity: 0.9; max-width: 750px; margin-left: auto; margin-right: auto; font-weight: 300; }
 
-        .hero .container { display: flex; flex-direction: column; align-items: center; }
-        .hero h1 { font-size: 4.5rem; margin-bottom: 1.5rem; max-width: 900px; }
-        .hero-lead { font-size: 1.5rem; margin-bottom: 3rem; opacity: 0.95; max-width: 750px; font-weight: 300; }
-
-        .btn-primary { 
-            display: inline-block; padding: 1.2rem 2.5rem; background: var(--color-accent); 
-            color: var(--color-primary); text-decoration: none; font-size: 0.8rem; 
-            font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; transition: 0.3s; 
-        }
-        .btn-primary:hover { background: var(--color-accent-hover); transform: translateY(-3px); }
-
-        /* SECCIONES ORIGINALES */
-        section { padding: 9rem 0; }
+        /* SECCIONES */
+        section { padding: 8rem 0; }
         .section-dark { background: #0f0f0f; color: white; }
         .section-light { background: var(--color-bg-light); }
         .section-bone { background: var(--color-bg-bone); }
         .section-label { display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 4px; color: var(--color-accent); margin-bottom: 1.5rem; font-weight: 600; }
-        h2 { font-size: 3.5rem; margin-bottom: 2.5rem; }
-        .lead { font-size: 1.25rem; opacity: 0.85; max-width: 750px; margin-bottom: 4rem; }
+        h2 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 2.5rem; }
+        h3 { font-size: 1.8rem; margin-bottom: 1rem; color: var(--color-accent); }
+        .lead { font-size: 1.25rem; opacity: 0.85; max-width: 800px; margin-bottom: 4rem; }
 
-        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
-        
-        .stage { background: white; padding: 3rem 2rem; border: 1px solid #eee; color: var(--color-primary); text-align: left; }
-        .stage.featured { border: 1px solid var(--color-accent); box-shadow: 0 25px 50px rgba(0,0,0,0.1); transform: translateY(-10px); }
-        .stage-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--color-accent); margin-bottom: 1rem; display: block; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
 
-        /* MARKET NOTE */
-        .market-note { background: #1a1a1a; padding: 5rem; color: white; border-top: 3px solid var(--color-accent); margin-top: -1px; text-align: center; }
-        .market-note p { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; line-height: 1.3; margin: 0 auto; max-width: 800px; }
+        /* CARDS */
+        .card { background: white; padding: 3rem 2rem; border: 1px solid #eee; color: var(--color-primary); height: 100%; }
+        .card.featured { border: 1px solid var(--color-accent); transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--color-accent); display: block; margin-bottom: 1rem; }
 
-        .team-card { background: white; padding: 3.5rem; border: 1px solid #eee; text-align: left; }
-        .role { font-size: 0.75rem; text-transform: uppercase; color: var(--color-accent); letter-spacing: 2px; font-weight: 600; display: block; margin-bottom: 1rem; }
-        .email { color: var(--color-primary); text-decoration: none; font-weight: 600; border-bottom: 1px solid var(--color-accent); transition: 0.3s; }
+        /* VALOR COMPRADOR/PROVEEDOR */
+        .value-box { background: white; padding: 2.5rem; border-left: 3px solid var(--color-accent); margin-bottom: 2rem; }
+        .value-box h4 { font-size: 1.4rem; margin-bottom: 1rem; }
+        .value-box ul { list-style: none; }
+        .value-box li { margin-bottom: 0.8rem; font-size: 0.95rem; position: relative; padding-left: 1.5rem; }
+        .value-box li::before { content: "→"; position: absolute; left: 0; color: var(--color-accent); }
 
-        /* FORM */
-        .form-box { padding: 4rem; background: white; box-shadow: 0 30px 60px rgba(0,0,0,0.05); text-align: left; }
-        input, textarea { width: 100%; padding: 1.2rem; border: 1px solid #ddd; margin-bottom: 1rem; font-family: 'Inter', sans-serif; font-size: 1rem; }
-        .form-confidential { font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 1.5rem; font-style: italic; display: block; }
+        /* EQUIPO */
+        .team-card { background: white; padding: 3rem; border: 1px solid #eee; margin-bottom: 2rem; }
+        .role { font-size: 0.7rem; text-transform: uppercase; color: var(--color-accent); letter-spacing: 2px; font-weight: 700; margin-bottom: 1rem; display: block; }
+        .team-card ul { list-style: none; margin: 1.5rem 0; }
+        .team-card li { font-size: 0.9rem; margin-bottom: 0.5rem; opacity: 0.8; }
+        .email-link { color: var(--color-primary); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--color-accent); }
 
-        footer { padding: 5rem 0; text-align: center; background: #080808; color: rgba(255,255,255,0.4); font-size: 0.8rem; }
+        /* FORMULARIO */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; }
+        .form-container { background: white; padding: 4rem; box-shadow: 0 30px 60px rgba(0,0,0,0.05); }
+        .form-group { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        input, textarea, select { width: 100%; padding: 1rem; border: 1px solid #ddd; margin-bottom: 1rem; font-family: 'Inter', sans-serif; }
+        .btn-submit { background: var(--color-accent); color: var(--color-primary); border: none; padding: 1.2rem; width: 100%; font-weight: 700; text-transform: uppercase; cursor: pointer; transition: 0.3s; }
+        .btn-submit:hover { background: var(--color-accent-hover); }
 
-        /* RESPONSIVE */
+        footer { padding: 5rem 0; background: #080808; color: rgba(255,255,255,0.4); text-align: center; font-size: 0.8rem; }
+
         @media (max-width: 768px) {
-            .nav-links { gap: 1.2rem; }
-            .nav-links a { font-size: 0.65rem; letter-spacing: 1.5px; }
-            .hero h1 { font-size: 2.8rem; }
-            .hero-lead { font-size: 1.2rem; }
-            .grid-3, .grid-2 { grid-template-columns: 1fr; }
+            .grid-2, .grid-3, .contact-grid, .form-group { grid-template-columns: 1fr; }
             section { padding: 5rem 0; }
-            .market-note { padding: 3rem 2rem; }
-            .hero { background-position: center 20%; }
+            .hero h1 { font-size: 2.8rem; }
+            .nav-links { gap: 1rem; }
+            .nav-links a { font-size: 0.6rem; }
         }
     </style>
 </head>
@@ -114,366 +105,162 @@
     <nav>
         <div class="container nav-centered">
             <div class="nav-links">
-                <a href="#concept">Concept</a>
-                <a href="#structure">Structure</a>
-                <a href="#team">Team</a>
-                <a href="#contact">Contact</a>
+                <a href="#abs">¿Qué es ABS?</a>
+                <a href="#proceso">Proceso</a>
+                <a href="#valor">Valor</a>
+                <a href="#equipo">Equipo</a>
+                <a href="#contacto">Contacto</a>
             </div>
         </div>
     </nav>
 
     <header class="hero">
         <div class="container">
-            <h1>Structured Buyer-Side Control at Origin</h1>
-            <p class="hero-lead">Exclusive technical representation for international agri-industrial buyers in Argentina.</p>
-            <a href="#contact" class="btn-primary">Request Structured Feasibility Review</a>
+            <h1>Tu presencia local profesional en Argentina</h1>
+            <p class="hero-lead">Sin abrir una estructura propia. Representación exclusiva del lado del comprador.</p>
+            <a href="#contacto" style="text-decoration: none; background: var(--color-accent); color: var(--color-primary); padding: 1.2rem 2.5rem; font-weight: 700; text-transform: uppercase; font-size: 0.8rem;">Solicitar evaluación de viabilidad</a>
         </div>
     </header>
 
-    <section id="concept" class="section-dark">
+    <section id="abs" class="section-dark">
         <div class="container">
-            <span class="section-label">Identity</span>
-            <h2>Your control at origin.</h2>
-            <p class="lead">ABS is not a broker nor a trader. We function as your professional local presence, operating without conflicts of interest.</p>
+            <span class="section-label">Concepto</span>
+            <h2>Tu control en el origen.</h2>
+            <p class="lead">ABS no es un intermediario ni un comerciante. Somos tu brazo técnico y comercial operando sin conflictos de intereses.</p>
             
             <div class="grid-2">
                 <div>
-                    <h3 style="color: var(--color-accent); margin-bottom: 1.5rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;">Core Functions</h3>
-                    <p style="margin-bottom: 1rem;">• Exclusive buyer-side representation.</p>
-                    <p style="margin-bottom: 1rem;">• Aligned interests — no commissions or margins from sellers.</p>
-                    <p>• End-to-end management at origin (Argentina).</p>
+                    <h3>Lo que es ABS</h3>
+                    <p>• Representación exclusiva del comprador.</p>
+                    <p>• Intereses alineados: sin margen en el producto.</p>
+                    <p>• Gestión integral: inteligencia de mercado hasta el envío.</p>
                 </div>
-                <div style="opacity: 0.6; border-left: 1px solid #333; padding-left: 3rem;">
-                    <h3 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem;">Non-Intervention Policy</h3>
-                    <p style="margin-bottom: 1rem;">— No intermediation of operations</p>
-                    <p>— No seller representation</p>
+                <div style="opacity: 0.6; border-left: 1px solid #333; padding-left: 2rem;">
+                    <h3>Lo que NO es ABS</h3>
+                    <p>— No somos intermediarios ni brokers.</p>
+                    <p>— No representamos a vendedores.</p>
+                    <p>— No competimos con el comprador.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="structure" class="section-light">
+    <section id="proceso" class="section-light">
         <div class="container">
-            <span class="section-label">Methodology</span>
-            <h2>Buyer-Side Structure</h2>
+            <span class="section-label">Metodología</span>
+            <h2>Estructura del lado del comprador</h2>
+            <p style="margin-bottom: 4rem; max-width: 700px;">Operamos mediante un proceso estructurado y obligatorio. La representación comienza solo tras la validación de viabilidad.</p>
+            
             <div class="grid-3">
-                <div class="stage">
-                    <span class="stage-num">00</span>
-                    <h3>Educational Document</h3>
-                    <p>Identifying structural risks international buyers underestimate in the Argentine market.</p>
+                <div class="card">
+                    <span class="num">00</span>
+                    <h4>Documento Educativo</h4>
+                    <p>Identificamos los riesgos estructurales que los compradores internacionales suelen subestimar en Argentina.</p>
                 </div>
-                <div class="stage featured">
-                    <span class="stage-num">01</span>
-                    <h3>Feasibility Assessment</h3>
-                    <p>Mandatory technical validation including supply mapping, logistics, and origin risk analysis.</p>
+                <div class="card featured">
+                    <span class="num">01</span>
+                    <h4>Evaluación de Viabilidad</h4>
+                    <p>Análisis real: suministro viable, calidad alcanzable, volúmenes ejecutables y precios de referencia.</p>
                 </div>
-                <div class="stage">
-                    <span class="stage-num">02</span>
-                    <h3>Representation</h3>
-                    <p>Execution control, local presence, and document management throughout the process.</p>
+                <div class="card">
+                    <span class="num">02</span>
+                    <h4>Representación Local</h4>
+                    <p>Gestión completa de la ejecución: negociación, control de calidad pre-embarque y logística.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="padding: 0; background-color: #0f0f0f;">
-        <div class="market-note">
-            <div class="container">
-                <span class="section-label">Market Note</span>
-                <p>Prior technical validation and buyer structuring are decisive variables for execution feasibility in the current campaign.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="team" class="section-bone">
+    <section id="valor" class="section-bone">
         <div class="container">
-            <span class="section-label">Authority</span>
-            <h2>Technical Team</h2>
+            <span class="section-label">Beneficios</span>
+            <h2>Por qué ABS beneficia a todos</h2>
             <div class="grid-2">
-                <div class="team-card">
-                    <span class="role">Founder | Strategy</span>
-                    <h3 style="font-size: 2.5rem; margin-bottom: 1rem;">Leandro Bazán</h3>
-                    <p style="margin-bottom: 2rem; color: #555;">Expert in agri-industrial negotiation and quality control at origin.</p>
-                    <a href="mailto:leandrobazan@absrepresentative.com.ar" class="email">leandrobazan@absrepresentative.com.ar</a>
-                </div>
-                <div class="team-card">
-                    <span class="role">Operations</span>
-                    <h3 style="font-size: 2.5rem; margin-bottom: 1rem;">Victoria del Valle</h3>
-                    <p style="margin-bottom: 2rem; color: #555;">Specialist in documentation and operational coordination for exports.</p>
-                    <a href="mailto:victoria.delvalle@absrepresentative.com.ar" class="email">victoria.delvalle@absrepresentative.com.ar</a>
-                    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Structured Buyer-Side Control at Origin</h1>
-                <p class="hero-lead">Exclusive representation for international agri-industrial buyers in Argentina.</p>
-                <p class="hero-sub">Mandatory feasibility validation before representation. Aligned interests. Zero conflicts. Full execution control.</p>
-                <a href="#structure" class="btn-primary">Request Feasibility Assessment</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHAT IS - DARK -->
-    <section id="what" class="section-dark">
-        <div class="container">
-            <span class="section-label">What we are</span>
-            <h2>Your control at origin.<br>Not a broker. Not a trader.</h2>
-            
-            <div class="grid-2" style="margin-top: 4rem;">
-                <div>
-                    <h3 style="font-size: 2rem; margin-bottom: 2rem;">What ABS Is</h3>
-                    <div style="font-size: 1.1rem; line-height: 2;">
-                        <p style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">Your professional local presence without opening your own structure</p>
-                        <p style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">Exclusive buyer-side representation — we act only for the buyer</p>
-                        <p style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">Aligned interests — no conflicts, no margin on product</p>
-                        <p style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">End-to-end management — from market intelligence to shipment</p>
-                    </div>
-                </div>
-                <div>
-                    <h3 style="font-size: 2rem; margin-bottom: 2rem; opacity: 0.6;">What ABS Is Not</h3>
-                    <div style="font-size: 1.1rem; line-height: 2; opacity: 0.7;">
-                        <p style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">We are not brokers</p>
-                        <p style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">We are not traders</p>
-                        <p style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">We do not intermediate operations</p>
-                        <p style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">We do not represent sellers</p>
-                        <p style="padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">We do not compete with the buyer</p>
-                    </div>
-                    <p style="margin-top: 2rem; padding: 1.5rem; background: rgba(201,162,39,0.2); border-left: 3px solid #c9a227; font-family: 'Cormorant Garamond', serif; font-size: 1.25rem;">
-                        ABS operates without conflicts of interest.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- STRUCTURE - LIGHT -->
-    <section id="structure" class="section-light">
-        <div class="container">
-            <span class="section-label" style="color: #999;">Our process</span>
-            <h2 style="color: #1a1a1a;">Buyer-Side Structure</h2>
-            <p class="lead" style="color: #666;">ABS operates through a structured and mandatory buyer-side process. Representation begins only after feasibility validation.</p>
-            
-            <div class="grid-3">
-                <div class="card-light">
-                    <div class="card-num" style="color: #999;">00</div>
-                    <h3>Before You Buy From Argentina</h3>
-                    <p style="color: #666; line-height: 1.7;">Educational buyer-side document identifying the five most common structural risks international buyers underestimate.</p>
-                    <a href="#" style="color: #a88420; text-decoration: none; font-weight: 600;">Download document →</a>
-                </div>
-                <div class="card-light featured">
-                    <div class="card-num">01</div>
-                    <h3>Buyer-Side Feasibility Assessment</h3>
-                    <p style="color: #666; line-height: 1.7;">Mandatory and paid assessment. Determines whether Argentina is viable for your specific purchasing objectives.</p>
+                <div class="value-box">
+                    <h4>Para Compradores</h4>
                     <ul>
-                        <li>Viable supply validation</li>
-                        <li>Achievable quality parameters</li>
-                        <li>Executable volumes</li>
-                        <li>Reference FOB / CFR pricing</li>
-                        <li>Execution risk mapping</li>
+                        <li><strong>Decisiones informadas:</strong> Comprende el mercado antes de invertir capital.</li>
+                        <li><strong>Intereses alineados:</strong> Tu representante trabaja solo para ti.</li>
+                        <li><strong>Presencia sin estructura:</strong> Equipo local sin abrir una empresa.</li>
                     </ul>
-                    <p style="font-style: italic; color: #1a1a1a; margin-top: 1rem;"><strong>Mandatory and quoted case by case.</strong> If feasibility is not confirmed, we advise not to proceed.</p>
                 </div>
-                <div class="card-light">
-                    <div class="card-num" style="color: #999;">02</div>
-                    <h3>Local Buyer Representation</h3>
-                    <p style="color: #666; line-height: 1.7;">Full buyer-side execution management at origin through shipment, after feasibility has been validated.</p>
-                </div>
-            </div>
-            
-            <p class="principle" style="color: #1a1a1a;">ABS does not initiate representation without feasibility validation.</p>
-        </div>
-    </section>
-
-    <!-- PROCESS - WHITE -->
-    <section id="process" class="section-white">
-        <div class="container">
-            <span class="section-label" style="color: #999;">Method</span>
-            <h2>How We Work</h2>
-            
-            <div class="process-list" style="margin-top: 3rem;">
-                <div class="process-item">
-                    <div class="process-num">0</div>
-                    <div>
-                        <h4>Before You Buy From Argentina</h4>
-                        <p>Free buyer-side guide to identify hidden risks. No commitment.</p>
-                    </div>
-                </div>
-                <div class="process-item">
-                    <div class="process-num">1</div>
-                    <div>
-                        <h4>Buyer-Side Feasibility Assessment</h4>
-                        <p><strong>Mandatory and paid.</strong> Real market analysis: viable supply, achievable quality, executable volumes, reference pricing.</p>
-                    </div>
-                </div>
-                <div class="process-item">
-                    <div class="process-num">2</div>
-                    <div>
-                        <h4>Supplier Validation</h4>
-                        <p>Complete mapping: real producers vs. intermediaries, execution capacity verification, due diligence at origin.</p>
-                    </div>
-                </div>
-                <div class="process-item">
-                    <div class="process-num">3</div>
-                    <div>
-                        <h4>Local Buyer Representation</h4>
-                        <p>End-to-end management: negotiation, pre-shipment quality control, documentation, logistics, operational tracking.</p>
-                    </div>
+                <div class="value-box">
+                    <h4>Para Proveedores</h4>
+                    <ul>
+                        <li><strong>Compradores validados:</strong> Operaciones con capacidad real de decisión.</li>
+                        <li><strong>Requisitos claros:</strong> Especificaciones técnicas validadas.</li>
+                        <li><strong>Acceso al mercado:</strong> Conexión con compradores internacionales serios.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BENEFITS - DARK -->
-    <section id="benefits" class="section-dark">
+    <section id="equipo">
         <div class="container">
-            <span class="section-label">Value</span>
-            <h2>Why ABS Benefits Everyone</h2>
-            <p class="lead">When demand arrives structured from the start, the entire ecosystem works better.</p>
-            
-            <div class="tabs">
-                <button class="tab active" onclick="showTab('buyers', event)">For Buyers</button>
-                <button class="tab" onclick="showTab('suppliers', event)">For Suppliers</button>
-            </div>
-            
-            <div id="buyers" class="tab-content active">
-                <div class="grid-2" style="font-size: 1.1rem;">
-                    <div>
-                        <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">Informed Decisions</h4>
-                        <p style="opacity: 0.8; line-height: 1.7;">You understand the real market before committing capital. No last-minute surprises.</p>
-                    </div>
-                    <div>
-                        <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">Aligned Interests</h4>
-                        <p style="opacity: 0.8; line-height: 1.7;">Your representative does not sell product or earn commission from the seller. Works for you.</p>
-                    </div>
-                    <div>
-                        <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">Presence Without Structure</h4>
-                        <p style="opacity: 0.8; line-height: 1.7;">You operate as if you had your own team in Argentina, without opening a company.</p>
-                    </div>
-                    <div>
-                        <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">Efficiency</h4>
-                        <p style="opacity: 0.8; line-height: 1.7;">Single technical-commercial point of contact. Less friction, more control.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="suppliers" class="tab-content">
-                <div class="grid-2" style="font-size: 1.1rem;">
-                    <div>
-                        <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">Validated Buyers</h4>
-                        <p style="opacity: 0.8; line-height: 1.7;">Less speculative inquiries, more operations with real decision-making capacity.</p>
-                    </div>
-                    <div>
-                        <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">Clear Requirements</h4>
-                        <p style="opacity: 0.8; line-height: 1.7;">You receive validated technical and commercial specifications, not ambiguous ones.</p>
-                    </div>
-                    <div>
-                        <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">Professional Relationship</h4>
-                        <p style="opacity: 0.8; line-height: 1.7;">One interlocutor organizes the process and respects your commercial structure.</p>
-                    </div>
-                    <div>
-                        <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">Market Access</h4>
-                        <p style="opacity: 0.8; line-height: 1.7;">Connection with serious international buyers without investment in prospecting.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TEAM - LIGHT -->
-    <section id="team" class="section-light">
-        <div class="container">
-            <span class="section-label" style="color: #999;">People</span>
-            <h2 style="color: #1a1a1a;">Technical Team</h2>
-            <p class="lead" style="color: #666;">Deliberately compact structure. No unnecessary layers.</p>
-            
-            <div class="grid-2" style="margin-top: 3rem;">
+            <span class="section-label">Autoridad</span>
+            <h2>Equipo Técnico</h2>
+            <div class="grid-2">
                 <div class="team-card">
+                    <span class="role">Founder | Estrategia</span>
                     <h3>Leandro Bazán</h3>
-                    <div class="role">Founder | Buyer-Side Strategy</div>
                     <ul>
-                        <li>Grain and oilseed market operator (cereal plant)</li>
-                        <li>Grain classifier — direct quality reading at origin</li>
-                        <li>B2B agri-industrial sales closing with direct negotiation</li>
-                        <li>Commodities marketing: positioning Argentine origin</li>
+                        <li>• Operador del mercado de granos y oleaginosas.</li>
+                        <li>• Clasificador de granos: lectura directa de calidad.</li>
+                        <li>• Experto en negociación agroindustrial B2B.</li>
                     </ul>
-                    <p class="team-desc">Structures buyer-side operations from origin knowledge. Knows what can be promised, what cannot, and how it is controlled.</p>
-                    <a href="mailto:leandrobazan@absrepresentative.com.ar" class="email">leandrobazan@absrepresentative.com.ar</a>
+                    <a href="mailto:leandrobazan@absrepresentative.com.ar" class="email-link">leandrobazan@absrepresentative.com.ar</a>
                 </div>
                 <div class="team-card">
+                    <span class="role">Operaciones | Comercio Int.</span>
                     <h3>Victoria del Valle</h3>
-                    <div class="role">Operations | International Trade</div>
                     <ul>
-                        <li>International trade analyst — containerized and bulk operations</li>
-                        <li>Complex documentation: SENASA, certificates, CRT, bills of lading</li>
-                        <li>Coordination with quality inspectors in food operations</li>
-                        <li>Contingency resolution: critical document logistics at border</li>
+                        <li>• Analista de comercio internacional (Bulk & Container).</li>
+                        <li>• Especialista en documentación compleja (SENASA, BL).</li>
+                        <li>• Resolución de contingencias logísticas en frontera.</li>
                     </ul>
-                    <p class="team-desc">End-to-end operational execution. Manages what others only process.</p>
-                    <a href="mailto:victoria.delvalle@absrepresentative.com.ar" class="email">victoria.delvalle@absrepresentative.com.ar</a>
+                    <a href="mailto:victoria.delvalle@absrepresentative.com.ar" class="email-link">victoria.delvalle@absrepresentative.com.ar</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT - WHITE -->
-    <section id="contact" class="section-white">
+    <section id="contacto" class="section-light">
         <div class="container">
             <div class="contact-grid">
                 <div>
-                    <span class="section-label" style="color: #999;">Start</span>
-                    <h2>Contact</h2>
-                    <p style="color: #666; font-size: 1.1rem; margin: 2rem 0 3rem;">For international buyers evaluating Argentina, or structuring existing operations.</p>
-                    
-                    <div class="email-block">
-                        <div class="label">Buyer Representation</div>
-                        <a href="mailto:leandrobazan@absrepresentative.com.ar">leandrobazan@absrepresentative.com.ar</a>
-                    </div>
-                    <div class="email-block">
-                        <div class="label">Operations</div>
-                        <a href="mailto:victoria.delvalle@absrepresentative.com.ar">victoria.delvalle@absrepresentative.com.ar</a>
-                    </div>
-                    <div class="email-block">
-                        <div class="label">General</div>
-                        <a href="mailto:info@absrepresentative.com.ar">info@absrepresentative.com.ar</a>
-                    </div>
-                    
-                    <a href="https://linkedin.com/company/abs-representative" target="_blank" style="color: #a88420; text-decoration: none; font-weight: 600;">LinkedIn →</a>
+                    <span class="section-label">Contacto</span>
+                    <h2>Solicitar evaluación</h2>
+                    <p style="margin-bottom: 2rem;">La representación comienza solo después de la validación de viabilidad técnica.</p>
+                    <p><strong>General:</strong><br>info@absrepresentative.com.ar</p>
                 </div>
-                
-                <div class="form-box">
-                    <h3>Request Feasibility Assessment</h3>
-                    <p style="color: #666; margin-bottom: 2rem;">Representation begins only after feasibility validation.</p>
-                    <form action="https://formsubmit.co/leandrobazan@absrepresentative.com.ar" method="POST">
-                        <input type="hidden" name="_subject" value="New Feasibility Assessment Request">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="text" name="Company" placeholder="Company Name" required>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                            <input type="text" name="Country" placeholder="Country" required>
-                            <input type="text" name="Product" placeholder="Product" required>
+                <div class="form-container">
+                    <form action="https://formsubmit.co/info@absrepresentative.com.ar" method="POST">
+                        <input type="text" name="Empresa" placeholder="Nombre de empresa" required>
+                        <div class="form-group">
+                            <input type="text" name="País" placeholder="País" required>
+                            <input type="text" name="Producto" placeholder="Producto" required>
                         </div>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                            <input type="text" name="Volume" placeholder="Volume">
-                            <input type="text" name="Incoterm" placeholder="Incoterm">
+                        <div class="form-group">
+                            <input type="text" name="Volumen" placeholder="Volumen aproximado">
+                            <select name="Incoterm">
+                                <option value="">Seleccionar Incoterm</option>
+                                <option value="FOB">FOB</option>
+                                <option value="CFR">CFR</option>
+                                <option value="CIF">CIF</option>
+                            </select>
                         </div>
-                        <textarea name="Message" placeholder="Additional information"></textarea>
-                        <button type="submit">Request Assessment</button>
+                        <textarea name="Mensaje" rows="4" placeholder="Información adicional"></textarea>
+                        <button type="submit" class="btn-submit">Solicitar evaluación</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
-        <p>© 2024 ABS Representative. Structured buyer-side control at origin.</p>
+        <p>© 2026 ABS Representative. Todos los derechos reservados.<br>Presencia técnica profesional en origen (Argentina).</p>
     </footer>
 
-    <script>
-        function showTab(tabName, event) {
-            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            document.getElementById(tabName).classList.add('active');
-            event.currentTarget.classList.add('active');
-        }
-    </script>
 </body>
 </html>
