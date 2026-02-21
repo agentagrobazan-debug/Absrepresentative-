@@ -14,13 +14,9 @@
     </script>
 
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://absrepresentative.com.ar/">
     <link rel="icon" type="image/png" href="Favicon.png">
-
     <meta property="og:title" content="ABS Representative | Structured Buyer-Side Control at Origin">
-    <meta property="og:description" content="Exclusive buyer-side representation in Argentina. Mandatory feasibility validation.">
     <meta property="og:image" content="og-image.jpg.png">
-    <meta property="og:type" content="website">
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
@@ -35,72 +31,79 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--color-primary); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        body { font-family: 'Inter', sans-serif; color: var(--color-primary); line-height: 1.6; -webkit-font-smoothing: antialiased; background-color: white; }
         h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-height: 1.1; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 
         /* NAV */
-        nav { position: absolute; top: 0; left: 0; right: 0; z-index: 100; padding: 2.5rem 0; }
+        nav { position: absolute; top: 0; left: 0; right: 0; z-index: 100; padding: 1.5rem 0; }
         nav .container { display: flex; justify-content: space-between; align-items: center; }
-        .nav-links { display: flex; gap: 2rem; }
-        .nav-links a { text-decoration: none; color: white; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.8; transition: 0.3s; }
-        .nav-links a:hover { opacity: 1; color: var(--color-accent); }
+        .nav-links { display: flex; gap: 1.5rem; }
+        .nav-links a { text-decoration: none; color: white; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; opacity: 0.8; }
         
-        /* LOGO con filtro para blanco */
-        .logo img { height: 60px; width: auto; filter: brightness(0) invert(1); }
+        /* LOGO - Forzamos visibilidad */
+        .logo img { 
+            height: 45px; 
+            width: auto; 
+            display: block;
+            filter: brightness(0) invert(1); 
+            background: transparent;
+        }
 
-        /* HERO corregido */
+        /* HERO - Solución al Zoom en móviles */
         .hero { 
-            min-height: 100vh; 
+            min-height: 85vh; /* Bajamos la altura mínima para reducir el zoom */
             background-color: #1a1a1a;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.7)), url('herobackground.jpeg'); 
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('herobackground.jpeg'); 
             background-size: cover; 
-            background-position: center 30%; 
+            background-position: center 25%; /* Enfocamos la parte superior/media de la foto */
             background-repeat: no-repeat;
             display: flex; 
             align-items: center; 
             color: white; 
+            padding-top: 60px;
         }
-        .hero h1 { font-size: 4.5rem; margin-bottom: 1.5rem; max-width: 850px; }
-        .hero-lead { font-size: 1.5rem; margin-bottom: 3rem; opacity: 0.95; font-weight: 300; max-width: 700px; }
+
+        .hero h1 { font-size: 3.2rem; margin-bottom: 1.2rem; max-width: 800px; }
+        .hero-lead { font-size: 1.2rem; margin-bottom: 2.5rem; opacity: 0.95; max-width: 600px; font-weight: 300; }
 
         .btn-primary { 
-            display: inline-block; padding: 1.25rem 2.5rem; background: var(--color-accent); 
-            color: var(--color-primary); text-decoration: none; font-size: 0.85rem; 
-            font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; transition: 0.3s; 
+            display: inline-block; padding: 1rem 2rem; background: var(--color-accent); 
+            color: var(--color-primary); text-decoration: none; font-size: 0.75rem; 
+            font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: 0.3s; 
         }
-        .btn-primary:hover { background: var(--color-accent-hover); transform: translateY(-3px); }
 
-        section { padding: 9rem 0; }
+        /* SECCIONES */
+        section { padding: 7rem 0; }
         .section-dark { background: #0f0f0f; color: white; }
         .section-light { background: var(--color-bg-light); }
         .section-bone { background: var(--color-bg-bone); }
-        .section-white { background: white; }
         .section-label { display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 4px; color: var(--color-accent); margin-bottom: 1.5rem; font-weight: 600; }
-        h2 { font-size: 3.5rem; margin-bottom: 2.5rem; }
-        .lead { font-size: 1.25rem; opacity: 0.85; max-width: 750px; margin-bottom: 4rem; }
+        h2 { font-size: 2.8rem; margin-bottom: 2rem; }
+        .lead { font-size: 1.15rem; opacity: 0.85; max-width: 700px; margin-bottom: 3rem; }
 
-        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
         
-        .stage { background: white; padding: 3rem 2rem; border: 1px solid #eee; color: var(--color-primary); }
-        .stage.featured { border: 1px solid var(--color-accent); box-shadow: 0 25px 50px rgba(0,0,0,0.1); transform: translateY(-10px); }
-        .stage-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--color-accent); margin-bottom: 1rem; display: block; }
+        .stage { background: white; padding: 2.5rem 2rem; border: 1px solid #eee; color: var(--color-primary); }
+        .stage.featured { border: 1px solid var(--color-accent); transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .stage-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--color-accent); margin-bottom: 0.5rem; display: block; }
 
-        .market-note { background: #1a1a1a; padding: 5rem; color: white; border-top: 3px solid var(--color-accent); }
-        .market-note p { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 1.5rem; }
+        .team-card { background: white; padding: 2.5rem; border: 1px solid #eee; margin-bottom: 1rem; }
+        .email { color: var(--color-primary); text-decoration: none; font-weight: 600; border-bottom: 1px solid var(--color-accent); font-size: 0.9rem; }
 
-        .team-card { background: white; padding: 3rem; border: 1px solid #eee; }
-        .role { font-size: 0.75rem; text-transform: uppercase; color: var(--color-accent); letter-spacing: 2px; font-weight: 600; display: block; margin-bottom: 1rem; }
-        .email { color: var(--color-primary); text-decoration: none; font-weight: 600; border-bottom: 1px solid var(--color-accent); }
+        .form-box { padding: 3rem; background: white; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        input, textarea { width: 100%; padding: 1rem; border: 1px solid #ddd; margin-bottom: 1rem; font-family: 'Inter', sans-serif; }
 
-        .form-box { padding: 4rem; background: white; box-shadow: 0 30px 60px rgba(0,0,0,0.05); }
-        input, textarea { width: 100%; padding: 1.2rem; border: 1px solid #ddd; margin-bottom: 1rem; font-family: 'Inter', sans-serif; }
-        .form-confidential { font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 1.5rem; font-style: italic; }
+        footer { padding: 4rem 0; text-align: center; background: #080808; color: rgba(255,255,255,0.4); font-size: 0.75rem; }
 
-        footer { padding: 5rem 0; text-align: center; background: #080808; color: rgba(255,255,255,0.4); font-size: 0.8rem; }
-
-        @media (max-width: 768px) { .grid-3, .grid-2 { grid-template-columns: 1fr; } .hero h1 { font-size: 2.8rem; } .nav-links { display: none; } }
+        @media (max-width: 768px) { 
+            .grid-3, .grid-2 { grid-template-columns: 1fr; } 
+            .hero h1 { font-size: 2.4rem; } 
+            .nav-links { display: none; }
+            .hero { min-height: 70vh; background-position: center center; }
+            section { padding: 5rem 0; }
+        }
     </style>
 </head>
 <body>
@@ -132,15 +135,15 @@
             <span class="section-label">Identity</span>
             <h2>Your control at origin.</h2>
             <p class="lead">ABS is not a broker nor a trader. We function as your professional local presence, operating without conflicts of interest.</p>
-            <div class="grid-2" style="margin-top: 4rem;">
+            <div class="grid-2">
                 <div>
-                    <h3 style="color: var(--color-accent); margin-bottom: 1.5rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;">Core Functions</h3>
+                    <h3 style="color: var(--color-accent); margin-bottom: 1rem; font-size: 0.85rem; text-transform: uppercase;">Core Functions</h3>
                     <p>• Exclusive buyer-side representation.</p>
                     <p>• Aligned interests — no commissions from sellers.</p>
                     <p>• End-to-end management at origin.</p>
                 </div>
-                <div style="opacity: 0.6; border-left: 1px solid #333; padding-left: 3rem;">
-                    <h3 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;">Non-Intervention Policy</h3>
+                <div style="opacity: 0.7; border-left: 1px solid #333; padding-left: 2rem;">
+                    <h3 style="font-size: 0.85rem; text-transform: uppercase;">Non-Intervention Policy</h3>
                     <p>— No intermediation of operations</p>
                     <p>— No seller representation</p>
                 </div>
@@ -172,15 +175,6 @@
         </div>
     </section>
 
-    <section class="section-white" style="padding: 0;">
-        <div class="container">
-            <div class="market-note">
-                <span class="section-label">Market Note</span>
-                <p>Prior technical validation and buyer structuring are decisive variables for execution feasibility in the current campaign.</p>
-            </div>
-        </div>
-    </section>
-
     <section id="team" class="section-bone">
         <div class="container">
             <span class="section-label">Authority</span>
@@ -189,13 +183,13 @@
                 <div class="team-card">
                     <span class="role">Founder | Strategy</span>
                     <h3>Leandro Bazán</h3>
-                    <p style="margin: 1.5rem 0;">Expert in agri-industrial negotiation and quality control at origin.</p>
+                    <p style="margin: 1rem 0; font-size: 0.95rem;">Expert in agri-industrial negotiation and quality control at origin.</p>
                     <a href="mailto:leandrobazan@absrepresentative.com.ar" class="email">leandrobazan@absrepresentative.com.ar</a>
                 </div>
                 <div class="team-card">
                     <span class="role">Operations</span>
                     <h3>Victoria del Valle</h3>
-                    <p style="margin: 1.5rem 0;">Specialist in documentation and operational coordination for exports.</p>
+                    <p style="margin: 1rem 0; font-size: 0.95rem;">Specialist in documentation and operational coordination for exports.</p>
                     <a href="mailto:victoria.delvalle@absrepresentative.com.ar" class="email">victoria.delvalle@absrepresentative.com.ar</a>
                 </div>
             </div>
@@ -208,14 +202,14 @@
                 <div>
                     <span class="section-label">Engagement</span>
                     <h2>Contact</h2>
-                    <p>Structured evaluation is required before execution engagement.</p>
-                    <a href="mailto:info@absrepresentative.com.ar" style="font-size: 1.2rem; font-weight: 600; color: #1a1a1a; text-decoration: none;">info@absrepresentative.com.ar</a>
+                    <p style="margin-bottom: 2rem;">Structured evaluation is required before execution engagement.</p>
+                    <a href="mailto:info@absrepresentative.com.ar" style="font-size: 1.1rem; font-weight: 600; color: #1a1a1a; text-decoration: none;">info@absrepresentative.com.ar</a>
                 </div>
                 <div class="form-box">
                     <form action="https://formsubmit.co/leandrobazan@absrepresentative.com.ar" method="POST">
                         <input type="text" name="Company" placeholder="Company Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" placeholder="Requirements" rows="4"></textarea>
+                        <textarea name="Message" placeholder="Requirements" rows="3"></textarea>
                         <button type="submit" class="btn-primary" style="width: 100%;">Request Assessment</button>
                     </form>
                 </div>
