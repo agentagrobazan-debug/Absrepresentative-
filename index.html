@@ -21,7 +21,7 @@
             --color-primary: #1a1a1a;
             --color-accent: #c9a227;
             --color-bg-light: #f8f8f8;
-            --color-bg-soft: #f0f0f0; /* El gris suave que nos gusta */
+            --color-bg-soft: #f0f0f0;
             --max-width: 1100px;
         }
 
@@ -40,15 +40,14 @@
 
         /* --- HERO --- */
         .hero { position: relative; height: 100vh; min-height: 850px; display: flex; align-items: center; justify-content: center; }
-        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('herobackground.jpeg?v=2') center 30% / cover; z-index: 1; }
+        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('herobackground.jpeg') center 30% / cover; z-index: 1; }
         
-        /* BAJAMOS EL CONTENIDO DEL HERO PARA QUE EL LOGO NO CHOQUE */
         .hero-content { 
             position: relative; 
             z-index: 2; 
             text-align: center; 
             color: white; 
-            padding-top: 180px; /* Aumentado para bajar el logo significativamente */
+            padding-top: 180px;
             padding-left: 20px;
             padding-right: 20px;
         }
@@ -71,7 +70,7 @@
         .btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 
         /* --- SECTIONS --- */
-        section { padding: 100px 0; background: var(--color-bg-soft); } /* Cambiado a Gris Suave globalmente */
+        section { padding: 100px 0; background: var(--color-bg-soft); }
         .section-dark { background: #0f0f0f; color: white; }
         .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 25px; }
         .label { color: var(--color-accent); font-size: 11px; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; display: block; margin-bottom: 20px; }
@@ -85,19 +84,28 @@
         .email-link { color: inherit; text-decoration: none; transition: 0.3s; }
         .email-link:hover { color: var(--color-accent); }
 
-        /* --- CONTACT FORM --- */
-        .contact-wrapper { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; }
-        .form-box { background: #fff; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid #eee; }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; font-size: 11px; text-transform: uppercase; font-weight: 700; margin-bottom: 8px; color: #666; }
-        input, textarea, select { width: 100%; padding: 15px; border: 1px solid #ddd; font-family: inherit; font-size: 14px; }
-        .btn-submit { background: var(--color-primary); color: white; border: none; padding: 20px; width: 100%; font-weight: 700; text-transform: uppercase; cursor: pointer; letter-spacing: 1px; }
+        /* --- CONTACT & FORMS --- */
+        .contact-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; }
+        .forms-container { display: flex; flex-direction: column; gap: 30px; }
+        
+        .form-box { background: #fff; padding: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        .form-box h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 10px; color: var(--color-primary); }
+        .form-box p.desc { font-size: 13px; color: #666; margin-bottom: 25px; line-height: 1.4; }
+
+        .form-group { margin-bottom: 18px; }
+        label { display: block; font-size: 10px; text-transform: uppercase; font-weight: 700; margin-bottom: 6px; color: #888; letter-spacing: 1px; }
+        input, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; font-family: inherit; font-size: 14px; background: #fafafa; }
+        
+        .btn-submit { background: var(--color-primary); color: white; border: none; padding: 18px; width: 100%; font-weight: 700; text-transform: uppercase; cursor: pointer; letter-spacing: 1px; font-size: 11px; transition: 0.3s; }
+        .btn-accent { background: var(--color-accent); color: var(--color-primary); }
+        .btn-submit:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        .confidentiality { font-size: 10px; color: #999; text-align: center; margin-top: 15px; font-style: italic; }
 
         /* --- MOBILE --- */
-        @media (max-width: 768px) {
-            .nav-links { gap: 12px; }
-            .contact-wrapper { grid-template-columns: 1fr; }
-            .hero-content { padding-top: 200px; } /* Más espacio en móvil */
+        @media (max-width: 900px) {
+            .contact-layout { grid-template-columns: 1fr; }
+            .hero-content { padding-top: 200px; }
         }
     </style>
 </head>
@@ -220,7 +228,7 @@
 
     <section id="contact">
         <div class="container">
-            <div class="contact-wrapper">
+            <div class="contact-layout">
                 <div>
                     <span class="label">Engagement</span>
                     <h2>Start your assessment.</h2>
@@ -230,34 +238,38 @@
                     <a href="https://linkedin.com/company/abs-representative" style="color: var(--color-accent); font-weight: 700; text-decoration: none;">LINKEDIN →</a>
                 </div>
 
-                <div class="form-box">
-                    <form action="https://formsubmit.co/info@absrepresentative.com.ar" method="POST">
-                        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px;">
-                            <div class="form-group">
-                                <label>Company Name</label>
-                                <input type="text" name="Company" required>
+                <div class="forms-container">
+                    <div class="form-box">
+                        <form action="https://formsubmit.co/info@absrepresentative.com.ar" method="POST">
+                            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px;">
+                                <div class="form-group"><label>Company Name</label><input type="text" name="Company" required></div>
+                                <div class="form-group"><label>Country</label><input type="text" name="Country" required></div>
+                            </div>
+                            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px;">
+                                <div class="form-group"><label>Product</label><input type="text" name="Product" required></div>
+                                <div class="form-group"><label>Projected Volume</label><input type="text" name="Volume" required></div>
                             </div>
                             <div class="form-group">
-                                <label>Country</label>
-                                <input type="text" name="Country" required>
+                                <label>Specific Technical Requirements</label>
+                                <textarea name="Requirements" rows="3"></textarea>
                             </div>
-                        </div>
-                        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px;">
-                            <div class="form-group">
-                                <label>Product</label>
-                                <input type="text" name="Product" required>
+                            <button type="submit" class="btn-submit">Submit Assessment Request</button>
+                        </form>
+                    </div>
+
+                    <div class="form-box">
+                        <h4>Before You Buy From Argentina</h4>
+                        <p class="desc">Educational brief outlining structural risks international buyers often underestimate when sourcing from Argentina.</p>
+                        <form action="https://formsubmit.co/info@absrepresentative.com.ar" method="POST">
+                            <div class="form-group"><label>Company Name</label><input type="text" name="Brief-Company" required></div>
+                            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px;">
+                                <div class="form-group"><label>Country</label><input type="text" name="Brief-Country" required></div>
+                                <div class="form-group"><label>Email</label><input type="email" name="Brief-Email" required></div>
                             </div>
-                            <div class="form-group">
-                                <label>Projected Volume</label>
-                                <input type="text" name="Volume" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Specific Technical Requirements</label>
-                            <textarea name="Requirements" rows="4"></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">Submit Assessment Request</button>
-                    </form>
+                            <button type="submit" class="btn-submit btn-accent">Request Document</button>
+                            <p class="confidentiality">All submitted information is handled under strict confidentiality.</p>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
