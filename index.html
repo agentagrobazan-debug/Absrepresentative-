@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,20 +34,22 @@
         .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 
         /* NAV - Fixed for Logo Visibility */
-        nav { position: absolute; top: 0; left: 0; right: 0; z-index: 100; padding: 2.5rem 0; }
+        nav { position: absolute; top: 0; left: 0; right: 0; z-index: 100; padding: 2rem 0; }
         nav .container { display: flex; justify-content: space-between; align-items: center; }
         .nav-links { display: flex; gap: 2rem; }
         .nav-links a { text-decoration: none; color: white; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.8; transition: 0.3s; }
         .nav-links a:hover { opacity: 1; color: var(--color-accent); }
         
+        /* LOGO BOX - Forzamos que se vea */
+        .logo { display: block; width: 120px; }
         .logo img { 
-            height: 60px; 
-            width: auto; 
+            width: 100%; 
+            height: auto; 
             display: block; 
-            filter: brightness(0) invert(1); /* Parche para que el logo negro se vea blanco */
+            filter: brightness(0) invert(1); /* Convierte logo negro a blanco */
         }
 
-        /* HERO - Zoom Fix */
+        /* HERO */
         .hero { 
             min-height: 100vh; 
             background-color: #1a1a1a;
@@ -68,6 +69,7 @@
             display: inline-block; padding: 1.2rem 2.5rem; background: var(--color-accent); 
             color: var(--color-primary); text-decoration: none; font-size: 0.8rem; 
             font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; transition: 0.3s; 
+            border: none; cursor: pointer;
         }
         .btn-primary:hover { background: var(--color-accent-hover); transform: translateY(-3px); }
 
@@ -80,7 +82,7 @@
         h2 { font-size: 3.5rem; margin-bottom: 2.5rem; }
         .lead { font-size: 1.25rem; opacity: 0.85; max-width: 750px; margin-bottom: 4rem; }
 
-        /* GRID SYSTEM */
+        /* GRIDS */
         .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
         
@@ -88,21 +90,19 @@
         .stage.featured { border: 1px solid var(--color-accent); box-shadow: 0 25px 50px rgba(0,0,0,0.1); transform: translateY(-10px); }
         .stage-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--color-accent); margin-bottom: 1rem; display: block; }
 
-        .market-note { background: #1a1a1a; padding: 5rem; color: white; border-top: 3px solid var(--color-accent); margin-top: -1px; }
+        .market-note { background: #1a1a1a; padding: 5rem; color: white; border-top: 3px solid var(--color-accent); }
         .market-note p { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; line-height: 1.3; }
 
         .team-card { background: white; padding: 3.5rem; border: 1px solid #eee; }
         .role { font-size: 0.75rem; text-transform: uppercase; color: var(--color-accent); letter-spacing: 2px; font-weight: 600; display: block; margin-bottom: 1rem; }
         .email { color: var(--color-primary); text-decoration: none; font-weight: 600; border-bottom: 1px solid var(--color-accent); transition: 0.3s; }
-        .email:hover { color: var(--color-accent); }
 
         /* FORM */
         .form-box { padding: 4rem; background: white; box-shadow: 0 30px 60px rgba(0,0,0,0.05); }
-        input, textarea { width: 100%; padding: 1.2rem; border: 1px solid #ddd; margin-bottom: 1rem; font-family: 'Inter', sans-serif; font-size: 1rem; }
-        input:focus, textarea:focus { outline: 1px solid var(--color-accent); border-color: var(--color-accent); }
+        input, textarea { width: 100%; padding: 1.2rem; border: 1px solid #ddd; margin-bottom: 1rem; font-family: 'Inter', sans-serif; }
         .form-confidential { font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 1.5rem; font-style: italic; display: block; }
 
-        footer { padding: 5rem 0; text-align: center; background: #080808; color: rgba(255,255,255,0.4); font-size: 0.8rem; border-top: 1px solid #1a1a1a; }
+        footer { padding: 5rem 0; text-align: center; background: #080808; color: rgba(255,255,255,0.4); font-size: 0.8rem; }
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
@@ -111,7 +111,6 @@
             .nav-links { display: none; }
             .hero { background-position: center center; min-height: 80vh; }
             section { padding: 5rem 0; }
-            .market-note { padding: 3rem 2rem; }
         }
     </style>
 </head>
@@ -186,64 +185,6 @@
     </section>
 
     <section style="padding: 0; background-color: #0f0f0f;">
-        <div class="container" style="max-width: 100%; padding: 0;">
-            <div class="market-note">
-                <div class="container">
-                    <span class="section-label">Market Note</span>
-                    <p>Prior technical validation and buyer structuring are decisive variables for execution feasibility in the current campaign.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="team" class="section-bone">
-        <div class="container">
-            <span class="section-label">Authority</span>
-            <h2>Technical Team</h2>
-            <div class="grid-2">
-                <div class="team-card">
-                    <span class="role">Founder | Strategy</span>
-                    <h3 style="font-size: 2.5rem; margin-bottom: 1rem;">Leandro Bazán</h3>
-                    <p style="margin-bottom: 2rem; color: #555;">Expert in agri-industrial negotiation and quality control at origin.</p>
-                    <a href="mailto:leandrobazan@absrepresentative.com.ar" class="email">leandrobazan@absrepresentative.com.ar</a>
-                </div>
-                <div class="team-card">
-                    <span class="role">Operations</span>
-                    <h3 style="font-size: 2.5rem; margin-bottom: 1rem;">Victoria del Valle</h3>
-                    <p style="margin-bottom: 2rem; color: #555;">Specialist in documentation and operational coordination for exports.</p>
-                    <a href="mailto:victoria.delvalle@absrepresentative.com.ar" class="email">victoria.delvalle@absrepresentative.com.ar</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section-light">
-        <div class="container">
-            <div class="grid-2" style="align-items: center;">
-                <div>
-                    <span class="section-label">Engagement</span>
-                    <h2>Inquiry</h2>
-                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">Structured evaluation is required before execution engagement. Contact us to start the process.</p>
-                    <a href="mailto:info@absrepresentative.com.ar" style="font-size: 1.5rem; font-weight: 600; color: #1a1a1a; text-decoration: none;">info@absrepresentative.com.ar</a>
-                </div>
-                <div class="form-box">
-                    <form action="https://formsubmit.co/leandrobazan@absrepresentative.com.ar" method="POST">
-                        <input type="text" name="Company" placeholder="Company Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" placeholder="Specific Requirements" rows="4"></textarea>
-                        <span class="form-confidential">All inquiries are handled with strict confidentiality.</span>
-                        <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">Request Assessment</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>© 2026 ABS Representative. All rights reserved. <br>Structured buyer-side control at origin (Argentina).</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+        <div class="market-note">
+            <div class="container">
+                
