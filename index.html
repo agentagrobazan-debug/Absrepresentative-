@@ -15,9 +15,7 @@
 
     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/png" href="Favicon.png">
-    <meta property="og:title" content="ABS Representative | Structured Buyer-Side Control at Origin">
-    <meta property="og:image" content="og-image.jpg.png">
-
+    
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
@@ -35,37 +33,30 @@
         h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-height: 1.1; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 
-        /* NAV */
-        nav { position: absolute; top: 0; left: 0; right: 0; z-index: 100; padding: 2.5rem 0; }
-        nav .container { display: flex; justify-content: space-between; align-items: center; }
-        .nav-links { display: flex; gap: 2.5rem; }
-        .nav-links a { text-decoration: none; color: white; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.8; transition: 0.3s; }
+        /* NAV - Centered without Logo */
+        nav { position: absolute; top: 0; left: 0; right: 0; z-index: 100; padding: 3rem 0; }
+        .nav-centered { display: flex; justify-content: center; align-items: center; width: 100%; }
+        .nav-links { display: flex; gap: 3rem; }
+        .nav-links a { text-decoration: none; color: white; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 3px; opacity: 0.8; transition: 0.3s; font-weight: 500; }
         .nav-links a:hover { opacity: 1; color: var(--color-accent); }
-        
-        /* LOGO FIX */
-        .logo { display: block; }
-        .logo img { 
-            height: 55px; 
-            width: auto; 
-            display: block; 
-            filter: brightness(0) invert(1); /* Parche para logo oscuro sobre fondo oscuro */
-        }
 
-        /* HERO */
+        /* HERO - Optimized Background */
         .hero { 
             min-height: 100vh; 
             background-color: #1a1a1a;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url('herobackground.jpeg'); 
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('herobackground.jpeg'); 
             background-size: cover; 
             background-position: center 30%; 
             background-repeat: no-repeat;
             display: flex; 
             align-items: center; 
             color: white; 
+            text-align: center; /* Centramos el contenido del hero también */
         }
 
-        .hero h1 { font-size: 4.5rem; margin-bottom: 1.5rem; max-width: 850px; }
-        .hero-lead { font-size: 1.5rem; margin-bottom: 3rem; opacity: 0.95; max-width: 700px; font-weight: 300; }
+        .hero .container { display: flex; flex-direction: column; align-items: center; }
+        .hero h1 { font-size: 4.5rem; margin-bottom: 1.5rem; max-width: 900px; }
+        .hero-lead { font-size: 1.5rem; margin-bottom: 3rem; opacity: 0.95; max-width: 750px; font-weight: 300; }
 
         .btn-primary { 
             display: inline-block; padding: 1.2rem 2.5rem; background: var(--color-accent); 
@@ -74,7 +65,7 @@
         }
         .btn-primary:hover { background: var(--color-accent-hover); transform: translateY(-3px); }
 
-        /* SECCIONES */
+        /* SECCIONES ORIGINALES */
         section { padding: 9rem 0; }
         .section-dark { background: #0f0f0f; color: white; }
         .section-light { background: var(--color-bg-light); }
@@ -86,43 +77,42 @@
         .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
         
-        .stage { background: white; padding: 3rem 2rem; border: 1px solid #eee; color: var(--color-primary); }
+        .stage { background: white; padding: 3rem 2rem; border: 1px solid #eee; color: var(--color-primary); text-align: left; }
         .stage.featured { border: 1px solid var(--color-accent); box-shadow: 0 25px 50px rgba(0,0,0,0.1); transform: translateY(-10px); }
         .stage-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--color-accent); margin-bottom: 1rem; display: block; }
 
         /* MARKET NOTE */
-        .market-note { background: #1a1a1a; padding: 5rem; color: white; border-top: 3px solid var(--color-accent); margin-top: -1px; }
-        .market-note p { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; line-height: 1.3; }
+        .market-note { background: #1a1a1a; padding: 5rem; color: white; border-top: 3px solid var(--color-accent); margin-top: -1px; text-align: center; }
+        .market-note p { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; line-height: 1.3; margin: 0 auto; max-width: 800px; }
 
-        .team-card { background: white; padding: 3.5rem; border: 1px solid #eee; }
+        .team-card { background: white; padding: 3.5rem; border: 1px solid #eee; text-align: left; }
         .role { font-size: 0.75rem; text-transform: uppercase; color: var(--color-accent); letter-spacing: 2px; font-weight: 600; display: block; margin-bottom: 1rem; }
         .email { color: var(--color-primary); text-decoration: none; font-weight: 600; border-bottom: 1px solid var(--color-accent); transition: 0.3s; }
-        .email:hover { color: var(--color-accent); }
 
         /* FORM */
-        .form-box { padding: 4rem; background: white; box-shadow: 0 30px 60px rgba(0,0,0,0.05); }
+        .form-box { padding: 4rem; background: white; box-shadow: 0 30px 60px rgba(0,0,0,0.05); text-align: left; }
         input, textarea { width: 100%; padding: 1.2rem; border: 1px solid #ddd; margin-bottom: 1rem; font-family: 'Inter', sans-serif; font-size: 1rem; }
         .form-confidential { font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 1.5rem; font-style: italic; display: block; }
 
         footer { padding: 5rem 0; text-align: center; background: #080808; color: rgba(255,255,255,0.4); font-size: 0.8rem; }
 
+        /* RESPONSIVE */
         @media (max-width: 768px) {
-            .grid-3, .grid-2 { grid-template-columns: 1fr; }
+            .nav-links { gap: 1.2rem; }
+            .nav-links a { font-size: 0.65rem; letter-spacing: 1.5px; }
             .hero h1 { font-size: 2.8rem; }
-            .nav-links { display: none; }
-            .hero { background-position: center center; min-height: 80vh; }
+            .hero-lead { font-size: 1.2rem; }
+            .grid-3, .grid-2 { grid-template-columns: 1fr; }
             section { padding: 5rem 0; }
             .market-note { padding: 3rem 2rem; }
+            .hero { background-position: center 20%; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="container">
-            <div class="logo">
-                <img src="Logosabs.jpeg" alt="ABS Logo">
-            </div>
+        <div class="container nav-centered">
             <div class="nav-links">
                 <a href="#concept">Concept</a>
                 <a href="#structure">Structure</a>
