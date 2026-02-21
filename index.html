@@ -21,7 +21,7 @@
             --color-primary: #1a1a1a;
             --color-accent: #c9a227;
             --color-bg-light: #f8f8f8;
-            --color-bg-soft: #f0f0f0; /* Gris suave para Methodology */
+            --color-bg-soft: #f0f0f0; /* El gris suave que nos gusta */
             --max-width: 1100px;
         }
 
@@ -41,9 +41,28 @@
         /* --- HERO --- */
         .hero { position: relative; height: 100vh; min-height: 850px; display: flex; align-items: center; justify-content: center; }
         .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('herobackground.jpeg') center 30% / cover; z-index: 1; }
-        .hero-content { position: relative; z-index: 2; text-align: center; color: white; padding: 140px 20px 0; }
         
-        .main-logo { width: clamp(180px, 22vw, 250px); height: auto; margin-bottom: 30px; mix-blend-mode: multiply; filter: contrast(1.1) brightness(1.1); background: rgba(255,255,255,0.85); padding: 12px; }
+        /* BAJAMOS EL CONTENIDO DEL HERO PARA QUE EL LOGO NO CHOQUE */
+        .hero-content { 
+            position: relative; 
+            z-index: 2; 
+            text-align: center; 
+            color: white; 
+            padding-top: 180px; /* Aumentado para bajar el logo significativamente */
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        .main-logo { 
+            width: clamp(180px, 22vw, 250px); 
+            height: auto; 
+            margin-bottom: 35px; 
+            mix-blend-mode: multiply; 
+            filter: contrast(1.1) brightness(1.1); 
+            background: rgba(255,255,255,0.85); 
+            padding: 12px; 
+        }
+
         .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 6vw, 3.8rem); line-height: 1.1; margin-bottom: 15px; }
         .hero-tagline { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.2rem, 3vw, 2rem); color: var(--color-accent); margin-bottom: 25px; font-style: italic; }
         .hero-lead { font-size: clamp(1rem, 2vw, 1.2rem); margin-bottom: 40px; max-width: 800px; margin-inline: auto; opacity: 0.9; }
@@ -52,7 +71,7 @@
         .btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 
         /* --- SECTIONS --- */
-        section { padding: 100px 0; background: #fff; }
+        section { padding: 100px 0; background: var(--color-bg-soft); } /* Cambiado a Gris Suave globalmente */
         .section-dark { background: #0f0f0f; color: white; }
         .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 25px; }
         .label { color: var(--color-accent); font-size: 11px; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; display: block; margin-bottom: 20px; }
@@ -60,16 +79,15 @@
         h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 15px; color: var(--color-accent); }
 
         .grid { display: grid; gap: 40px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-        .card { border: 1px solid #eee; padding: 40px; transition: 0.3s; }
+        .card { border: 1px solid #ddd; padding: 40px; transition: 0.3s; background: #fff; }
         .card:hover { border-color: var(--color-accent); }
         
-        /* Estilo para los emails con mailto */
         .email-link { color: inherit; text-decoration: none; transition: 0.3s; }
         .email-link:hover { color: var(--color-accent); }
 
         /* --- CONTACT FORM --- */
         .contact-wrapper { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; }
-        .form-box { background: #fff; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .form-box { background: #fff; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid #eee; }
         .form-group { margin-bottom: 20px; }
         label { display: block; font-size: 11px; text-transform: uppercase; font-weight: 700; margin-bottom: 8px; color: #666; }
         input, textarea, select { width: 100%; padding: 15px; border: 1px solid #ddd; font-family: inherit; font-size: 14px; }
@@ -79,7 +97,7 @@
         @media (max-width: 768px) {
             .nav-links { gap: 12px; }
             .contact-wrapper { grid-template-columns: 1fr; }
-            .hero-content { padding-top: 180px; }
+            .hero-content { padding-top: 200px; } /* Más espacio en móvil */
         }
     </style>
 </head>
@@ -130,14 +148,14 @@
         </div>
     </section>
 
-    <section id="structure" style="background-color: var(--color-bg-soft); color: var(--color-primary);">
+    <section id="structure">
         <div class="container">
             <span class="label">Methodology</span>
             <h2>Buyer-Side Structure</h2>
             <p style="margin-bottom: 50px; max-width: 700px; opacity: 0.8;">A rigorous sequence designed to mitigate the inherent risks of the Argentine origin.</p>
             
             <div class="grid">
-                <div class="card" style="background: #fff; border: 1px solid #ddd; position: relative;">
+                <div class="card" style="position: relative;">
                     <span style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: rgba(0, 0, 0, 0.6); position: absolute; top: 10px; right: 20px; font-weight: 700;">00</span>
                     <h3>Risk Education</h3>
                     <p style="color: #555;">Free educational document identifying structural risks international buyers underestimate before buying from Argentina.</p>
@@ -149,7 +167,7 @@
                     <p style="color: #fff; font-weight: 500;"><strong>Mandatory analysis</strong> including supply validation, quality parameters, executable volumes, and execution risk mapping.</p>
                 </div>
 
-                <div class="card" style="background: #fff; border: 1px solid #ddd; position: relative;">
+                <div class="card" style="position: relative;">
                     <span style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: rgba(0, 0, 0, 0.6); position: absolute; top: 10px; right: 20px; font-weight: 700;">02</span>
                     <h3>Local Representation</h3>
                     <p style="color: #555;">Execution control at origin: negotiation structuring, supplier DD, quality coordination, and operational tracking.</p>
@@ -200,7 +218,7 @@
         </div>
     </section>
 
-    <section id="contact" style="background: var(--color-bg-light);">
+    <section id="contact">
         <div class="container">
             <div class="contact-wrapper">
                 <div>
