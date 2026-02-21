@@ -21,7 +21,6 @@
             --color-primary: #1a1a1a;
             --color-accent: #c9a227;
             --color-bg-light: #f4f4f4;
-            --color-bg-bone: #f9f7f2;
             --max-width: 1100px;
         }
 
@@ -32,76 +31,80 @@
             color: var(--color-primary); 
             background-color: #000;
             line-height: 1.6; 
-            -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
-        h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; line-height: 1.2; }
-        .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
+        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; }
+        .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 25px; }
 
         /* Navigation */
         nav { 
             position: absolute; top: 0; left: 0; right: 0; z-index: 100; 
-            padding: 25px 0; background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+            padding: 30px 0; background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
         }
-        .nav-links { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; }
+        .nav-links { display: flex; justify-content: center; gap: 30px; }
         .nav-links a { 
             text-decoration: none; color: white; font-size: 11px; 
             text-transform: uppercase; letter-spacing: 2px; font-weight: 600;
-            padding: 5px 10px; transition: 0.3s;
         }
-        .nav-links a:hover { color: var(--color-accent); }
 
-        /* Hero Section - OPTIMIZED ENCADRE */
+        /* Hero Section - FIXED ENCADRE */
         .hero { 
-            min-height: 100vh; display: flex; align-items: center; justify-content: center;
-            background-color: #1a1a1a;
-            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('herobackground.jpeg');
-            background-repeat: no-repeat;
-            background-size: cover; 
-            /* En PC enfocamos la parte superior para que no se vea 'lejos' */
-            background-position: center top; 
-            color: white; text-align: center;
-            padding: 100px 20px;
-        }
-        
-        @media (max-width: 768px) {
-            .hero { 
-                background-position: center center; /* En móvil centramos */
-            }
+            position: relative;
+            min-height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            overflow: hidden;
+            background-color: #000;
         }
 
-        .hero h1 { font-size: clamp(2.2rem, 7vw, 4.5rem); margin-bottom: 20px; width: 100%; max-width: 950px; text-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-        .hero-lead { font-size: clamp(1rem, 2.5vw, 1.4rem); margin-bottom: 40px; max-width: 800px; opacity: 0.95; font-weight: 300; }
-        
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('herobackground.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* Priorizamos la parte superior y central para que en PC se vean las manos y la mesa */
+            background-position: center 20%; 
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .hero h1 { font-size: clamp(2.2rem, 8vw, 4.2rem); margin-bottom: 20px; line-height: 1.1; }
+        .hero-lead { font-size: clamp(1rem, 3vw, 1.4rem); margin-bottom: 40px; max-width: 800px; margin-inline: auto; font-weight: 300; opacity: 0.9; }
+
         .btn-main { 
             background: var(--color-accent); color: var(--color-primary); 
-            padding: 18px 35px; text-decoration: none; font-weight: 700; 
+            padding: 20px 40px; text-decoration: none; font-weight: 700; 
             text-transform: uppercase; font-size: 12px; letter-spacing: 1px;
-            display: inline-block; transition: 0.3s; border: none;
+            display: inline-block; transition: 0.3s;
         }
         .btn-main:hover { background: #e8d5a3; transform: translateY(-2px); }
 
         /* Sections */
-        section { padding: 80px 0; background: #fff; }
+        section { padding: 100px 0; background: #fff; }
         .section-dark { background: #0f0f0f; color: white; }
-        .section-light { background: var(--color-bg-light); }
-        .section-bone { background: var(--color-bg-bone); }
-        .label { color: var(--color-accent); font-size: 11px; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; display: block; margin-bottom: 15px; }
-        h2 { font-size: clamp(1.8rem, 5vw, 3rem); margin-bottom: 30px; }
+        .label { color: var(--color-accent); font-size: 11px; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; display: block; margin-bottom: 20px; }
+        h2 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 40px; }
         
-        .grid { display: grid; gap: 30px; }
-        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
-        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        .grid { display: grid; gap: 40px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .card { background: white; padding: 40px; border: 1px solid #eee; }
+        .card.featured { border: 2px solid var(--color-accent); }
 
-        .card { background: white; padding: 40px 30px; border: 1px solid #eee; height: 100%; color: var(--color-primary); }
-        .card.featured { border: 2px solid var(--color-accent); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
-        .num { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; color: var(--color-accent); display: block; margin-bottom: 10px; }
+        footer { padding: 60px 20px; background: #000; color: rgba(255,255,255,0.4); text-align: center; font-size: 11px; }
 
-        footer { padding: 60px 20px; background: #000; color: rgba(255,255,255,0.3); text-align: center; font-size: 11px; }
-
-        @media (max-width: 600px) {
-            .form-row { grid-template-columns: 1fr; }
-            .hero { padding-top: 120px; }
+        /* Mobile specific fixes */
+        @media (max-width: 768px) {
+            .hero-bg { background-position: center center; }
+            .nav-links { gap: 15px; }
+            section { padding: 70px 0; }
         }
     </style>
 </head>
@@ -111,14 +114,14 @@
         <div class="container nav-links">
             <a href="#abs">Concept</a>
             <a href="#process">Process</a>
-            <a href="#value">Value</a>
             <a href="#team">Team</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="container">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
             <h1>Your professional local presence in Argentina</h1>
             <p class="hero-lead">Operating without opening your own structure. Exclusive representation for the buyer side.</p>
             <a href="#contact" class="btn-main">Request Feasibility Assessment</a>
@@ -129,73 +132,41 @@
         <div class="container">
             <span class="label">Identity</span>
             <h2>Your control at origin.</h2>
-            <div class="grid grid-2">
+            <div class="grid">
                 <div>
                     <p style="font-size: 1.2rem; margin-bottom: 25px; opacity: 0.9;">ABS is not a broker nor a trader. We function as your own technical arm, ensuring transparency without conflicts of interest.</p>
-                    <ul style="list-style: none;">
-                        <li style="margin-bottom: 12px;"><span style="color: var(--color-accent);">•</span> Exclusive buyer-side representation only.</li>
-                        <li style="margin-bottom: 12px;"><span style="color: var(--color-accent);">•</span> Aligned interests: zero commissions from sellers.</li>
-                        <li style="margin-bottom: 12px;"><span style="color: var(--color-accent);">•</span> End-to-end management at the source.</li>
-                    </ul>
                 </div>
-                <div style="background: rgba(255,255,255,0.03); padding: 30px; border-left: 1px solid #333;">
-                    <h4 class="label">Non-Intervention Policy</h4>
-                    <p style="margin-bottom: 10px; opacity: 0.7;">— No brokerage or trading</p>
-                    <p style="margin-bottom: 10px; opacity: 0.7;">— No seller representation</p>
-                    <p>— No competition with the buyer</p>
+                <div style="background: rgba(255,255,255,0.05); padding: 30px; border-left: 2px solid var(--color-accent);">
+                    <h4 class="label" style="margin-bottom: 10px;">Non-Intervention</h4>
+                    <p style="opacity: 0.7;">— No brokerage or trading<br>— No seller representation<br>— No competition with the buyer</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="process" class="section-light">
+    <section id="process">
         <div class="container">
             <span class="label">Methodology</span>
             <h2>Buyer-Side Structure</h2>
-            <div class="grid grid-3">
+            <div class="grid">
                 <div class="card">
-                    <span class="num">00</span>
-                    <h4>Educational</h4>
-                    <p>Document identifying risks international buyers underestimate in Argentina.</p>
+                    <h4 style="margin-bottom: 15px;">Feasibility</h4>
+                    <p>Mandatory technical evaluation: supply mapping, quality validation, and execution risk analysis.</p>
                 </div>
                 <div class="card featured">
-                    <span class="num">01</span>
-                    <h4>Feasibility</h4>
-                    <p>Mandatory evaluation: supply mapping, quality validation, and execution risk analysis.</p>
-                </div>
-                <div class="card">
-                    <span class="num">02</span>
-                    <h4>Execution</h4>
-                    <p>Full representation: negotiation control, quality inspection, and logistics.</p>
+                    <h4 style="margin-bottom: 15px;">Execution</h4>
+                    <p>Full representation at origin: negotiation control, pre-shipment quality inspection, and logistics.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="team">
-        <div class="container">
-            <span class="label">Technical Team</span>
-            <h2>Authority at Origin</h2>
-            <div class="grid grid-2">
-                <div class="team-card">
-                    <h3>Leandro Bazán</h3>
-                    <p class="label">Founder | Strategy</p>
-                    <p>Expert in B2B agri-industrial negotiation and grain quality assessment.</p>
-                </div>
-                <div class="team-card">
-                    <h3>Victoria del Valle</h3>
-                    <p class="label">Operations | Intl. Trade</p>
-                    <p>Specialist in complex documentation and logistics coordination.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section-bone">
-        <div class="container">
+    <section id="contact" style="background: var(--color-bg-light);">
+        <div class="container" style="text-align: center;">
             <span class="label">Inquiry</span>
-            <h2>Request Assessment</h2>
-            <p>info@absrepresentative.com.ar</p>
+            <h2>Start your evaluation</h2>
+            <p style="margin-bottom: 30px;">info@absrepresentative.com.ar</p>
+            <a href="mailto:info@absrepresentative.com.ar" class="btn-main">Send Email</a>
         </div>
     </section>
 
