@@ -33,27 +33,27 @@
             overflow-x: hidden;
         }
 
-        /* --- NAVEGACIÓN MEJORADA --- */
+        /* --- NAVEGACIÓN (Pestañas más grandes y separadas) --- */
         nav { 
             position: absolute; 
             top: 0; left: 0; right: 0; 
             z-index: 100; 
-            padding: 45px 0; /* Más espacio */
-            /* Fondo degrade oscuro para que resalten las pestañas */
+            padding: 50px 0; 
+            /* Fondo degrade más marcado para legibilidad */
             background: linear-gradient(to bottom, 
-                rgba(0,0,0,0.98) 0%, 
-                rgba(0,0,0,0.8) 60%, 
+                rgba(0,0,0,0.95) 0%, 
+                rgba(0,0,0,0.8) 50%, 
                 transparent 100%);
         }
         .nav-links { 
             display: flex; 
             justify-content: center; 
-            gap: clamp(20px, 5vw, 55px); /* Mucho más separados */
+            gap: 60px; /* Máxima separación */
         }
         .nav-links a { 
             text-decoration: none; 
             color: #fff; 
-            font-size: 14px; /* Más grandes */
+            font-size: 14px; 
             text-transform: uppercase; 
             letter-spacing: 3px; 
             font-weight: 700;
@@ -84,54 +84,57 @@
             position: relative;
             z-index: 2;
             text-align: center;
-            padding-top: 100px; /* Para que el logo baje y no toque el menú */
-            width: 90%;
-            max-width: 1000px;
+            /* BAJAMOS TODO EL BLOQUE: Le damos un margen superior mayor para alejarlo del NAV */
+            margin-top: 120px; 
+            padding: 0 20px;
+            width: 100%;
         }
 
-        /* --- EL LOGO --- */
+        /* --- EL LOGO (Bajado y Escalado) --- */
         .main-logo {
-            width: 220px; /* Tamaño imponente */
+            width: clamp(180px, 22vw, 240px); 
             height: auto;
-            margin-bottom: 35px;
+            /* Espacio arriba del logo para que no toque las pestañas */
+            margin-top: 40px; 
+            margin-bottom: 30px; 
             display: inline-block;
-            /* Filtro para que el logo se vea nítido */
             filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
         }
 
         .hero h1 { 
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(2.4rem, 8vw, 4.5rem); 
+            font-size: clamp(2.2rem, 8vw, 4.2rem); 
             line-height: 1.1; 
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             text-shadow: 0 4px 20px rgba(0,0,0,0.8);
         }
 
         .hero-lead { 
-            font-size: clamp(1rem, 2.8vw, 1.4rem); 
-            margin-bottom: 45px; 
+            font-size: clamp(1rem, 2.8vw, 1.3rem); 
+            margin-bottom: 40px; 
             opacity: 0.9;
-            max-width: 850px;
+            max-width: 800px;
             margin-inline: auto;
         }
 
         .btn-main { 
             background: var(--color-accent); 
             color: var(--color-primary); 
-            padding: 22px 50px; 
+            padding: 20px 45px; 
             text-decoration: none; 
             font-weight: 800; 
             text-transform: uppercase; 
-            font-size: 13px; 
+            font-size: 12px; 
             letter-spacing: 2px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
 
+        /* Ajustes Mobile */
         @media (max-width: 768px) {
             nav { padding: 30px 10px; }
-            .nav-links { gap: 15px; }
-            .nav-links a { font-size: 10px; letter-spacing: 1px; }
-            .main-logo { width: 160px; }
+            .nav-links { gap: 20px; flex-wrap: wrap; }
+            .hero-content { margin-top: 150px; } /* Más margen en móvil para el menú de dos líneas */
+            .main-logo { width: 160px; margin-top: 20px; }
         }
     </style>
 </head>
@@ -155,7 +158,7 @@
             
             <h1>Your professional local presence in Argentina</h1>
             <p class="hero-lead">Operating without opening your own structure. Exclusive representation for the buyer side.</p>
-            <a href="#contact" class="btn-main">Request Feasibility Assessment</a>
+            <a href="#contact" class="btn-main">Request Assessment</a>
         </div>
     </header>
 
