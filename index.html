@@ -48,7 +48,6 @@
         
         .main-logo { width: clamp(120px, 15vw, 180px); height: auto; margin-bottom: 15px; background: transparent; padding: 0; display: inline-block; }
         .hero h1 { font-size: clamp(1.6rem, 4vw, 3.5rem); line-height: 1.1; margin-bottom: 15px; font-weight: 700; }
-        .hero-tagline { font-family: 'Cormorant Garamond', serif; font-size: clamp(1rem, 2vw, 1.4rem); color: var(--color-accent); margin-bottom: 5px; font-style: italic; }
         .hero-location { font-size: 10px; text-transform: uppercase; letter-spacing: 5px; color: #fff; opacity: 0.6; margin-bottom: 25px; display: block; }
         .hero-lead { font-size: clamp(0.85rem, 1.5vw, 1.1rem); margin-bottom: 30px; max-width: 700px; margin-inline: auto; opacity: 0.85; }
         .btn-main { background: var(--color-accent); color: var(--color-primary); padding: 18px 35px; text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 1.5px; display: inline-block; width: 100%; max-width: 400px; transition: 0.3s; }
@@ -77,6 +76,9 @@
         .mail-link { color: var(--color-accent); text-decoration: none; font-weight: 700; transition: 0.2s; }
         .mail-link:hover { opacity: 0.7; }
 
+        /* --- CONTACT BOXES --- */
+        .contact-sidebar-box { background: #fff; border-left: 3px solid var(--color-accent); padding: 25px; margin-top: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+
         footer { padding: 40px; text-align: center; background: #000; color: #666; font-size: 10px; letter-spacing: 1px; }
 
         @media (max-width: 768px) {
@@ -89,6 +91,7 @@
     <nav>
         <div class="nav-links">
             <a href="#concept">Concept</a>
+            <a href="#about">About</a>
             <a href="#structure">Structure</a>
             <a href="#value">Value</a>
             <a href="#team">Team</a>
@@ -101,6 +104,7 @@
         <div class="hero-content">
             <img src="absdora.png" alt="ABS Logo" class="main-logo">
             <h1>Structured Buyer-Side Control at Origin</h1>
+            <span class="hero-location">ARGENTINA</span>
             <p class="hero-lead">Exclusive technical representation for international agri-industrial buyers in Argentina.</p>
             <a href="#contact" class="btn-main">Request Structured Feasibility Assessment</a>
         </div>
@@ -126,6 +130,22 @@
                     <p style="margin-bottom: 15px; font-size: 14px;"><strong>Aligned interests:</strong> No margins on product, no seller commissions.</p>
                     <p style="font-size: 14px;"><strong>End-to-end:</strong> From market intelligence to final shipment.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" style="background: #fff;">
+        <div class="container">
+            <span class="label">Context</span>
+            <h2>Bridging the gap in Argentina.</h2>
+            <div style="max-width: 850px;">
+                <p style="font-size: 1.1rem; margin-bottom: 25px; line-height: 1.8;">ABS was born from direct experience in the Argentine market and from years of observing a recurring pattern in international sourcing operations: <strong>genuine purchasing intent, yet decisions made from a distance</strong> — based on incomplete information, misaligned expectations and underestimated execution risk at origin.</p>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 25px; line-height: 1.8;">That gap between intention and operational reality is what led to the creation of ABS. At ABS, we believe that international buyers need more than information: <strong>they need presence, technical judgment and real execution control at origin.</strong></p>
+                
+                <p style="font-size: 1.1rem; margin-bottom: 25px; line-height: 1.8;">We operate as the foreign buyer’s commercial office in Argentina, representing buyer interests exclusively and serving as a permanent on-the-ground presence. Our objective is to address the needs of foreign buyers in the Argentine market through technical analysis, structured validation and disciplined execution.</p>
+                
+                <p style="font-size: 1.2rem; font-weight: 700; color: var(--color-accent); border-top: 1px solid #eee; padding-top: 20px;">Our role is not intermediation. It is responsibility, validation and structured execution.</p>
             </div>
         </div>
     </section>
@@ -199,21 +219,25 @@ Technical written English proficiency for international documentation and commun
         </div>
     </section>
 
-    <section id="contact" style="background: #fff;">
+    <section id="contact" style="background: var(--color-bg-soft);">
         <div class="container">
             <div class="grid contact-grid" style="grid-template-columns: 1fr 1.5fr; gap: 50px; align-items: start;">
                 <div>
                     <span class="label">Engagement</span>
-                    <h2 style="color: #000; margin-bottom: 20px;">Work with us</h2>
-                    <h3 style="color: #000; font-size: 1.3rem;">Technical Inquiry</h3>
-                    <p style="font-size: 14px; margin-bottom: 25px;">Before formal engagement, we conduct a structured feasibility assessment to validate supply viability, quality parameters, executable volumes, and operational risk exposure in Argentina.</p>
-                    <p style="font-size: 13px; margin-bottom: 5px;"><strong>General Inquiries:</strong></p>
-                    <p style="font-size: 13px; margin-bottom: 25px;"><a href="mailto:info@absrepresentative.com.ar" class="mail-link">info@absrepresentative.com.ar</a></p>
+                    <h2 style="color: #000; margin-bottom: 40px; font-size: 3rem; border-bottom: 2px solid var(--color-accent); display: inline-block; padding-bottom: 10px;">Technical Inquiry</h2>
                     
-                    <a href="https://linkedin.com" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none;">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 20px; height: 20px; filter: grayscale(1) brightness(0);">
-                        <span style="font-size: 10px; font-weight: 800; color: #000; letter-spacing: 2px; margin-left: 8px; border-bottom: 2px solid var(--color-accent);">LINKEDIN</span>
-                    </a>
+                    <p style="font-size: 15px; margin-bottom: 25px; font-weight: 500;">Before formal engagement, we conduct a structured feasibility assessment to validate supply viability, quality parameters, executable volumes, and operational risk exposure in Argentina.</p>
+                    
+                    <div class="contact-sidebar-box">
+                        <p style="font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: #999; margin-bottom: 10px; font-weight: 700;">Direct Contact</p>
+                        <p style="font-size: 14px; margin-bottom: 15px;"><strong>General Inquiries:</strong><br>
+                        <a href="mailto:info@absrepresentative.com.ar" class="mail-link">info@absrepresentative.com.ar</a></p>
+                        
+                        <a href="https://linkedin.com" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none;">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 18px; height: 18px; filter: grayscale(1) brightness(0);">
+                            <span style="font-size: 10px; font-weight: 800; color: #000; letter-spacing: 2px; margin-left: 8px; border-bottom: 1px solid var(--color-accent);">LINKEDIN NETWORK</span>
+                        </a>
+                    </div>
                 </div>
 
                 <div style="margin-top: 10px;">
@@ -234,7 +258,7 @@ Technical written English proficiency for international documentation and commun
                         </form>
                     </div>
 
-                    <div class="form-box" style="background: var(--color-bg-soft); border: none;">
+                    <div class="form-box" style="border: none;">
                         <h4 style="margin-bottom: 10px; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;">Strategic Entry Brief</h4>
                         <p style="font-size: 11px; color: #888; margin-bottom: 20px;">Request the strategic document outlining structural risks international buyers commonly underestimate before entering the Argentine market.</p>
                         <form action="https://formsubmit.co/info@absrepresentative.com.ar" method="POST">
