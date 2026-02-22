@@ -50,6 +50,7 @@
             background-color: #000;
         }
         
+        /* CAPA 0: La imagen real con el nombre corregido */
         .hero-image {
             position: absolute;
             top: 0;
@@ -58,10 +59,11 @@
             height: 100%;
             object-fit: cover;
             object-position: center center;
-            filter: grayscale(10%) contrast(1.05) brightness(0.6);
+            filter: grayscale(10%) contrast(1.05) brightness(0.65);
             z-index: 0;
         }
 
+        /* CAPA 1: El degradado para legibilidad */
         .hero-bg {
             position: absolute;
             top: 0;
@@ -199,7 +201,7 @@
     </nav>
 
     <header class="hero">
-        <img src="background.jpeg" class="hero-image" alt="Agri-industrial origin background">
+        <img src="herobackground.jpeg" class="hero-image" alt="Agri-industrial background">
         <div class="hero-bg"></div>
         <div class="container hero-content">
             <img src="logoabs.png" alt="ABS Logo" class="main-logo">
