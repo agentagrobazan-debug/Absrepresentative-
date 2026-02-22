@@ -39,7 +39,7 @@
         .nav-links a:hover { opacity: 1; color: var(--color-accent); }
 
         /* --- HERO --- */
-        .hero { position: relative; height: 100vh; min-height: 850px; display: flex; align-items: center; justify-content: center; }
+        .hero { position: relative; height: 100vh; min-height: 900px; display: flex; align-items: center; justify-content: center; }
         .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('herobackground.jpeg') center 30% / cover; z-index: 1; }
         
         .hero-content { 
@@ -62,7 +62,12 @@
             padding: 12px; 
         }
 
-        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 6vw, 3.8rem); line-height: 1.1; margin-bottom: 15px; }
+        .hero h1 {
+            font-size: clamp(2.3rem, 6.5vw, 4.5rem);
+            line-height: 1.05;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
         .hero-tagline { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.2rem, 3vw, 2rem); color: var(--color-accent); margin-bottom: 25px; font-style: italic; }
         .hero-lead { font-size: clamp(1rem, 2vw, 1.2rem); margin-bottom: 40px; max-width: 800px; margin-inline: auto; opacity: 0.9; }
 
@@ -70,16 +75,43 @@
         .btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 
         /* --- SECTIONS --- */
-        section { padding: 100px 0; background: var(--color-bg-soft); }
+        section { padding: 130px 0; background: var(--color-bg-soft); }
         .section-dark { background: #0f0f0f; color: white; }
         .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 25px; }
         .label { color: var(--color-accent); font-size: 11px; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; display: block; margin-bottom: 20px; }
-        h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 40px; line-height: 1.2; }
+        
+        h2 { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: clamp(2rem, 5vw, 3rem); 
+            margin-bottom: 40px; 
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+        h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: var(--color-accent);
+            margin-top: 20px;
+        }
+
         h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 15px; color: var(--color-accent); }
 
         .grid { display: grid; gap: 40px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-        .card { border: 1px solid #ddd; padding: 40px; transition: 0.3s; background: #fff; }
-        .card:hover { border-color: var(--color-accent); }
+        
+        .card { 
+            border: 1px solid #ddd; 
+            padding: 40px; 
+            transition: 0.3s; 
+            background: #fff;
+            border-radius: 8px;
+        }
+        .card:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
         
         .email-link { color: inherit; text-decoration: none; transition: 0.3s; font-weight: 600; }
         .email-link:hover { color: var(--color-accent); }
@@ -94,14 +126,35 @@
 
         .form-group { margin-bottom: 20px; }
         label { display: block; font-size: 10px; text-transform: uppercase; font-weight: 700; margin-bottom: 8px; color: #888; letter-spacing: 1px; }
-        input, textarea { width: 100%; padding: 14px; border: 1px solid #ddd; font-family: inherit; font-size: 14px; background: #fafafa; transition: 0.3s; }
-        input:focus { border-color: var(--color-accent); outline: none; background: #fff; }
+        
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #e5e5e5;
+            font-family: inherit;
+            font-size: 14px;
+            background: #ffffff;
+            transition: 0.3s;
+        }
+        input:focus, textarea:focus {
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 2px rgba(201,162,39,0.15);
+            outline: none;
+        }
         
         .btn-submit { background: var(--color-primary); color: white; border: none; padding: 20px; width: 100%; font-weight: 800; text-transform: uppercase; cursor: pointer; letter-spacing: 2px; font-size: 11px; transition: 0.3s; }
         .btn-accent { background: var(--color-accent); color: var(--color-primary); }
         .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 
         .confidentiality { font-size: 10px; color: #aaa; text-align: center; margin-top: 20px; font-style: italic; letter-spacing: 0.5px; }
+
+        /* --- ENHANCEMENTS --- */
+        .form-box:first-child {
+            border-top: 3px solid var(--color-accent);
+        }
+        .form-box:last-child {
+            background: #fafafa;
+        }
 
         /* --- MOBILE --- */
         @media (max-width: 900px) {
@@ -286,7 +339,7 @@
         </div>
     </section>
 
-    <footer style="padding: 40px; text-align: center; background: #000; color: #444; font-size: 10px; letter-spacing: 1px;">
+    <footer style="padding: 50px; text-align: center; background: #0a0a0a; color: #777; font-size: 11px; letter-spacing: 1px;">
         © 2026 ABS REPRESENTATIVE. STRUCTURED BUYER-SIDE CONTROL.
     </footer>
 
