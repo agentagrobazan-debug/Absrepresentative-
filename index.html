@@ -53,6 +53,17 @@
         .btn-main { background: var(--color-accent); color: var(--color-primary); padding: 18px 35px; text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 1.5px; display: inline-block; width: 100%; max-width: 400px; transition: 0.3s; }
         .btn-main:hover { background: #b08d1f; }
 
+        /* --- ESTILO DEL LOGO TRANSPARENTE --- */
+        .main-logo { 
+         width: clamp(120px, 15vw, 180px); 
+         height: auto; 
+         margin-bottom: 25px; 
+         /* Eliminamos el fondo blanco y el padding que hacían el recuadro */
+         background: transparent; 
+         padding: 0; 
+         display: inline-block;
+         }
+        
         /* --- SECTIONS --- */
         section { padding: 80px 0; background: var(--color-bg-soft); }
         .section-dark { background: #0f0f0f; color: white; border-top: 1px solid #222; }
