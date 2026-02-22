@@ -21,7 +21,7 @@
     </script>
 
     <link rel="icon" type="image/png" href="Favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&swap" rel="stylesheet">
     
     <style>
         :root {
@@ -32,7 +32,8 @@
             --color-bg-soft: #f0f0f0;
             --color-card-base: #f1f1f1;
             --color-card-highlight: #e9e6db;
-            --color-team-card: #e5e5e5; /* Tono más oscuro para resaltar equipo */
+            --color-team-card: #e5e5e5;
+            --color-contact-bg: #141414; /* Nuevo fondo diferenciador para contacto */
             --max-width: 1100px;
         }
 
@@ -97,7 +98,7 @@
         .mail-link:hover { opacity: 0.7; }
 
         /* --- CONTACT BOXES --- */
-        .contact-sidebar-box { background: var(--color-card-base); border: 1px solid #ddd; border-left: 4px solid var(--color-accent); padding: 30px; margin-top: 35px; }
+        .contact-sidebar-box { border-left: 4px solid var(--color-accent); padding: 30px; margin-top: 35px; background: rgba(255,255,255,0.03); border-top: 1px solid rgba(255,255,255,0.05); border-right: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); }
 
         footer { padding: 40px; text-align: center; background: #000; color: #666; font-size: 10px; letter-spacing: 1px; }
 
@@ -188,7 +189,7 @@
                 <div class="card" style="background: var(--color-card-highlight); border-top: 4px solid var(--color-accent); box-shadow: 0 18px 40px rgba(0,0,0,0.08);">
                     <span style="font-size: 2rem; color: var(--color-accent); font-weight: 700;">01</span>
                     <h3>ABS Feasibility Intelligence Report</h3>
-                    <p style="font-size: 14px; color: #444;">Structured technical report prepared by ABS, including supply validation, achievable quality parameters, executable volumes and execution risk mapping based on the buyer’s specific sourcing intent. The report integrates market intelligence and supplier landscape analysis tailored to each request.</p>
+                    <p style="font-size: 14px; color: #444;">Structured technical report prepared by ABS, including supply validation, achievable quality parameters, executable volumes and execution risk mapping based on the buyer’s specific sourcing intent.</p>
                 </div>
                 <div class="card">
                     <span style="font-size: 2rem; color: var(--color-accent); font-weight: 700;">02</span>
@@ -208,28 +209,28 @@
                     <h3 style="color: var(--color-accent); font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px;">For International Buyers</h3>
                     <ul style="list-style: none; font-size: 14px; opacity: 0.9; line-height: 2; margin-bottom: 20px;">
                         <li>• Reduced execution risk at origin</li>
-                        <li>• Structured feasibility validation before commercial commitment</li>
-                        <li>• Independent representation with zero conflict of interest</li>
-                        <li>• Permanent on-the-ground control in Argentina</li>
-                        <li>• Disciplined negotiation and supplier due diligence</li>
+                        <li>• Structured feasibility validation</li>
+                        <li>• Independent representation</li>
+                        <li>• On-the-ground control</li>
+                        <li>• Disciplined due diligence</li>
                     </ul>
                 </div>
                 <div>
                     <h3 style="color: var(--color-accent); font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px;">For Argentine Suppliers</h3>
                     <ul style="list-style: none; font-size: 14px; opacity: 0.9; line-height: 2; margin-bottom: 20px;">
-                        <li>• Access to validated international demand</li>
-                        <li>• Clear technical requirements before price negotiation</li>
-                        <li>• More predictable execution standards</li>
-                        <li>• Reduced transactional uncertainty</li>
+                        <li>• Validated international demand</li>
+                        <li>• Clear technical requirements</li>
+                        <li>• Predictable execution standards</li>
+                        <li>• Reduced uncertainty</li>
                     </ul>
                 </div>
                 <div>
                     <h3 style="color: var(--color-accent); font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px;">System-Level Impact</h3>
                     <ul style="list-style: none; font-size: 14px; opacity: 0.9; line-height: 2;">
                         <li>• Fewer speculative operations</li>
-                        <li>• Higher execution reliability in high-volume trades</li>
-                        <li>• Structured sourcing instead of opportunistic intermediation</li>
-                        <li>• Long-term alignment between buyer and origin</li>
+                        <li>• Higher reliability</li>
+                        <li>• Structured sourcing</li>
+                        <li>• Long-term alignment</li>
                     </ul>
                 </div>
             </div>
@@ -244,28 +245,28 @@
                 <div class="card text-center" style="background: var(--color-team-card); border: 1px solid #ccc; border-top: 3px solid var(--color-accent); box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
                     <h3 style="color: #000; margin-bottom: 5px; font-weight: 700;">Leandro Bazán</h3>
                     <p class="label" style="margin-bottom: 15px; font-size: 9px;">Founder | Buyer-Side Strategy</p>
-                    <p style="font-size: 14px; color: #333; margin-bottom: 20px; text-align: left; line-height: 1.7;">Certified Grain Market Operator accredited by the Rosario Board of Trade (Argentina). Grain classifier and cereal plant operator with hands-on experience at origin. Background in structured B2B sales and agri-industrial marketing.</p>
+                    <p style="font-size: 14px; color: #333; margin-bottom: 20px; text-align: left; line-height: 1.7;">Certified Grain Market Operator accredited by the Rosario Board of Trade. Background in structured B2B sales and agri-industrial marketing.</p>
                     <p style="font-size: 12px;"><a href="mailto:leandrobazan@absrepresentative.com.ar" class="mail-link">leandrobazan@absrepresentative.com.ar</a></p>
                 </div>
                 <div class="card text-center" style="background: var(--color-team-card); border: 1px solid #ccc; border-top: 3px solid var(--color-accent); box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
                     <h3 style="color: #000; margin-bottom: 5px; font-weight: 700;">Victoria del Valle</h3>
                     <p class="label" style="margin-bottom: 15px; font-size: 9px;">Operations | International Trade</p>
-                    <p style="font-size: 14px; color: #333; margin-bottom: 20px; text-align: left; line-height: 1.7;">Certified Customs Regime Technician and Customs Broker, later completing a Bachelor’s Degree in International Trade. Experience in containerized and bulk export operations, including cereals such as soybeans and wheat. Coordination of sanitary inspections (SENASA) and hands-on management of export documentation under time-sensitive conditions. Technical written English proficiency for international communication.</p>
+                    <p style="font-size: 14px; color: #333; margin-bottom: 20px; text-align: left; line-height: 1.7;">Certified Customs Broker with a Degree in International Trade. Specialist in bulk export operations and sanitary coordination.</p>
                     <p style="font-size: 12px;"><a href="mailto:victoria.delvalle@absrepresentative.com.ar" class="mail-link">victoria.delvalle@absrepresentative.com.ar</a></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" style="background: var(--color-bg-soft);">
+    <section id="contact" style="background: var(--color-contact-bg); color: #fff;">
         <div class="container">
             <div class="grid contact-grid" style="grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: start;">
                 <div>
                     <span class="label">Engagement</span>
-                    <h2 style="color: #000; margin-bottom: 40px; font-size: 3rem; border-bottom: 2px solid var(--color-accent); display: inline-block; padding-bottom: 10px;">Technical Inquiry</h2>
+                    <h2 style="color: #fff; margin-bottom: 40px; font-size: 3rem; border-bottom: 2px solid var(--color-accent); display: inline-block; padding-bottom: 10px;">Technical Inquiry</h2>
                     
-                    <p style="font-size: 15px; margin-bottom: 15px; font-weight: 500;">Before formal engagement, we conduct a structured feasibility assessment to validate:</p>
-                    <ul style="list-style: none; font-size: 14px; line-height: 2.2; margin-bottom: 25px; padding-left: 5px; color: #444;">
+                    <p style="font-size: 15px; margin-bottom: 15px; font-weight: 500; color: #e9e6db;">Before formal engagement, we conduct a structured feasibility assessment to validate:</p>
+                    <ul style="list-style: none; font-size: 14px; line-height: 2.2; margin-bottom: 25px; padding-left: 5px; color: #ccc;">
                         <li><span style="color: var(--color-accent); font-weight: bold;">•</span> Supply viability</li>
                         <li><span style="color: var(--color-accent); font-weight: bold;">•</span> Quality parameters</li>
                         <li><span style="color: var(--color-accent); font-weight: bold;">•</span> Executable volumes</li>
@@ -274,20 +275,20 @@
                     
                     <div class="contact-sidebar-box">
                         <span class="label" style="font-size: 9px; margin-bottom: 15px;">Direct Contact</span>
-                        <p style="font-size: 14px; margin-bottom: 20px;"><strong>General Inquiries:</strong><br>
+                        <p style="font-size: 14px; margin-bottom: 20px; color: #fff;"><strong>General Inquiries:</strong><br>
                         <a href="mailto:info@absrepresentative.com.ar" class="mail-link">info@absrepresentative.com.ar</a></p>
                         
-                        <a href="https://www.linkedin.com/company/abs-representative/" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none; background: #000; padding: 10px 15px; border-radius: 2px;">
+                        <a href="https://www.linkedin.com/company/abs-representative/" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none; background: #fff; padding: 10px 15px; border-radius: 2px;">
                             <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 14px; height: 14px;">
-                            <span style="font-size: 9px; font-weight: 800; color: #fff; letter-spacing: 2px; margin-left: 10px;">LinkedIn</span>
+                            <span style="font-size: 9px; font-weight: 800; color: #000; letter-spacing: 2px; margin-left: 10px;">LinkedIn</span>
                         </a>
                     </div>
                 </div>
 
                 <div style="margin-top: 10px;">
                     <div class="form-box form-main-highlight">
-                        <h4 style="margin-bottom: 10px; text-transform: uppercase; font-size: 13px; font-weight: 800; letter-spacing: 1px;">ABS Feasibility Intelligence Report</h4>
-                        <p style="font-size: 11px; color: #444; margin-bottom: 20px; line-height: 1.4;">This request initiates the preparation of a tailored technical intelligence report developed by ABS. The report evaluates supply viability, achievable quality parameters, executable volumes and operational risk exposure based on the buyer’s specific product, volume and sourcing requirements in Argentina.</p>
+                        <h4 style="margin-bottom: 10px; text-transform: uppercase; font-size: 13px; font-weight: 800; letter-spacing: 1px; color: #1a1a1a;">ABS Feasibility Intelligence Report</h4>
+                        <p style="font-size: 11px; color: #444; margin-bottom: 20px; line-height: 1.4;">This request initiates the preparation of a tailored technical intelligence report developed by ABS. The report evaluates supply viability, achievable quality parameters, executable volumes and operational risk exposure.</p>
                         <form action="https://formsubmit.co/info@absrepresentative.com.ar" method="POST">
                             <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
                                 <div class="form-group"><label>Company Name</label><input type="text" name="Company" required></div>
@@ -303,7 +304,7 @@
                     </div>
 
                     <div class="form-box" style="border: 1px solid #ddd; background: var(--color-card-base);">
-                        <h4 style="margin-bottom: 10px; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;">Strategic Entry Brief</h4>
+                        <h4 style="margin-bottom: 10px; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; color: #1a1a1a;">Strategic Entry Brief</h4>
                         <p style="font-size: 11px; color: #444; margin-bottom: 20px;">Request the strategic document outlining structural risks international buyers commonly underestimate before entering the Argentine market.</p>
                         <form action="https://formsubmit.co/info@absrepresentative.com.ar" method="POST">
                             <div class="form-group"><label>Company Name</label><input type="text" name="Brief-Company" required></div>
