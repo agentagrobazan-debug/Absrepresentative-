@@ -32,62 +32,38 @@
         /* --- NAVIGATION --- */
         nav { 
             position: absolute; top: 0; left: 0; right: 0; z-index: 100; padding: 45px 0;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+            background: linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 100%);
         }
         .nav-links { display: flex; justify-content: center; gap: clamp(15px, 4vw, 50px); }
         .nav-links a { text-decoration: none; color: white; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; opacity: 0.8; transition: 0.3s; }
         .nav-links a:hover { opacity: 1; color: var(--color-accent); }
 
-        /* --- HERO: IMAGEN COMPLETA --- */
-        .hero { 
-            position: relative; 
-            width: 100%;
-            height: 100vh;
-            min-height: 800px;
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            overflow: hidden; 
-            background-color: #000;
-        }
+        /* --- HERO --- */
+        .hero { position: relative; height: 100vh; min-height: 900px; display: flex; align-items: center; justify-content: center; }
+        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('herobackground.jpeg') center 30% / cover; z-index: 1; }
         
-        .hero-image {
-            width: 100%;
-            height: 100%;
-            object-fit: contain; /* Muestra la imagen entera sin recortes */
-            z-index: 0;
-            filter: brightness(0.7);
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);
-            z-index: 1;
-        }
-
         .hero-content { 
-            position: absolute; 
+            position: relative; 
             z-index: 2; 
             text-align: center; 
             color: white; 
-            padding: 20px;
-            margin-top: 80px;
+            padding-top: 180px;
+            padding-left: 20px;
+            padding-right: 20px;
         }
         
         .main-logo { 
             width: clamp(180px, 22vw, 250px); 
             height: auto; 
             margin-bottom: 35px; 
-            background: rgba(255,255,255,0.9); 
+            mix-blend-mode: multiply; 
+            filter: contrast(1.1) brightness(1.1); 
+            background: rgba(255,255,255,0.85); 
             padding: 12px; 
         }
 
         .hero h1 {
-            font-size: clamp(2.2rem, 6vw, 4.2rem);
+            font-size: clamp(2.3rem, 6.5vw, 4.5rem);
             line-height: 1.05;
             margin-bottom: 20px;
             letter-spacing: -0.5px;
@@ -104,14 +80,38 @@
         .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 25px; }
         .label { color: var(--color-accent); font-size: 11px; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; display: block; margin-bottom: 20px; }
         
-        h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 40px; line-height: 1.2; }
-        h2::after { content: ""; display: block; width: 60px; height: 2px; background: var(--color-accent); margin-top: 20px; }
+        h2 { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: clamp(2rem, 5vw, 3rem); 
+            margin-bottom: 40px; 
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+        h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: var(--color-accent);
+            margin-top: 20px;
+        }
 
         h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 15px; color: var(--color-accent); }
+
         .grid { display: grid; gap: 40px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
         
-        .card { border: 1px solid #ddd; padding: 40px; transition: 0.3s; background: #fff; border-radius: 8px; }
-        .card:hover { border-color: var(--color-accent); transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        .card { 
+            border: 1px solid #ddd; 
+            padding: 40px; 
+            transition: 0.3s; 
+            background: #fff;
+            border-radius: 8px;
+        }
+        .card:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
         
         .email-link { color: inherit; text-decoration: none; transition: 0.3s; font-weight: 600; }
         .email-link:hover { color: var(--color-accent); }
@@ -119,19 +119,48 @@
         /* --- CONTACT & FORMS --- */
         .contact-layout { display: grid; grid-template-columns: 0.8fr 2fr; gap: 60px; }
         .forms-container { display: flex; flex-direction: column; gap: 40px; }
+        
         .form-box { background: #fff; padding: 45px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 1px solid #eee; }
         .form-box h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 10px; color: var(--color-primary); }
         .form-box p.desc { font-size: 13px; color: #666; margin-bottom: 25px; line-height: 1.5; }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; font-size: 10px; text-transform: uppercase; font-weight: 700; margin-bottom: 8px; color: #888; }
-        input, textarea { width: 100%; padding: 14px; border: 1px solid #e5e5e5; font-family: inherit; font-size: 14px; }
-        .btn-submit { background: var(--color-primary); color: white; border: none; padding: 20px; width: 100%; font-weight: 800; text-transform: uppercase; cursor: pointer; letter-spacing: 2px; font-size: 11px; }
 
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-size: 10px; text-transform: uppercase; font-weight: 700; margin-bottom: 8px; color: #888; letter-spacing: 1px; }
+        
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #e5e5e5;
+            font-family: inherit;
+            font-size: 14px;
+            background: #ffffff;
+            transition: 0.3s;
+        }
+        input:focus, textarea:focus {
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 2px rgba(201,162,39,0.15);
+            outline: none;
+        }
+        
+        .btn-submit { background: var(--color-primary); color: white; border: none; padding: 20px; width: 100%; font-weight: 800; text-transform: uppercase; cursor: pointer; letter-spacing: 2px; font-size: 11px; transition: 0.3s; }
+        .btn-accent { background: var(--color-accent); color: var(--color-primary); }
+        .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+        .confidentiality { font-size: 10px; color: #aaa; text-align: center; margin-top: 20px; font-style: italic; letter-spacing: 0.5px; }
+
+        /* --- ENHANCEMENTS --- */
+        .form-box:first-child {
+            border-top: 3px solid var(--color-accent);
+        }
+        .form-box:last-child {
+            background: #fafafa;
+        }
+
+        /* --- MOBILE --- */
         @media (max-width: 900px) {
             .contact-layout { grid-template-columns: 1fr; }
-            .hero-content { padding-top: 150px; position: relative; }
-            .hero { height: auto; min-height: 600px; padding-bottom: 50px; }
-            .hero-image { height: 400px; }
+            .hero-content { padding-top: 200px; }
+            .form-box { padding: 30px; }
         }
     </style>
 </head>
@@ -148,7 +177,6 @@
     </nav>
 
     <header class="hero">
-        <img src="herobackground.jpeg" class="hero-image" alt="Agri-industrial background">
         <div class="hero-bg"></div>
         <div class="container hero-content">
             <img src="logoabs.png" alt="ABS Logo" class="main-logo">
@@ -187,16 +215,23 @@
         <div class="container">
             <span class="label">Methodology</span>
             <h2>Buyer-Side Structure</h2>
+            <p style="margin-bottom: 50px; max-width: 700px; opacity: 0.8;">A rigorous sequence designed to mitigate the inherent risks of the Argentine origin.</p>
+            
             <div class="grid">
-                <div class="card">
+                <div class="card" style="position: relative;">
+                    <span style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: rgba(0, 0, 0, 0.6); position: absolute; top: 10px; right: 20px; font-weight: 700;">00</span>
                     <h3>Risk Education</h3>
                     <p style="color: #555;">Free educational document identifying structural risks international buyers underestimate before buying from Argentina.</p>
                 </div>
-                <div class="card" style="background: var(--color-accent); border: none;">
-                    <h3 style="color: #fff;">Feasibility Assessment</h3>
-                    <p style="color: #fff;">Mandatory analysis including supply validation, quality parameters, executable volumes, and execution risk mapping.</p>
+
+                <div class="card" style="background: var(--color-accent); border: none; position: relative; transform: scale(1.05); box-shadow: 0 20px 40px rgba(0,0,0,0.15); z-index: 2;">
+                    <span style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: rgba(0, 0, 0, 0.7); position: absolute; top: 10px; right: 20px; font-weight: 700;">01</span>
+                    <h3 style="color: #fff; font-weight: 700;">Feasibility Assessment</h3>
+                    <p style="color: #fff; font-weight: 500;"><strong>Mandatory analysis</strong> including supply validation, quality parameters, executable volumes, and execution risk mapping.</p>
                 </div>
-                <div class="card">
+
+                <div class="card" style="position: relative;">
+                    <span style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: rgba(0, 0, 0, 0.6); position: absolute; top: 10px; right: 20px; font-weight: 700;">02</span>
                     <h3>Local Representation</h3>
                     <p style="color: #555;">Execution control at origin: negotiation structuring, supplier DD, quality coordination, and operational tracking.</p>
                 </div>
@@ -251,8 +286,14 @@
             <div class="contact-layout">
                 <div>
                     <span class="label">Engagement</span>
-                    <h2 style="font-family: 'Cormorant Garamond', serif; border: none;">Start your assessment.</h2>
-                    <p style="font-size: 14px; color: #666; margin-bottom: 15px;">Structured evaluation is required before execution engagement.</p>
+                    <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 10px;">Structured Feasibility Assessment Before Representation</h4>
+                    <p style="font-size: 14px; color: #666; margin-bottom: 15px;">Before formal engagement, we conduct a structured feasibility assessment to validate:</p>
+                    <ul style="list-style: none; font-size: 14px; color: #666; margin-bottom: 25px;">
+                        <li>• Supply viability</li>
+                        <li>• Quality parameters</li>
+                        <li>• Executable volumes</li>
+                        <li>• Operational risk exposure</li>
+                    </ul>
                     <p style="font-size: 13px; color: #888; margin-bottom: 5px;">General Inquiries:</p>
                     <a href="mailto:info@absrepresentative.com.ar" class="email-link" style="font-size: 15px;">info@absrepresentative.com.ar</a>
                     <br><br>
@@ -262,6 +303,7 @@
                 <div class="forms-container">
                     <div class="form-box">
                         <h4>Structured Feasibility Assessment</h4>
+                        <p class="desc">A mandatory preliminary analysis required before any execution engagement to validate supply viability, achievable quality parameters, executable volumes and operational exposure.</p>
                         <form action="https://formsubmit.co/info@absrepresentative.com.ar" method="POST">
                             <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px;">
                                 <div class="form-group"><label>Company Name</label><input type="text" name="Company" required></div>
@@ -275,17 +317,20 @@
                                 <label>Specific Technical Requirements</label>
                                 <textarea name="Requirements" rows="3"></textarea>
                             </div>
-                            <button type="submit" class="btn-submit">Submit Assessment Request</button>
+                            <button type="submit" class="btn-submit">Request Feasibility Assessment</button>
                         </form>
                     </div>
 
-                    <div class="form-box" style="background: #fafafa;">
-                        <h4>Before You Buy From Argentina</h4>
-                        <p class="desc">Educational brief outlining structural risks international buyers often underestimate.</p>
+                    <div class="form-box">
+                        <h4>Strategic Entry Brief</h4>
+                        <p class="desc">Request the strategic document outlining structural risks international buyers commonly underestimate before entering the Argentine market.</p>
                         <form action="https://formsubmit.co/info@absrepresentative.com.ar" method="POST">
                             <div class="form-group"><label>Company Name</label><input type="text" name="Brief-Company" required></div>
-                            <div class="form-group"><label>Email</label><input type="email" name="Brief-Email" required></div>
-                            <button type="submit" class="btn-submit" style="background: var(--color-accent);">Request Document</button>
+                            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px;">
+                                <div class="form-group"><label>Country</label><input type="text" name="Brief-Country" required></div>
+                                <div class="form-group"><label>Email</label><input type="email" name="Brief-Email" required></div>
+                            </div>
+                            <button type="submit" class="btn-submit btn-accent">Request Strategic Entry Brief</button>
                             <p class="confidentiality">All submitted information is handled under strict confidentiality.</p>
                         </form>
                     </div>
