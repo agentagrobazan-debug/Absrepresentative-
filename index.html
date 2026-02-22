@@ -63,25 +63,19 @@
         .grid { display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
         .card { border: 1px solid #ddd; padding: 35px; background: #fff; border-radius: 4px; color: var(--color-primary); }
 
-        /* --- FORMS (MEJORADOS) --- */
+        /* --- FORMS --- */
         .form-box { background: #fff; padding: 30px; border: 1px solid #eee; margin-bottom: 30px; color: var(--color-primary); }
-        
-        /* Resalte del formulario principal */
-        .form-main-highlight { 
-            border: 1px solid var(--color-accent); 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            position: relative;
-        }
-
+        .form-main-highlight { border: 1px solid var(--color-accent); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
         .form-group { margin-bottom: 15px; }
         label { display: block; font-size: 9px; text-transform: uppercase; font-weight: 700; margin-bottom: 5px; color: #999; }
         input, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; font-family: 'Inter', sans-serif; font-size: 14px; }
-        
         .btn-submit { background: var(--color-primary); color: white; border: none; padding: 15px; width: 100%; font-weight: 800; text-transform: uppercase; font-size: 10px; cursor: pointer; transition: 0.3s; }
-        
-        /* Botón Dorado */
         .btn-gold { background: var(--color-accent); color: var(--color-primary); }
         .btn-gold:hover { background: #b08d1f; }
+
+        /* --- UTILS --- */
+        .mail-link { color: var(--color-accent); text-decoration: none; font-weight: 700; transition: 0.2s; }
+        .mail-link:hover { opacity: 0.8; }
 
         footer { padding: 40px; text-align: center; background: #000; color: #666; font-size: 10px; letter-spacing: 1px; }
 
@@ -105,7 +99,7 @@
     <header class="hero">
         <img src="herobackground.jpeg" class="hero-image" alt="Agri-industrial background">
         <div class="hero-content">
-            <img src="absdora.png" alt="ABS Logo" class="main-logo">
+            <img src="logoabs.png" alt="ABS Logo" class="main-logo">
             <h1>Structured Buyer-Side Control at Origin</h1>
             <p class="hero-tagline">ABS Representative</p>
             <p class="hero-lead">Exclusive technical representation for international agri-industrial buyers in Argentina.</p>
@@ -176,13 +170,13 @@
                     <h3 style="color: #000; margin-bottom: 5px;">Leandro Bazán</h3>
                     <p class="label" style="margin-bottom: 15px; font-size: 9px;">Founder | Buyer-Side Strategy</p>
                     <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Grain classifier and market operator. Expert in direct quality reading and B2B negotiation.</p>
-                    <p style="font-size: 12px; font-weight: 700; color: var(--color-accent);">leandrobazan@absrepresentative.com.ar</p>
+                    <p style="font-size: 12px;"><a href="mailto:leandrobazan@absrepresentative.com.ar" class="mail-link">leandrobazan@absrepresentative.com.ar</a></p>
                 </div>
                 <div class="card">
                     <h3 style="color: #000; margin-bottom: 5px;">Victoria del Valle</h3>
                     <p class="label" style="margin-bottom: 15px; font-size: 9px;">Operations | International Trade</p>
                     <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Specialist in complex documentation (SENASA, CRT, BL) and bulk/containerized food exports.</p>
-                    <p style="font-size: 12px; font-weight: 700; color: var(--color-accent);">victoria.delvalle@absrepresentative.com.ar</p>
+                    <p style="font-size: 12px;"><a href="mailto:victoria.delvalle@absrepresentative.com.ar" class="mail-link">victoria.delvalle@absrepresentative.com.ar</a></p>
                 </div>
             </div>
         </div>
@@ -197,7 +191,7 @@
                     <h3 style="color: #000; font-size: 1.3rem;">Technical Inquiry</h3>
                     <p style="font-size: 14px; margin-bottom: 25px;">Before formal engagement, we conduct a structured feasibility assessment to validate supply viability, quality parameters, executable volumes, and operational risk exposure.</p>
                     <p style="font-size: 13px; margin-bottom: 5px;"><strong>General Inquiries:</strong></p>
-                    <p style="font-size: 13px; color: var(--color-accent); font-weight: 700; margin-bottom: 25px;">info@absrepresentative.com.ar</p>
+                    <p style="font-size: 13px; margin-bottom: 25px;"><a href="mailto:info@absrepresentative.com.ar" class="mail-link">info@absrepresentative.com.ar</a></p>
                     <a href="https://linkedin.com" target="_blank" style="text-decoration: none; font-size: 10px; font-weight: 800; color: #000; letter-spacing: 2px; border-bottom: 2px solid var(--color-accent);">LINKEDIN →</a>
                 </div>
 
