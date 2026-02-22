@@ -44,7 +44,13 @@
 
         /* --- HERO --- */
         .hero { position: relative; width: 100%; background-color: #000; display: flex; flex-direction: column; overflow: hidden; }
-        .hero-image { width: 100%; height: auto; display: block; filter: brightness(0.6); }
+        /* 3️⃣ HERO IMAGE – AJUSTE DE CONTRASTE */
+        .hero-image { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            filter: brightness(0.55) contrast(1.05); 
+        }
         .hero-content { background-color: #000; padding: 40px 20px; text-align: center; color: white; width: 100%; }
 
         @media (min-width: 769px) {
@@ -164,7 +170,7 @@
             <span class="label">Methodology</span>
             <h2>Buyer-Side Structure</h2>
             <p style="margin-bottom: 40px; opacity: 0.7; max-width: 700px;" class="mx-auto">A rigorous sequence designed to mitigate the inherent risks of the Argentine origin.</p>
-            <div class="grid text-center">
+            <div class="grid">
                 <div class="card">
                     <span style="font-size: 2rem; color: var(--color-accent); font-weight: 700;">00</span>
                     <h3>Risk Education</h3>
@@ -213,13 +219,13 @@
                 <div class="card text-center">
                     <h3 style="color: #000; margin-bottom: 5px;">Leandro Bazán</h3>
                     <p class="label" style="margin-bottom: 15px; font-size: 9px;">Founder | Buyer-Side Strategy</p>
-                    <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Certified Grain Market Operator accredited by the Rosario Board of Trade (Argentina). Grain classifier and cereal plant operator with hands-on experience at origin. Background in structured B2B sales and agri-industrial marketing.</p>
+                    <p style="font-size: 14px; color: #666; margin-bottom: 20px; text-align: left;">Certified Grain Market Operator accredited by the Rosario Board of Trade (Argentina). Grain classifier and cereal plant operator with hands-on experience at origin. Background in structured B2B sales and agri-industrial marketing.</p>
                     <p style="font-size: 12px;"><a href="mailto:leandrobazan@absrepresentative.com.ar" class="mail-link">leandrobazan@absrepresentative.com.ar</a></p>
                 </div>
                 <div class="card text-center">
                     <h3 style="color: #000; margin-bottom: 5px;">Victoria del Valle</h3>
                     <p class="label" style="margin-bottom: 15px; font-size: 9px;">Operations | International Trade</p>
-                    <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Certified Customs Regime Technician and Customs Broker, later completing a Bachelor’s Degree in International Trade. Experience in containerized and bulk export operations, including cereals such as soybeans and wheat. Coordination of sanitary inspections (SENASA) and hands-on management of export documentation under time-sensitive conditions. Technical written English proficiency for international communication.</p>
+                    <p style="font-size: 14px; color: #666; margin-bottom: 20px; text-align: left;">Certified Customs Regime Technician and Customs Broker, later completing a Bachelor’s Degree in International Trade. Experience in containerized and bulk export operations, including cereals such as soybeans and wheat. Coordination of sanitary inspections (SENASA) and hands-on management of export documentation under time-sensitive conditions. Technical written English proficiency for international communication.</p>
                     <p style="font-size: 12px;"><a href="mailto:victoria.delvalle@absrepresentative.com.ar" class="mail-link">victoria.delvalle@absrepresentative.com.ar</a></p>
                 </div>
             </div>
