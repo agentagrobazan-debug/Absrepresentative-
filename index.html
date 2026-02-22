@@ -37,107 +37,100 @@
         .nav-links { display: flex; justify-content: center; gap: clamp(10px, 3vw, 40px); flex-wrap: wrap; }
         .nav-links a { text-decoration: none; color: white; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; opacity: 0.8; }
 
-        /* --- HERO: ELIMINA ESPACIOS NEGROS --- */
+        /* --- HERO: AJUSTE PARA MÓVIL --- */
         .hero { 
             position: relative; 
             width: 100%;
+            min-height: auto;
             background-color: #000;
-            line-height: 0; /* Elimina espacio extra debajo de la imagen */
+            display: flex;
+            flex-direction: column;
         }
         
+        .hero-image-container {
+            width: 100%;
+            position: relative;
+            line-height: 0;
+        }
+
         .hero-image {
             width: 100%;
             height: auto;
             display: block;
-            filter: brightness(0.5); /* Oscurecemos para que el texto sea legible */
+            filter: brightness(0.5);
         }
 
         .hero-content { 
-            position: absolute; 
-            top: 50%;
+            position: absolute;
+            top: 55%;
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 2; 
             text-align: center; 
             color: white; 
             width: 90%;
-            max-width: 900px;
-            line-height: 1.6; /* Restauramos line-height para el texto */
+            max-width: 800px;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                position: relative; /* En móvil deja de flotar para no encimarse */
+                top: 0; left: 0; transform: none;
+                margin: -60px auto 0; /* Sube un poco para entrar en la imagen */
+                padding-bottom: 40px;
+            }
+            .hero-image {
+                filter: brightness(0.4);
+                min-height: 400px;
+                object-fit: cover;
+            }
         }
         
         .main-logo { 
-            width: clamp(100px, 15vw, 180px); 
+            width: clamp(110px, 15vw, 180px); 
             height: auto; 
-            margin-bottom: clamp(10px, 2vw, 25px); 
+            margin-bottom: 20px; 
             background: rgba(255,255,255,0.95); 
             padding: 8px; 
         }
 
-        .hero h1 { 
-            font-size: clamp(1.2rem, 4vw, 3.5rem); 
-            line-height: 1.1; 
-            margin-bottom: 10px; 
-            font-weight: 700;
-        }
-        .hero-tagline { 
-            font-family: 'Cormorant Garamond', serif; 
-            font-size: clamp(0.9rem, 2vw, 1.5rem); 
-            color: var(--color-accent); 
-            margin-bottom: 15px; 
-            font-style: italic; 
-        }
-        .hero-lead { 
-            font-size: clamp(0.75rem, 1.5vw, 1rem); 
-            margin-bottom: clamp(15px, 3vw, 30px); 
-            max-width: 700px; 
-            margin-inline: auto; 
-            opacity: 0.9; 
-        }
+        .hero h1 { font-size: clamp(1.4rem, 4vw, 3.5rem); line-height: 1.1; margin-bottom: 10px; font-weight: 700; }
+        .hero-tagline { font-family: 'Cormorant Garamond', serif; font-size: clamp(0.9rem, 2vw, 1.4rem); color: var(--color-accent); margin-bottom: 15px; font-style: italic; }
+        .hero-lead { font-size: clamp(0.8rem, 1.5vw, 1rem); margin-bottom: 25px; max-width: 600px; margin-inline: auto; opacity: 0.9; }
+        
         .btn-main { 
             background: var(--color-accent); 
             color: var(--color-primary); 
-            padding: clamp(10px, 2vw, 18px) clamp(15px, 3vw, 35px); 
+            padding: 16px 28px; 
             text-decoration: none; 
             font-weight: 800; 
             text-transform: uppercase; 
-            font-size: clamp(9px, 1.2vw, 11px); 
+            font-size: 10px; 
             letter-spacing: 1.5px; 
-            display: inline-block; 
-            transition: 0.3s;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
         /* --- SECTIONS --- */
-        section { padding: clamp(40px, 8vw, 100px) 0; background: var(--color-bg-soft); }
-        .section-dark { background: #0f0f0f; color: white; margin-top: -1px; } /* Evita grietas visuales */
-        .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
-        
+        section { padding: 60px 0; background: var(--color-bg-soft); }
+        .section-dark { background: #0f0f0f; color: white; margin-top: 0; }
+        .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 25px; }
         .label { color: var(--color-accent); font-size: 10px; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; display: block; margin-bottom: 15px; }
-        h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 30px; line-height: 1.2; }
-        h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 15px; color: var(--color-accent); }
         
-        .grid { display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 25px; line-height: 1.2; }
+        h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 10px; color: var(--color-accent); }
         
-        /* --- ESTILO DE LAS CAJAS EN IDENTITY (Captura 122) --- */
-        .identity-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; }
-        .vertical-divider { border-left: 2px solid var(--color-accent); padding-left: 30px; }
+        .grid { display: grid; gap: 25px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
         
+        .card { border: 1px solid #ddd; padding: 30px; background: #fff; border-radius: 4px; color: var(--color-primary); }
+
         @media (max-width: 768px) {
-            .identity-grid { grid-template-columns: 1fr; }
-            .vertical-divider { border-left: none; border-top: 2px solid var(--color-accent); padding-left: 0; padding-top: 30px; }
-            .hero-content { width: 95%; }
+            .grid-identity { display: flex; flex-direction: column; gap: 30px; }
+            .vertical-line { border-left: none; border-top: 1px solid var(--color-accent); padding-top: 20px; }
         }
 
-        .card { border: 1px solid #ddd; padding: 35px; background: #fff; border-radius: 4px; color: var(--color-primary); }
-        
-        /* --- CONTACT --- */
-        .contact-layout { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; }
-        @media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; } }
-        
-        .form-box { background: #fff; padding: 30px; border: 1px solid #eee; margin-bottom: 30px; color: var(--color-primary); }
-        .form-group { margin-bottom: 15px; }
-        label { display: block; font-size: 9px; text-transform: uppercase; font-weight: 700; margin-bottom: 5px; color: #999; }
-        input, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; font-size: 14px; }
-        .btn-submit { background: var(--color-primary); color: white; border: none; padding: 15px; width: 100%; font-weight: 800; text-transform: uppercase; font-size: 10px; cursor: pointer; }
+        .vertical-line { border-left: 1px solid var(--color-accent); padding-left: 25px; }
 
         footer { padding: 40px; text-align: center; background: #000; color: #666; font-size: 10px; }
     </style>
@@ -155,7 +148,9 @@
     </nav>
 
     <header class="hero">
-        <img src="herobackground.jpeg" class="hero-image" alt="Agri-industrial background">
+        <div class="hero-image-container">
+            <img src="herobackground.jpeg" class="hero-image" alt="Agri-industrial background">
+        </div>
         <div class="hero-content">
             <img src="logoabs.png" alt="ABS Logo" class="main-logo">
             <h1>Structured Buyer-Side Control at Origin</h1>
@@ -169,21 +164,21 @@
         <div class="container">
             <span class="label">Identity</span>
             <h2>Your control at origin.</h2>
-            <div class="identity-grid">
+            <div class="grid" style="grid-template-columns: 1.2fr 1fr;">
                 <div>
-                    <p style="font-size: 1.1rem; margin-bottom: 25px;">ABS is not a broker nor a trader. We function as your professional local presence, operating without conflicts of interest.</p>
-                    <p class="label">Non-Intervention Policy</p>
-                    <ul style="list-style: none; opacity: 0.8; font-size: 14px; line-height: 1.8;">
+                    <p style="margin-bottom: 20px;">ABS is not a broker nor a trader. We function as your professional local presence, operating without conflicts of interest.</p>
+                    <p class="label" style="font-size: 9px;">Non-Intervention Policy</p>
+                    <ul style="list-style: none; opacity: 0.8; font-size: 14px;">
                         <li>— No intermediation of operations</li>
                         <li>— No seller representation</li>
                         <li>— No competition with the buyer</li>
                     </ul>
                 </div>
-                <div class="vertical-divider">
-                    <h3 style="color: var(--color-accent); font-family: 'Inter', sans-serif; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px;">Core Functions</h3>
-                    <p style="margin-bottom: 15px; font-size: 15px;"><strong style="color: #fff;">Exclusive representation:</strong> We act only for the principal.</p>
-                    <p style="margin-bottom: 15px; font-size: 15px;"><strong style="color: #fff;">Aligned interests:</strong> No margins on product, no seller commissions.</p>
-                    <p style="font-size: 15px;"><strong style="color: #fff;">End-to-end:</strong> From market intelligence to final shipment.</p>
+                <div class="vertical-line">
+                    <h3 style="font-size: 1.2rem; color: #fff;">Core Functions</h3>
+                    <p style="margin-bottom: 10px; font-size: 14px;"><strong>Exclusive representation:</strong> We act only for the principal.</p>
+                    <p style="margin-bottom: 10px; font-size: 14px;"><strong>Aligned interests:</strong> No margins on product, no seller commissions.</p>
+                    <p style="font-size: 14px;"><strong>End-to-end:</strong> From market intelligence to final shipment.</p>
                 </div>
             </div>
         </div>
@@ -193,74 +188,10 @@
         <div class="container">
             <span class="label">Methodology</span>
             <h2>Buyer-Side Structure</h2>
-            <p style="margin-bottom: 40px; opacity: 0.7;">A rigorous sequence designed to mitigate the inherent risks of the Argentine origin.</p>
             <div class="grid">
-                <div class="card">
-                    <h3 style="font-size: 1.3rem;">00 Risk Education</h3>
-                    <p style="font-size: 14px; color: #555;">Free educational document identifying structural risks international buyers underestimate before buying from Argentina.</p>
-                </div>
-                <div class="card" style="border-top: 4px solid var(--color-accent);">
-                    <h3 style="font-size: 1.3rem;">01 Feasibility Assessment</h3>
-                    <p style="font-size: 14px; color: #555;">Mandatory analysis including supply validation, quality parameters, executable volumes, and execution risk mapping.</p>
-                </div>
-                <div class="card">
-                    <h3 style="font-size: 1.3rem;">02 Local Representation</h3>
-                    <p style="font-size: 14px; color: #555;">Execution control at origin: negotiation structuring, supplier DD, quality coordination, and operational tracking.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="value" class="section-dark">
-        <div class="container">
-            <span class="label">Value Proposition</span>
-            <h2>Systemic Efficiency</h2>
-            <div class="grid">
-                <div>
-                    <h3>For Suppliers</h3>
-                    <p style="opacity: 0.8; font-size: 14px;">Direct access to validated demand and serious international buyers with structured requirements.</p>
-                </div>
-                <div>
-                    <h3>Market Insights</h3>
-                    <ul style="list-style: none; font-size: 14px; opacity: 0.8; line-height: 1.8;">
-                        <li>• 2024/25 campaign protein constraints awareness.</li>
-                        <li>• Supplier concentration management (>25,000 MT).</li>
-                        <li>• Prior technical validation as a decisive variable.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <div class="contact-layout">
-                <div>
-                    <span class="label">Engagement</span>
-                    <h3 style="color: #111;">Structured Feasibility Assessment Before Representation</h3>
-                    <p style="font-size: 14px; margin: 15px 0;">Before formal engagement, we conduct a structured feasibility assessment to validate:</p>
-                    <ul style="font-size: 14px; margin-bottom: 20px; line-height: 1.8;">
-                        <li>• Supply viability</li>
-                        <li>• Quality parameters</li>
-                        <li>• Executable volumes</li>
-                        <li>• Operational risk exposure</li>
-                    </ul>
-                    <p style="font-size: 13px;">General Inquiries: <br><strong>info@absrepresentative.com.ar</strong></p>
-                </div>
-
-                <div class="forms">
-                    <div class="form-box">
-                        <h4>Structured Feasibility Assessment</h4>
-                        <form action="https://formsubmit.co/info@absrepresentative.com.ar" method="POST">
-                            <div class="form-group"><label>Company Name</label><input type="text" name="Company" required></div>
-                            <div class="form-group"><label>Country</label><input type="text" name="Country" required></div>
-                            <div class="form-group"><label>Product</label><input type="text" name="Product" required></div>
-                            <div class="form-group"><label>Projected Volume</label><input type="text" name="Volume" required></div>
-                            <div class="form-group"><label>Technical Requirements</label><textarea name="Requirements" rows="2"></textarea></div>
-                            <button type="submit" class="btn-submit">Request Feasibility Assessment</button>
-                        </form>
-                    </div>
-                </div>
+                <div class="card"><h3>00 Risk Education</h3><p style="font-size: 13px; color: #666;">Free educational document identifying structural risks.</p></div>
+                <div class="card" style="border-top: 3px solid var(--color-accent);"><h3>01 Feasibility Assessment</h3><p style="font-size: 13px; color: #666;">Mandatory analysis including supply validation and risk mapping.</p></div>
+                <div class="card"><h3>02 Local Representation</h3><p style="font-size: 13px; color: #666;">Execution control at origin: negotiation and operational tracking.</p></div>
             </div>
         </div>
     </section>
