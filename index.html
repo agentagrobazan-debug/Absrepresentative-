@@ -100,12 +100,21 @@
         h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 15px; color: var(--color-accent); }
         
         .grid { display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-        .card { border: var(--border-standard); padding: 35px; background: var(--color-card-base); border-radius: 4px; color: var(--color-primary); }
+        
+        /* Card 01 - Base */
+        .card { 
+            border: var(--border-standard); 
+            padding: 35px; 
+            background: var(--color-card-base); 
+            border-radius: 4px; 
+            color: var(--color-primary); 
+        }
 
+        /* Card 03 - Nivel Selectivo Actualizada */
         .card-representation {
-            background: #ece6d8;
-            border: 2px solid var(--color-accent);
-            border-top: 6px solid var(--color-accent);
+            background: #e9e3d8;
+            border: 1px solid #c5b79a;
+            border-top: 8px solid #9c8a63;
         }
 
         .form-box { background: var(--color-card-base); padding: 30px; border: var(--border-standard); margin-bottom: 30px; color: var(--color-primary); }
@@ -237,13 +246,13 @@
                     <h3>Buyer Operating Context</h3>
                     <p style="font-size: 14px; color: #444;">Structured assessment of the buyer’s operational capacity and sourcing structure prior to formal engagement.</p>
                 </div>
-                <div class="card" style="background: var(--color-card-highlight); border: 3px solid var(--color-accent); box-shadow: none;">
+                <div class="card" style="background: var(--color-card-highlight); border: 6px solid var(--color-accent); box-shadow: 0 8px 18px rgba(0,0,0,0.05);">
                     <span style="font-size: 2rem; color: var(--color-accent); font-weight: 700;">02</span>
                     <h3>ABS Feasibility Intelligence Report</h3>
                     <p style="font-size: 14px; color: #444;">Structured technical report prepared by ABS, including supply validation, achievable quality parameters, executable volumes and execution risk mapping based on the buyer’s specific sourcing intent.</p>
                 </div>
                 <div class="card card-representation">
-                    <span style="font-size: 2rem; color: var(--color-accent); font-weight: 700;">03</span>
+                    <span style="font-size: 2rem; color: #9c8a63; font-weight: 700;">03</span>
                     <h3>Local Representation</h3>
                     <p style="font-size: 14px; color: #444;">Selective Mandated Representation granted exclusively after structural validation. 
                     Execution control at origin including negotiation structuring, supplier due diligence, 
