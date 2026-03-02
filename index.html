@@ -110,12 +110,12 @@
             color: var(--color-primary); 
         }
 
-        /* 03 Card - Nivel decisorio final (MODIFICADA) */
+        /* 03 Card - Máxima elevación y peso visual */
         .card-representation {
-            background: #e3dccd;
-            border: 2px solid #b7a67f;
-            border-top: 14px solid #8f7b4f;
-            padding: 50px;
+            background: #e0d8c6;
+            border: 10px solid #8f7b4f;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+            transform: translateY(-16px);
         }
 
         .form-box { background: var(--color-card-base); padding: 30px; border: var(--border-standard); margin-bottom: 30px; color: var(--color-primary); }
@@ -149,8 +149,8 @@
 
         @media (max-width: 768px) {
             .contact-grid { grid-template-columns: 1fr !important; }
-            /* Ajuste para móviles en la sección structure */
-            #structure .grid { grid-template-columns: 1fr !important; }
+            /* Reset transform en móvil para evitar problemas de layout */
+            .card-representation, [style*="transform"] { transform: none !important; }
         }
     </style>
 </head>
@@ -244,38 +244,27 @@
             <h2>Buyer-Side Structure</h2>
             <p style="margin-bottom: 60px; opacity: 0.7; max-width: 700px; color: #ccc;" class="mx-auto">A structured execution model designed for disciplined buyer-side control at origin.</p>
             
-            <div class="grid" style="grid-template-columns: 0.9fr 1.1fr; margin-bottom: 70px; align-items: stretch; text-align: left;">
-
+            <div class="grid" style="text-align: left;">
                 <div class="card">
                     <span style="font-size: 2rem; color: var(--color-accent); font-weight: 700;">01</span>
                     <h3>Buyer Operating Context</h3>
-                    <p style="font-size: 14px; color: #444;">
-                        Structured assessment of the buyer’s operational capacity and sourcing structure prior to formal engagement.
-                    </p>
+                    <p style="font-size: 14px; color: #444;">Structured assessment of the buyer’s operational capacity and sourcing structure prior to formal engagement.</p>
                 </div>
 
-                <div class="card" style="background: #ece6da; border: 6px solid var(--color-accent); box-shadow: 0 22px 55px rgba(0,0,0,0.20); transform: translateY(-10px); padding: 42px;">
+                <div class="card" style="background: #ece6da; border: 8px solid var(--color-accent); box-shadow: 0 18px 40px rgba(0,0,0,0.15); transform: translateY(-8px);">
                     <span style="font-size: 2rem; color: var(--color-accent); font-weight: 700;">02</span>
                     <h3>ABS Feasibility Intelligence Report</h3>
-                    <p style="font-size: 14px; color: #444;">
-                        Structured technical report prepared by ABS, including supply validation, achievable quality parameters, executable volumes and execution risk mapping based on the buyer’s specific sourcing intent.
-                    </p>
+                    <p style="font-size: 14px; color: #444;">Structured technical report prepared by ABS, including supply validation, achievable quality parameters, executable volumes and execution risk mapping based on the buyer’s specific sourcing intent.</p>
                 </div>
 
-            </div>
-
-            <div style="max-width: 820px; margin: 0 auto; text-align: left;">
                 <div class="card card-representation">
-                    <span style="font-size: 2.3rem; color: var(--color-accent); font-weight: 700;">03</span>
+                    <span style="font-size: 2rem; color: #8f7b4f; font-weight: 700;">03</span>
                     <h3>Local Representation</h3>
-                    <p style="font-size: 15px; color: #444;">
-                        Selective Mandated Representation granted exclusively after structural validation.
-                        Execution control at origin including negotiation structuring, supplier due diligence,
-                        quality coordination and operational tracking under a limited mandate structure.
-                    </p>
+                    <p style="font-size: 14px; color: #444;">Selective Mandated Representation granted exclusively after structural validation. 
+                    Execution control at origin including negotiation structuring, supplier due diligence, 
+                    quality coordination and operational tracking under a limited mandate structure.</p>
                 </div>
             </div>
-
         </div>
     </section>
 
