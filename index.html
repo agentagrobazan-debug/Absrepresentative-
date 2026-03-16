@@ -66,10 +66,11 @@
         .nav-links { display: flex; justify-content: center; gap: clamp(10px, 3vw, 40px); flex-wrap: wrap; }
         .nav-links a { text-decoration: none; color: white; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; opacity: 0.8; }
 
-        .hero { position: relative; width: 100%; background-color: #111111; display: flex; flex-direction: column; overflow: hidden; }
+        .hero { position: relative; width: 100%; background-color: #111111; display: flex; flex-direction: column; overflow: hidden; height: 100vh; min-height: 600px; }
         .hero-image { 
             width: 100%; 
-            height: auto; 
+            height: 100%; 
+            object-fit: cover;
             display: block; 
             filter: brightness(0.55) contrast(1.05); 
         }
@@ -78,9 +79,9 @@
         @media (min-width: 769px) {
             .hero-content { 
                 position: absolute; 
-                top: 55%; 
+                top: 45%; /* Subido de 55% para mejorar visibilidad del botón */
                 left: 50%; 
-                transform: translate(-50%, -40%); 
+                transform: translate(-50%, -45%); 
                 background-color: transparent; 
                 padding: 0; 
             }
@@ -108,7 +109,6 @@
             margin-bottom: 15px;
         }
 
-        .hero-lead { font-size: clamp(0.85rem, 1.5vw, 1.1rem); margin-bottom: 30px; max-width: 700px; margin-inline: auto; opacity: 0.85; }
         .btn-main { background: var(--color-accent); color: var(--color-primary); padding: 18px 35px; text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 1.5px; display: inline-block; width: 100%; max-width: 400px; transition: 0.3s; }
 
         section { padding: 80px 0; background: var(--color-bg-soft); }
@@ -166,17 +166,8 @@
 
         footer { padding: 40px; text-align: center; background: #111111; color: #666; font-size: 10px; letter-spacing: 1px; }
 
-        #engagement {
-            background: #e8e2d7;
-            padding-top: 100px;
-            padding-bottom: 100px;
-            width: 100%;
-        }
-
-        #engagement h3 { font-size: 1.5rem; }
-        #engagement p { font-size: 15.5px; line-height: 1.8; }
-
         @media (max-width: 768px) {
+            .hero { height: auto; }
             .contact-grid { grid-template-columns: 1fr !important; }
             .card-01-fix, .card-02-fix, .card-03-fix { 
                 transform: none !important; 
@@ -184,17 +175,6 @@
                 border-width: 1px !important; 
             }
             .card-02-fix { border-color: var(--color-accent) !important; border-width: 3px !important; }
-
-            #engagement {
-                width: 100%;
-                padding-left: 20px;
-                padding-right: 20px;
-                box-sizing: border-box;
-            }
-
-            #engagement .grid {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -264,11 +244,11 @@
         </div>
     </section>
 
-    <section id="structure" class="section-dark">
+    <section id="structure">
         <div class="container text-center">
             <span class="label">Methodology</span>
             <h2>Buyer-Side Structure</h2>
-            <p style="margin-bottom: 60px; opacity: 0.7; max-width: 700px; color: #ccc;" class="mx-auto">A structured execution model designed for disciplined buyer-side control at origin.</p>
+            <p style="margin-bottom: 60px; opacity: 0.7; max-width: 700px;" class="mx-auto">A structured execution model designed for disciplined buyer-side control at origin.</p>
             
             <div class="grid" style="text-align: left; align-items: stretch;">
                 <div class="card card-01-fix">
