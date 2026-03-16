@@ -52,15 +52,20 @@
 
         .hero { position: relative; width: 100%; background-color: #111111; display: flex; flex-direction: column; overflow: hidden; }
         .hero-image { width: 100%; height: auto; display: block; filter: brightness(0.55) contrast(1.05); }
-        .hero-content { background-color: #111111; padding: 40px 20px; text-align: center; color: white; width: 100%; }
+        
+        /* Ajuste de posición del contenido hero */
+        .hero-content { background-color: #111111; padding: 30px 20px; text-align: center; color: white; width: 100%; }
 
         @media (min-width: 769px) {
-            .hero-content { position: absolute; top: 55%; left: 50%; transform: translate(-50%, -40%); background-color: transparent; padding: 0; }
+            .hero-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -45%); background-color: transparent; padding: 0; }
         }
         
-        .main-logo { width: clamp(120px, 15vw, 180px); height: auto; margin-bottom: 15px; display: inline-block; }
-        .hero h1 { font-size: clamp(1.6rem, 4vw, 3.5rem); line-height: 1.1; margin-bottom: 15px; font-weight: 700; }
-        .hero-subtitle { font-size: clamp(0.9rem, 1.5vw, 1.1rem); margin-bottom: 30px; max-width: 700px; margin-inline: auto; opacity: 0.85; }
+        /* Reducción de margen inferior del logo */
+        .main-logo { width: clamp(120px, 15vw, 180px); height: auto; margin-bottom: 10px; display: inline-block; }
+        
+        /* Reducción de margen de títulos */
+        .hero h1 { font-size: clamp(1.6rem, 4vw, 3.5rem); line-height: 1.1; margin-bottom: 10px; font-weight: 700; }
+        .hero-subtitle { font-size: clamp(0.9rem, 1.5vw, 1.1rem); margin-bottom: 25px; max-width: 700px; margin-inline: auto; opacity: 0.85; }
         
         .btn-main { background: var(--color-accent); color: var(--color-primary); padding: 18px 35px; text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 1.5px; display: inline-block; width: 100%; max-width: 400px; transition: 0.3s; }
 
@@ -176,7 +181,7 @@
                 <div>
                     <span class="label">Inquiry</span>
                     <h2>Request Supplier Market Sounding</h2>
-                    <p style="font-size: 15px; opacity: 0.8;">Provide your sourcing parameters and ABS will conduct a  to identify executable conditions aligned with your trading requirements.</p>
+                    <p style="font-size: 15px; opacity: 0.8;">Provide your sourcing parameters and ABS will conduct a scan to identify executable conditions aligned with your trading requirements.</p>
                 </div>
 
                 <div>
