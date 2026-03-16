@@ -161,7 +161,10 @@
         .form-group { margin-bottom: 15px; }
         label { display: block; font-size: 9px; text-transform: uppercase; font-weight: 700; margin-bottom: 5px; color: #444; }
         input, textarea { width: 100%; padding: 12px; border: 1px solid #d6d6d6; font-family: 'Inter', sans-serif; font-size: 14px; background: rgba(255,255,255,0.5); }
-        .btn-submit { background: var(--color-primary); color: white; border: none; padding: 15px; width: 100%; font-weight: 800; text-transform: uppercase; font-size: 10px; cursor: pointer; transition: 0.3s; }
+        
+        /* Ajuste de color del texto en botones solicitado */
+        .btn-submit { background: var(--color-primary); color: var(--color-accent); border: none; padding: 15px; width: 100%; font-weight: 800; text-transform: uppercase; font-size: 10px; cursor: pointer; transition: 0.3s; }
+        
         .btn-gold { background: var(--color-accent); color: var(--color-primary); }
         .btn-gold:hover { background: #b08d1f; }
 
@@ -212,14 +215,14 @@
             
             <div class="grid" style="text-align: left;">
                 <div class="card" style="border-top: 3px solid var(--color-accent);">
-                    <h3>Comerciantes de materias primas</h3>
-                    <p style="font-size: 14px; color: #444; margin-bottom: 25px;">Acceso rápido y estructurado al mercado proveedor argentino.</p>
-                    <a href="Traders.html" class="btn-submit" style="text-decoration: none; display: inline-block; text-align: center; background: var(--color-primary);">Market Intelligence</a>
+                    <h3>Commodity Traders</h3>
+                    <p style="font-size: 14px; color: #444; margin-bottom: 25px;">Fast and structured access to the Argentine supplier market.</p>
+                    <a href="Traders.html" class="btn-submit" style="text-decoration: none; display: inline-block; text-align: center;">Market Intelligence</a>
                 </div>
                 <div class="card" style="border-top: 3px solid var(--color-accent);">
-                    <h3>Compradores industriales</h3>
-                    <p style="font-size: 14px; color: #444; margin-bottom: 25px;">Estructuración de abastecimiento con proveedores argentinos.</p>
-                    <a href="companies.html" class="btn-submit" style="text-decoration: none; display: inline-block; text-align: center; background: var(--color-primary);">Structured Sourcing</a>
+                    <h3>Industrial Buyers</h3>
+                    <p style="font-size: 14px; color: #444; margin-bottom: 25px;">Sourcing structuring with Argentine suppliers.</p>
+                    <a href="companies.html" class="btn-submit" style="text-decoration: none; display: inline-block; text-align: center;">Structured Sourcing</a>
                 </div>
             </div>
         </div>
@@ -257,22 +260,22 @@
             
             <div class="grid" style="text-align: left; align-items: stretch;">
                 <div class="card card-01-fix">
-                    <span style="font-size: 2rem; color: var(--color-accent); font-weight: 700;">01</span>
-                    <h3>Requisitos del comprador</h3>
+                    <span style="font-size: 2rem; font-weight: 700;">01</span>
+                    <h3>Buyer Requirements</h3>
                     <p style="font-size: 14px; color: #444;">Initial clarification of the buyer’s sourcing requirements, operational parameters and purchasing structure before engaging with suppliers.</p>
                 </div>
 
                 <div class="card card-02-fix">
-                    <span style="font-size: 2rem; color: var(--color-accent); font-weight: 700;">02</span>
-                    <h3>Análisis del mercado de proveedores</h3>
+                    <span style="font-size: 2rem; font-weight: 700;">02</span>
+                    <h3>Supplier Market Analysis</h3>
                     <p style="font-size: 14px; color: #444;">ABS consults suppliers across Argentina to identify viable commercial scenarios and executable conditions aligned with the buyer’s sourcing requirements. This allows buyers to compare different supply structures before entering direct negotiations.</p>
                 </div>
 
                 <div class="card card-03-fix">
-                    <span style="font-size: 2rem; color: #6f5c35; font-weight: 700;">03</span>
-                    <h3>Representación local</h3>
+                    <span style="font-size: 2rem; font-weight: 700;">03</span>
+                    <h3>Local Representation</h3>
                     <p style="font-size: 14px; color: #444;">Execution control at origin including final negotiation, supplier due diligence, quality coordination and export tracking.</p>
-                    <p style="font-size: 13px; font-weight: 600; margin-top: 12px;">Representation is granted only after structural validation.</p>
+                    <p style="font-size: 13px; font-weight: 600; margin-top: 12px; color: var(--color-text-gray);">Representation is granted only after structural validation.</p>
                 </div>
             </div>
         </div>
@@ -296,8 +299,8 @@
                     </ul>
                     
                     <div class="contact-sidebar-box" style="background: var(--color-card-base); border: var(--border-standard); border-left: 4px solid var(--color-accent);">
-                        <span class="label" style="font-size: 9px; margin-bottom: 15px; color: var(--color-text-gray);">Contacto directo</span>
-                        <p style="font-size: 14px; margin-bottom: 20px; color: var(--color-text-gray);"><strong>Consultas generales:</strong><br>
+                        <span class="label" style="font-size: 9px; margin-bottom: 15px; color: var(--color-text-gray);">Direct Contact</span>
+                        <p style="font-size: 14px; margin-bottom: 20px; color: var(--color-text-gray);"><strong>General Inquiries:</strong><br>
                         <a href="mailto:info@absrepresentative.com.ar" class="mail-link">info@absrepresentative.com.ar</a></p>
                         
                         <a href="https://www.linkedin.com/company/abs-representative/" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none;">
@@ -328,7 +331,7 @@
                                 <div class="form-group"><label>Incoterm (FOB / CFR / CIF) *</label><input type="text" name="Incoterm" required></div>
                                 <div class="form-group"><label>Destination Port</label><input type="text" name="Port"></div>
                             </div>
-                            <button type="submit" class="btn-submit btn-gold">Submit Sourcing Request</button>
+                            <button type="submit" class="btn-submit btn-gold" style="color: var(--color-primary);">Submit Sourcing Request</button>
                         </form>
                         <p style="font-size: 9px; margin-top: 15px; text-align: center; color: #666;">All submitted information is handled under strict confidentiality.</p>
                     </div>
