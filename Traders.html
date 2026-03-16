@@ -108,7 +108,6 @@
             margin-bottom: 15px;
         }
 
-        .hero-lead { font-size: clamp(0.85rem, 1.5vw, 1.1rem); margin-bottom: 30px; max-width: 700px; margin-inline: auto; opacity: 0.85; }
         .btn-main { background: var(--color-accent); color: var(--color-primary); padding: 18px 35px; text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 1.5px; display: inline-block; width: 100%; max-width: 400px; transition: 0.3s; }
 
         section { padding: 80px 0; background: var(--color-bg-soft); }
@@ -120,34 +119,12 @@
         
         .grid { display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
         
-        .grid .card {
-            box-sizing: border-box;
-            padding: 35px;
-        }
-
         .card { 
             border: var(--border-standard); 
             background: var(--color-card-base); 
             border-radius: 4px; 
             color: var(--color-primary); 
-        }
-
-        .card-01-fix { border: 4px solid transparent !important; }
-        
-        .card-02-fix { 
-            background: #ece6da !important; 
-            border: 4px solid var(--color-accent) !important; 
-            box-shadow: 0 15px 30px rgba(0,0,0,0.18); 
-            transform: translateY(-3px);
-            margin-top: 0;
-        }
-
-        .card-03-fix {
-            background: #ddd4bf !important;
-            border: 3px solid #6f5c35 !important;
-            box-shadow: 0 25px 55px rgba(0,0,0,0.28);
-            transform: translateY(-8px);
-            margin-top: 0;
+            padding: 35px;
         }
 
         .form-box { background: var(--color-card-base); padding: 30px; border: var(--border-standard); margin-bottom: 30px; color: var(--color-primary); }
@@ -162,18 +139,10 @@
         .mail-link { color: var(--color-accent); text-decoration: none; font-weight: 700; transition: 0.2s; }
         .mail-link:hover { opacity: 0.7; }
 
-        .contact-sidebar-box { border-left: 4px solid var(--color-accent); padding: 30px; margin-top: 35px; background: rgba(255,255,255,0.03); border-top: var(--border-standard); border-right: var(--border-standard); border-bottom: var(--border-standard); }
-
         footer { padding: 40px; text-align: center; background: #111111; color: #666; font-size: 10px; letter-spacing: 1px; }
 
         @media (max-width: 768px) {
             .contact-grid { grid-template-columns: 1fr !important; }
-            .card-01-fix, .card-02-fix, .card-03-fix { 
-                transform: none !important; 
-                margin-top: 0 !important; 
-                border-width: 1px !important; 
-            }
-            .card-02-fix { border-color: var(--color-accent) !important; border-width: 3px !important; }
         }
     </style>
 </head>
@@ -192,163 +161,90 @@
         <img src="herobackground.jpeg" class="hero-image" alt="Agri-industrial background">
         <div class="hero-content">
             <img src="absdoras.png" alt="ABS Logo" class="main-logo">
-            <h1>Supplier Market Intelligence in Argentina</h1>
+            <h1>Supplier Market Intelligence from Argentina</h1>
             <span class="hero-location">TRADER ACCESS</span>
-            <p class="hero-prelead">Structured visibility of Argentine exporters before entering negotiations.</p>
-            <p class="hero-lead">ABS provides on-the-ground supplier intelligence for commodity traders evaluating sourcing opportunities in Argentina.</p>
+            <p class="hero-prelead">Supplier visibility and real market conditions before entering negotiations.</p>
             <a href="#contact" class="btn-main">Request Supplier Market Scan</a>
         </div>
     </header>
 
-    <section id="blind-spots" class="section-dark">
+    <section id="trader-value">
         <div class="container">
-            <span class="label">The Challenge</span>
-            <h2>Trading from a distance creates blind spots.</h2>
+            <span class="label">Solutions</span>
+            <h2>What Traders Receive</h2>
             <div class="grid">
-                <div>
-                    <p style="margin-bottom: 25px; font-size: 1.1rem;">Commodity traders often evaluate Argentine supply opportunities remotely. Without direct visibility at origin it is difficult to determine:</p>
-                    <ul style="list-style: none; opacity: 0.8; font-size: 14px; line-height: 2.2;">
-                        <li>— Which exporters are actually active</li>
-                        <li>— Which suppliers can execute the required volume</li>
-                        <li>— Which commercial structures are viable</li>
+                <div class="card">
+                    <ul style="list-style: none; font-size: 16px; line-height: 2.5; font-weight: 500;">
+                        <li>— Visibility of active Argentine exporters</li>
+                        <li>— Commercial conditions comparison</li>
+                        <li>— Executable supply scenarios</li>
+                        <li>— Direct supplier negotiation access</li>
                     </ul>
                 </div>
                 <div style="border-left: 2px solid var(--color-accent); padding-left: 30px; display: flex; align-items: center;">
-                    <p style="font-size: 1.3rem; font-family: 'Cormorant Garamond', serif; font-style: italic;">ABS reduces this uncertainty by acting as your technical presence at origin.</p>
+                    <p style="font-size: 1.3rem; font-family: 'Cormorant Garamond', serif; font-style: italic;">ABS reduces remote-sourcing uncertainty by acting as your technical presence at origin.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services">
-        <div class="container text-center">
-            <span class="label">Solutions</span>
-            <h2>What ABS Provides to Commodity Traders</h2>
-            <div class="grid" style="text-align: left; margin-top: 40px;">
-                <div class="card">
-                    <h3>Supplier Identification</h3>
-                    <p style="font-size: 14px; color: #444;">Identification of exporters, processors and cooperatives relevant to the specific commodity.</p>
-                </div>
-                <div class="card">
-                    <h3>Commercial Condition Visibility</h3>
-                    <p style="font-size: 14px; color: #444;">Initial consultation with suppliers to determine realistic commercial parameters.</p>
-                </div>
-                <div class="card">
-                    <h3>Origin Intelligence</h3>
-                    <p style="font-size: 14px; color: #444;">Insights regarding operational realities in Argentina including logistics and supplier positioning.</p>
-                </div>
-                <div class="card">
-                    <h3>Structured Market Scan</h3>
-                    <p style="font-size: 14px; color: #444;">A consolidated overview of potential suppliers before direct negotiations begin.</p>
+    <section id="scan-details" class="section-dark">
+        <div class="container">
+            <span class="label">Methodology</span>
+            <h2>What the Supplier Market Scan Includes</h2>
+            <div class="grid">
+                <div class="card" style="background: rgba(255,255,255,0.05); border: 1px solid #333; color: white;">
+                    <ul style="list-style: none; font-size: 14px; line-height: 2.2; opacity: 0.9;">
+                        <li><span style="color: var(--color-accent);">•</span> Identification of relevant Argentine exporters</li>
+                        <li><span style="color: var(--color-accent);">•</span> Supplier profile overview</li>
+                        <li><span style="color: var(--color-accent);">•</span> Commercial conditions comparison</li>
+                        <li><span style="color: var(--color-accent);">•</span> Volume availability indications</li>
+                        <li><span style="color: var(--color-accent);">•</span> Operational considerations for export</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="not-do" class="section-dark">
+    <section id="position">
         <div class="container">
             <div style="max-width: 800px; margin: 0 auto; text-align: center;">
                 <span class="label">Clarification</span>
-                <h2>What ABS Does Not Do</h2>
-                <ul style="list-style: none; font-size: 1.1rem; line-height: 2.5; margin-bottom: 40px; opacity: 0.9;">
-                    <li>• ABS is not a broker</li>
-                    <li>• ABS does not intermediate transactions</li>
-                    <li>• ABS does not represent sellers</li>
-                    <li>• ABS does not trade commodities</li>
-                </ul>
-                <p style="font-size: 1.2rem; font-weight: 700; color: var(--color-accent); border-top: 1px solid #333; padding-top: 25px;">ABS operates exclusively as buyer-side market intelligence and representation at origin.</p>
+                <h2>ABS Position</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 25px;">ABS does not act as a trader, broker, or seller representative.</p>
+                <p style="font-size: 1.2rem; font-weight: 700; color: var(--color-accent); border-top: 1px solid #ddd; padding-top: 25px;">ABS operates strictly as an independent buyer-side representative, providing traders with direct visibility of the Argentine supplier market before negotiations begin.</p>
             </div>
         </div>
     </section>
 
-    <section id="workflow">
-        <div class="container">
-            <span class="label">Process</span>
-            <h2 class="text-center">Typical Workflow</h2>
-            <div class="grid" style="margin-top: 50px;">
-                <div class="card card-01-fix" style="text-align: center;">
-                    <span style="font-size: 1.5rem; color: var(--color-accent); font-weight: 700;">1</span>
-                    <p style="font-size: 14px; margin-top: 10px;">Trader shares sourcing parameters</p>
-                </div>
-                <div class="card card-01-fix" style="text-align: center;">
-                    <span style="font-size: 1.5rem; color: var(--color-accent); font-weight: 700;">2</span>
-                    <p style="font-size: 14px; margin-top: 10px;">ABS consults suppliers across Argentina</p>
-                </div>
-                <div class="card card-01-fix" style="text-align: center;">
-                    <span style="font-size: 1.5rem; color: var(--color-accent); font-weight: 700;">3</span>
-                    <p style="font-size: 14px; margin-top: 10px;">Trader receives a Supplier Market Scan</p>
-                </div>
-                <div class="card card-01-fix" style="text-align: center;">
-                    <span style="font-size: 1.5rem; color: var(--color-accent); font-weight: 700;">4</span>
-                    <p style="font-size: 14px; margin-top: 10px;">Trader decides whether to proceed with negotiations</p>
-                </div>
-            </div>
-            <p class="text-center" style="margin-top: 40px; font-weight: 600; opacity: 0.8;">5. ABS can assist locally if execution support is required.</p>
-        </div>
-    </section>
-
-    <section id="cta" class="section-dark text-center">
-        <div class="container">
-            <span class="label">Ready to Start</span>
-            <h2>Evaluate Argentine suppliers before negotiating</h2>
-            <p style="max-width: 700px; margin: 0 auto 40px; opacity: 0.8;">ABS helps commodity traders gain structured visibility of the Argentine supplier market before committing to negotiations.</p>
-            <a href="#contact" class="btn-main">Request Supplier Market Scan</a>
-        </div>
-    </section>
-
-    <section id="contact">
+    <section id="contact" class="section-dark">
         <div class="container">
             <div class="grid contact-grid" style="grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: start;">
                 <div>
                     <span class="label">Engagement</span>
-                    <h2 style="color: var(--color-primary); margin-bottom: 40px; font-size: 3rem; border-bottom: 2px solid var(--color-accent); display: inline-block; padding-bottom: 10px;">Share Your Sourcing Requirements</h2>
+                    <h2 style="color: white; margin-bottom: 20px;">Request Supplier Market Scan</h2>
+                    <p style="font-size: 15px; opacity: 0.8; margin-bottom: 30px;">Share your sourcing parameters and ABS will consult suppliers across Argentina to identify executable commercial conditions aligned with your trading requirements.</p>
                     
-                    <p style="font-size: 14px; margin-bottom: 15px; color: #444; font-weight: 500;">This is the first step before any commercial negotiation.</p>
-                    
-                    <p style="font-size: 15px; margin-bottom: 15px; font-weight: 500; color: #222;">ABS consults suppliers across Argentina to identify executable commercial conditions aligned with your sourcing requirements. We validate:</p>
-                    <ul style="list-style: none; font-size: 14px; line-height: 2.2; margin-bottom: 25px; padding-left: 5px; color: #444;">
-                        <li><span style="color: var(--color-accent); font-weight: bold;">•</span> Supply viability</li>
-                        <li><span style="color: var(--color-accent); font-weight: bold;">•</span> Quality parameters</li>
-                        <li><span style="color: var(--color-accent); font-weight: bold;">•</span> Executable volumes</li>
-                        <li><span style="color: var(--color-accent); font-weight: bold;">•</span> Operational risk exposure in Argentina</li>
-                    </ul>
-                    
-                    <div class="contact-sidebar-box">
-                        <span class="label" style="font-size: 9px; margin-bottom: 15px;">Direct Contact</span>
-                        <p style="font-size: 14px; margin-bottom: 20px; color: #1a1a1a;"><strong>General Inquiries:</strong><br>
+                    <div style="border-left: 4px solid var(--color-accent); padding: 20px; background: rgba(255,255,255,0.03);">
+                        <p style="font-size: 12px; color: #aaa;"><strong>Direct Inquiries:</strong><br>
                         <a href="mailto:info@absrepresentative.com.ar" class="mail-link">info@absrepresentative.com.ar</a></p>
-                        
-                        <a href="https://www.linkedin.com/company/abs-representative/" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none; background: #000; padding: 10px 15px; border-radius: 2px;">
-                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 14px; height: 14px;">
-                            <span style="font-size: 9px; font-weight: 800; color: #fff; letter-spacing: 2px; margin-left: 10px;">LinkedIn</span>
-                        </a>
                     </div>
                 </div>
 
-                <div style="margin-top: 10px;">
+                <div>
                     <div class="form-box form-main-highlight">
-                        <h4 style="margin-bottom: 10px; text-transform: uppercase; font-size: 13px; font-weight: 800; letter-spacing: 1px; color: #1a1a1a;">Supplier Conditions Overview</h4>
-                        <p style="font-size: 11px; color: #444; margin-bottom: 20px; line-height: 1.4;">This request initiates a supplier market scan where ABS consults exporters, cooperatives and processors across Argentina to identify executable commercial conditions aligned with your sourcing requirements.</p>
                         <form action="https://formsubmit.co/info@absrepresentative.com.ar" method="POST">
-                            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
+                            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px;">
                                 <div class="form-group"><label>Company Name *</label><input type="text" name="Company" required></div>
                                 <div class="form-group"><label>Country *</label><input type="text" name="Country" required></div>
                             </div>
-                            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
-                                <div class="form-group"><label>Contact Name *</label><input type="text" name="Contact-Name" required></div>
+                            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px;">
                                 <div class="form-group"><label>Email *</label><input type="email" name="Email" required></div>
+                                <div class="form-group"><label>Product *</label><input type="text" name="Product" required></div>
                             </div>
-                            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
-                                <div class="form-group"><label>Product of Interest *</label><input type="text" name="Product" required></div>
-                                <div class="form-group"><label>Estimated Volume *</label><input type="text" name="Volume" placeholder="Shipment or annual" required></div>
-                            </div>
-                            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
-                                <div class="form-group"><label>Incoterm (FOB / CFR / CIF) *</label><input type="text" name="Incoterm" required></div>
-                                <div class="form-group"><label>Destination Port</label><input type="text" name="Port"></div>
-                            </div>
-                            <button type="submit" class="btn-submit btn-gold">Submit Sourcing Request</button>
+                            <div class="form-group"><label>Sourcing Parameters / Volume</label><textarea name="Message" rows="3" placeholder="Volume, Incoterm, Port..."></textarea></div>
+                            <button type="submit" class="btn-submit btn-gold">Submit Request</button>
                         </form>
-                        <p style="font-size: 9px; margin-top: 15px; text-align: center; color: #666;">All submitted information is handled under strict confidentiality.</p>
                     </div>
                 </div>
             </div>
