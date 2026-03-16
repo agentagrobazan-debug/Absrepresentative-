@@ -66,11 +66,11 @@
         .nav-links { display: flex; justify-content: center; gap: clamp(10px, 3vw, 40px); flex-wrap: wrap; }
         .nav-links a { text-decoration: none; color: white; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; opacity: 0.8; }
 
-        .hero { position: relative; width: 100%; background-color: #111111; display: flex; flex-direction: column; overflow: hidden; height: 100vh; min-height: 600px; }
+        /* HERO: Restaurado comportamiento original de imagen */
+        .hero { position: relative; width: 100%; background-color: #111111; display: flex; flex-direction: column; overflow: hidden; }
         .hero-image { 
             width: 100%; 
-            height: 100%; 
-            object-fit: cover;
+            height: auto; 
             display: block; 
             filter: brightness(0.55) contrast(1.05); 
         }
@@ -79,9 +79,9 @@
         @media (min-width: 769px) {
             .hero-content { 
                 position: absolute; 
-                top: 45%; /* Subido de 55% para mejorar visibilidad del botón */
+                top: 45%; /* Subido de 55% para elevar el contenido (incluido el botón) */
                 left: 50%; 
-                transform: translate(-50%, -45%); 
+                transform: translate(-50%, -45%); /* Ajustado transform para mantener centrado */
                 background-color: transparent; 
                 padding: 0; 
             }
@@ -167,7 +167,6 @@
         footer { padding: 40px; text-align: center; background: #111111; color: #666; font-size: 10px; letter-spacing: 1px; }
 
         @media (max-width: 768px) {
-            .hero { height: auto; }
             .contact-grid { grid-template-columns: 1fr !important; }
             .card-01-fix, .card-02-fix, .card-03-fix { 
                 transform: none !important; 
