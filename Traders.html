@@ -78,7 +78,19 @@
         .card-dark { background: rgba(255,255,255,0.05); border: 1px solid #333; color: white; }
         .card-dark h3 { color: var(--color-accent); }
 
-        /* --- UPDATED FORM STYLES --- */
+        /* --- CONTACT SECTION OPTIMIZATION --- */
+        #contact {
+            scroll-margin-top: 40px; /* Evita que el formulario quede pegado arriba al saltar */
+        }
+
+        @media (min-width: 769px) {
+            #contact {
+                min-height: 90vh; /* Asegura que la sección ocupe casi toda la pantalla */
+                display: flex;
+                align-items: center; /* Centra el contenido verticalmente para el efecto zoom */
+            }
+        }
+
         .form-box { 
             background: rgba(255,255,255,0.04); 
             border: 1px solid #333; 
@@ -115,7 +127,6 @@
 
         .btn-submit { background: var(--color-accent); color: var(--color-primary); border: none; padding: 15px; width: 100%; font-weight: 800; text-transform: uppercase; font-size: 10px; cursor: pointer; transition: 0.3s; margin-top: 10px; }
         .btn-submit:hover { background: #b08d1f; }
-        /* --- END UPDATED FORM STYLES --- */
         
         footer { padding: 40px; text-align: center; background: #111111; color: #666; font-size: 10px; letter-spacing: 1px; }
 
