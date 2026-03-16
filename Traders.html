@@ -64,7 +64,7 @@
         .hero h1 { font-size: clamp(1.6rem, 4vw, 3.5rem); line-height: 1.1; margin-bottom: 10px; font-weight: 700; }
         .hero-subtitle { font-size: clamp(0.9rem, 1.5vw, 1.1rem); margin-bottom: 25px; max-width: 700px; margin-inline: auto; opacity: 0.85; }
         
-        .btn-main { background: var(--color-accent); color: var(--color-primary); padding: 18px 35px; text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 1.5px; display: inline-block; width: 100%; max-width: 400px; transition: 0.3s; }
+        .btn-main { background: var(--color-accent); color: var(--color-primary); padding: 18px 35px; text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 1.5px; display: inline-block; width: 100%; max-width: 400px; transition: 0.3s; cursor: pointer; }
 
         section { padding: 80px 0; background: var(--color-bg-soft); }
         .section-dark { background: #111111; color: white; border-top: 1px solid #222; }
@@ -78,19 +78,7 @@
         .card-dark { background: rgba(255,255,255,0.05); border: 1px solid #333; color: white; }
         .card-dark h3 { color: var(--color-accent); }
 
-        /* --- CONTACT SECTION OPTIMIZATION --- */
-        #contact {
-            scroll-margin-top: 40px; /* Evita que el formulario quede pegado arriba al saltar */
-        }
-
-        @media (min-width: 769px) {
-            #contact {
-                min-height: 90vh; /* Asegura que la sección ocupe casi toda la pantalla */
-                display: flex;
-                align-items: center; /* Centra el contenido verticalmente para el efecto zoom */
-            }
-        }
-
+        /* --- FORM STYLES --- */
         .form-box { 
             background: rgba(255,255,255,0.04); 
             border: 1px solid #333; 
@@ -150,7 +138,7 @@
             <img src="absdoras.png" alt="ABS Logo" class="main-logo">
             <h1>Supplier Market Sounding — Argentina</h1>
             <p class="hero-subtitle">Compare real supplier conditions before entering negotiations.</p>
-            <a href="#contact" class="btn-main">Request Supplier Market Conditions</a>
+            <a onclick="scrollToForm()" class="btn-main">Request Supplier Market Conditions</a>
         </div>
     </header>
 
@@ -226,7 +214,7 @@
                 </div>
 
                 <div>
-                    <div class="form-box">
+                    <div class="form-box" id="sourcing-form">
                         <form action="https://formsubmit.co/info@absrepresentative.com.ar" method="POST">
                             <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
                                 <div class="form-group"><label>Product *</label><input type="text" name="Product" required></div>
@@ -256,6 +244,16 @@
     <footer>
         © 2026 ABS REPRESENTATIVE. STRUCTURED BUYER-SIDE ACCESS | ARGENTINA.
     </footer>
+
+    <script>
+        function scrollToForm() {
+            const formElement = document.getElementById('sourcing-form');
+            formElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center' // Esto hace que el formulario quede perfectamente centrado en pantalla
+            });
+        }
+    </script>
 
 </body>
 </html>
