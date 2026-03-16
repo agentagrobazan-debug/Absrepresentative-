@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Argentina Commodity Suppliers | Buyer-Side Market Access | ABS Representative</title>
 
-    <meta name="description" content="Source agricultural commodities from Argentina with structured buyer-side access. ABS Representative helps international buyers identify Argentine suppliers, verify commercial conditions, and manage sourcing risk for soybeans, corn, wheat and sunflower oil.">
+    <meta name="description" content="Identify Argentine commodity suppliers with structured buyer-side market access. ABS Representative helps international traders and industrial buyers evaluate exporters, compare commercial conditions, and manage sourcing risk in Argentina.">
     <meta property="og:title" content="ABS Representative | Agri Buyer Side">
     <meta property="og:description" content="Structured access to Argentine agri-industrial suppliers. ABS helps international buyers identify suppliers, compare commercial conditions and structure sourcing operations directly in Argentina.">
     <meta property="og:image" content="https://absrepresentative.com.ar/og-image.jpg.png">
@@ -66,7 +66,6 @@
         .nav-links { display: flex; justify-content: center; gap: clamp(10px, 3vw, 40px); flex-wrap: wrap; }
         .nav-links a { text-decoration: none; color: white; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; opacity: 0.8; }
 
-        /* HERO: Restaurado comportamiento original de imagen */
         .hero { position: relative; width: 100%; background-color: #111111; display: flex; flex-direction: column; overflow: hidden; }
         .hero-image { 
             width: 100%; 
@@ -79,9 +78,9 @@
         @media (min-width: 769px) {
             .hero-content { 
                 position: absolute; 
-                top: 45%; /* Subido de 55% para elevar el contenido (incluido el botón) */
+                top: 45%; 
                 left: 50%; 
-                transform: translate(-50%, -45%); /* Ajustado transform para mantener centrado */
+                transform: translate(-50%, -45%); 
                 background-color: transparent; 
                 padding: 0; 
             }
@@ -113,6 +112,12 @@
 
         section { padding: 80px 0; background: var(--color-bg-soft); }
         .section-dark { background: #111111; color: white; border-top: 1px solid #222; }
+        
+        /* New contrast rule for light sections */
+        section:not(.section-dark) .label {
+            color: #5a5a5a;
+        }
+
         .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 25px; }
         .label { color: var(--color-accent); font-size: 10px; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; display: block; margin-bottom: 20px; }
         h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 30px; line-height: 1.2; }
@@ -194,7 +199,7 @@
             <h1>Structured Access to Argentine Commodity Suppliers</h1>
             <span class="hero-location">ARGENTINA</span>
             <p class="hero-prelead">Supplier visibility and market intelligence before entering negotiations.</p>
-            <a href="#contact" class="btn-main">Share Your Sourcing Requirements</a>
+            <a href="#contact" class="btn-main">Request Supplier Market Scan</a>
         </div>
     </header>
 
@@ -202,17 +207,17 @@
         <div class="container text-center">
             <span class="label">Service Structure</span>
             <h2>ABS Service Structure</h2>
-            <p style="margin-bottom: 60px; opacity: 0.8; max-width: 700px;" class="mx-auto">ABS provides two levels of service depending on the sourcing needs of international buyers.</p>
+            <p style="margin-bottom: 60px; opacity: 0.8; max-width: 700px;" class="mx-auto">ABS offers two service levels depending on how buyers access the Argentine supplier market.</p>
             
             <div class="grid" style="text-align: left;">
                 <div class="card" style="border-top: 3px solid var(--color-accent);">
                     <h3>Commodity Traders</h3>
-                    <p style="font-size: 14px; color: #444; margin-bottom: 25px;">Fast and structured access to the Argentine supplier market.</p>
+                    <p style="font-size: 14px; color: #444; margin-bottom: 25px;">Acceso rápido y estructurado al mercado proveedor argentino.</p>
                     <a href="Traders.html" class="btn-submit" style="text-decoration: none; display: inline-block; text-align: center; background: var(--color-primary);">Market Intelligence</a>
                 </div>
                 <div class="card" style="border-top: 3px solid var(--color-accent);">
                     <h3>Industrial Buyers</h3>
-                    <p style="font-size: 14px; color: #444; margin-bottom: 25px;">Structured sourcing development with Argentine suppliers.</p>
+                    <p style="font-size: 14px; color: #444; margin-bottom: 25px;">Estructuración de abastecimiento con proveedores argentinos.</p>
                     <a href="companies.html" class="btn-submit" style="text-decoration: none; display: inline-block; text-align: center; background: var(--color-primary);">Structured Sourcing</a>
                 </div>
             </div>
@@ -337,3 +342,4 @@
 
 </body>
 </html>
+
