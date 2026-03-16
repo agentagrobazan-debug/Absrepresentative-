@@ -30,7 +30,6 @@
         :root {
             --color-primary: #1a1a1a;
             --color-accent: #c9a227;
-            --color-linkedin: #0077b5;
             --color-bg-light: #efeae1;
             --color-bg-soft: #efeae1;
             --color-card-base: #e6e1d8; 
@@ -44,8 +43,6 @@
         body { font-family: 'Inter', sans-serif; color: var(--color-primary); background-color: #111111; line-height: 1.6; }
 
         .text-center { text-align: center; }
-        .mx-auto { margin-left: auto; margin-right: auto; }
-
         nav { 
             position: absolute; top: 0; left: 0; right: 0; z-index: 100; padding: 25px 0;
             background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
@@ -54,26 +51,14 @@
         .nav-links a { text-decoration: none; color: white; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; opacity: 0.8; }
 
         .hero { position: relative; width: 100%; background-color: #111111; display: flex; flex-direction: column; overflow: hidden; }
-        .hero-image { 
-            width: 100%; 
-            height: auto; 
-            display: block; 
-            filter: brightness(0.55) contrast(1.05); 
-        }
+        .hero-image { width: 100%; height: auto; display: block; filter: brightness(0.55) contrast(1.05); }
         .hero-content { background-color: #111111; padding: 40px 20px; text-align: center; color: white; width: 100%; }
 
         @media (min-width: 769px) {
-            .hero-content { 
-                position: absolute; 
-                top: 55%; 
-                left: 50%; 
-                transform: translate(-50%, -40%); 
-                background-color: transparent; 
-                padding: 0; 
-            }
+            .hero-content { position: absolute; top: 55%; left: 50%; transform: translate(-50%, -40%); background-color: transparent; padding: 0; }
         }
         
-        .main-logo { width: clamp(120px, 15vw, 180px); height: auto; margin-bottom: 15px; background: transparent; padding: 0; display: inline-block; }
+        .main-logo { width: clamp(120px, 15vw, 180px); height: auto; margin-bottom: 15px; display: inline-block; }
         .hero h1 { font-size: clamp(1.6rem, 4vw, 3.5rem); line-height: 1.1; margin-bottom: 15px; font-weight: 700; }
         .hero-subtitle { font-size: clamp(0.9rem, 1.5vw, 1.1rem); margin-bottom: 30px; max-width: 700px; margin-inline: auto; opacity: 0.85; }
         
@@ -83,35 +68,23 @@
         .section-dark { background: #111111; color: white; border-top: 1px solid #222; }
         .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 25px; }
         .label { color: var(--color-accent); font-size: 10px; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; display: block; margin-bottom: 20px; }
-        h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 30px; line-height: 1.2; }
-        h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; margin-bottom: 10px; color: var(--color-primary); font-weight: 700; }
+        h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 30px; line-height: 1.2; }
+        h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; margin-bottom: 10px; font-weight: 700; }
         
         .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-        
-        .card { 
-            border: var(--border-standard); 
-            background: var(--color-card-base); 
-            border-radius: 4px; 
-            color: var(--color-primary); 
-            padding: 30px;
-            transition: 0.3s;
-        }
+        .card { border: var(--border-standard); background: var(--color-card-base); padding: 30px; transition: 0.3s; }
+        .card-dark { background: rgba(255,255,255,0.05); border: 1px solid #333; color: white; }
+        .card-dark h3 { color: var(--color-accent); }
 
-        .form-box { background: var(--color-card-base); padding: 30px; border: var(--border-standard); color: var(--color-primary); }
-        .form-main-highlight { background: var(--color-card-highlight); border: 1px solid var(--color-accent); box-shadow: 0 18px 40px rgba(0,0,0,0.08); }
+        .form-box { background: var(--color-card-highlight); padding: 30px; border: 1px solid var(--color-accent); color: var(--color-primary); }
         .form-group { margin-bottom: 15px; }
         label { display: block; font-size: 9px; text-transform: uppercase; font-weight: 700; margin-bottom: 5px; color: #444; }
         input, textarea { width: 100%; padding: 12px; border: 1px solid #d6d6d6; font-family: 'Inter', sans-serif; font-size: 14px; background: rgba(255,255,255,0.5); }
         .btn-submit { background: var(--color-primary); color: white; border: none; padding: 15px; width: 100%; font-weight: 800; text-transform: uppercase; font-size: 10px; cursor: pointer; transition: 0.3s; }
-        .btn-gold { background: var(--color-accent); color: var(--color-primary); }
         
-        .mail-link { color: var(--color-accent); text-decoration: none; font-weight: 700; }
-
         footer { padding: 40px; text-align: center; background: #111111; color: #666; font-size: 10px; letter-spacing: 1px; }
 
-        @media (max-width: 768px) {
-            .contact-grid { grid-template-columns: 1fr !important; }
-        }
+        @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr !important; } }
     </style>
 </head>
 <body>
@@ -137,14 +110,14 @@
 
     <section id="access">
         <div class="container">
-            <span class="label">Operational Scan</span>
+            <span class="label">Operational Sourcing</span>
             <h2>Fast Access to the Argentine Supplier Market</h2>
             <p style="margin-bottom: 40px; font-size: 1.1rem; max-width: 800px;">ABS conducts a structured supplier market scan across Argentina to identify real supply conditions aligned with the trader’s sourcing parameters.</p>
             
             <div class="grid">
                 <div class="card">
                     <h3>Active Exporters</h3>
-                    <p style="font-size: 14px; opacity: 0.85;">Identification of exporters and processors currently active in the Argentine export market.</p>
+                    <p style="font-size: 14px; opacity: 0.85;">Identification of exporters and processors currently active in the Argentine market.</p>
                 </div>
                 <div class="card">
                     <h3>Executable Volumes</h3>
@@ -152,11 +125,11 @@
                 </div>
                 <div class="card">
                     <h3>Commercial Conditions</h3>
-                    <p style="font-size: 14px; opacity: 0.85;">Comparison of commercial conditions across different suppliers.</p>
+                    <p style="font-size: 14px; opacity: 0.85;">Comparison of commercial terms across multiple suppliers.</p>
                 </div>
                 <div class="card">
                     <h3>Supply Scenarios</h3>
-                    <p style="font-size: 14px; opacity: 0.85;">Identification of viable sourcing scenarios before entering negotiations.</p>
+                    <p style="font-size: 14px; opacity: 0.85;">Identification of viable sourcing structures before negotiations.</p>
                 </div>
                 <div class="card">
                     <h3>Operational Context</h3>
@@ -166,31 +139,48 @@
         </div>
     </section>
 
-    <section id="position" class="section-dark">
-        <div class="container text-center">
-            <div style="max-width: 800px; margin: 0 auto;">
-                <span class="label">Independent Representation</span>
-                <p style="font-size: 1.3rem; font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--color-accent);">ABS operates strictly as an independent buyer-side representative providing traders with direct visibility of the Argentine supplier market before negotiations begin.</p>
+    <section id="how-it-works" class="section-dark">
+        <div class="container">
+            <span class="label">Process</span>
+            <h2>How Access Works</h2>
+            <div class="grid">
+                <div class="card card-dark">
+                    <h3>Supplier Market Scan</h3>
+                    <p style="font-size: 14px; opacity: 0.8;">ABS consults exporters and processors across Argentina based on the trader’s sourcing parameters.</p>
+                </div>
+                <div class="card card-dark">
+                    <h3>Supplier Conditions Report</h3>
+                    <p style="font-size: 14px; opacity: 0.8;">ABS delivers a structured comparison of supplier conditions allowing traders to evaluate supply scenarios before entering negotiations.</p>
+                </div>
+                <div class="card card-dark">
+                    <h3>Supplier Access</h3>
+                    <p style="font-size: 14px; opacity: 0.8;">After reviewing the report, traders may request supplier access through ABS under the appropriate engagement structure.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="position">
+        <div class="container text-center">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <span class="label">Independent Position</span>
+                <h2>Independent Buyer-Side Position</h2>
+                <p style="font-size: 1.1rem; color: var(--color-primary);">ABS does not intermediate transactions and does not represent sellers. We operate exclusively on the buyer side, providing independent supplier visibility and local execution support in Argentina.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-dark">
         <div class="container">
-            <div class="grid contact-grid" style="grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: start;">
+            <div class="grid contact-grid" style="grid-template-columns: 1fr 1.5fr; gap: 60px;">
                 <div>
-                    <span class="label">Engagement</span>
-                    <h2 style="color: var(--color-primary); margin-bottom: 20px;">Request Supplier Market Conditions</h2>
-                    <p style="font-size: 15px; margin-bottom: 30px;">Provide your sourcing parameters and ABS will conduct a supplier market scan to identify executable conditions aligned with your trading requirements.</p>
-                    
-                    <div style="border-left: 4px solid var(--color-accent); padding: 20px; background: rgba(0,0,0,0.03);">
-                        <p style="font-size: 12px;"><strong>Direct Inquiries:</strong><br>
-                        <a href="mailto:info@absrepresentative.com.ar" class="mail-link">info@absrepresentative.com.ar</a></p>
-                    </div>
+                    <span class="label">Inquiry</span>
+                    <h2>Request Supplier Market Conditions</h2>
+                    <p style="font-size: 15px; opacity: 0.8;">Provide your sourcing parameters and ABS will conduct a scan to identify executable conditions aligned with your trading requirements.</p>
                 </div>
 
                 <div>
-                    <div class="form-box form-main-highlight">
+                    <div class="form-box">
                         <form action="https://formsubmit.co/info@absrepresentative.com.ar" method="POST">
                             <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
                                 <div class="form-group"><label>Product *</label><input type="text" name="Product" required></div>
@@ -202,14 +192,14 @@
                             </div>
                             <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
                                 <div class="form-group"><label>Destination Port *</label><input type="text" name="Destination-Port" required></div>
-                                <div class="form-group"><label>Payment Method *</label><input type="text" name="Payment-Method" required></div>
+                                <div class="form-group"><label>Payment Method *</label><input type="text" name="Payment" required></div>
                             </div>
                             <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
                                 <div class="form-group"><label>Shipment Window *</label><input type="text" name="Shipment-Window" required></div>
                                 <div class="form-group"><label>Contact Email *</label><input type="email" name="Email" required></div>
                             </div>
                             <div class="form-group"><label>Technical Specifications *</label><textarea name="Specs" rows="3" required placeholder="Quality parameters, grades, etc."></textarea></div>
-                            <button type="submit" class="btn-submit btn-gold">Submit Sourcing Request</button>
+                            <button type="submit" class="btn-submit">Submit Sourcing Request</button>
                         </form>
                     </div>
                 </div>
