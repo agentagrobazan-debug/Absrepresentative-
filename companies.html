@@ -303,25 +303,41 @@
 
                 <div style="margin-top: 10px;">
                     <div class="form-box form-main-highlight">
-                        <h4 style="margin-bottom: 10px; text-transform: uppercase; font-size: 13px; font-weight: 800; letter-spacing: 1px; color: #1a1a1a;">Commercial Presence Setup</h4>
-                        <p style="font-size: 11px; color: #444; margin-bottom: 20px; line-height: 1.4;">This request initiates your embedded commercial presence in Argentina, where ABS integrates directly into your procurement structure to manage supplier engagement and execution at origin.</p>
+                        <h4 style="margin-bottom: 10px; text-transform: uppercase; font-size: 13px; font-weight: 800; letter-spacing: 1px; color: #1a1a1a;">Commercial Presence Request</h4>
+                        <p style="font-size: 11px; color: #444; margin-bottom: 20px; line-height: 1.4;">This request initiates your embedded commercial presence in Argentina. Please provide basic information about your company and procurement structure to allow proper alignment before engagement.</p>
                         <form action="https://formsubmit.co/info@absrepresentative.com.ar" method="POST">
                             <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
                                 <div class="form-group"><label>Company Name *</label><input type="text" name="Company" required></div>
-                                <div class="form-group"><label>Country *</label><input type="text" name="Country" required></div>
+                                <div class="form-group"><label>Country of Operation *</label><input type="text" name="Country-Operation" required></div>
                             </div>
+                            <div class="form-group"><label>Industry / Business Activity *</label><input type="text" name="Industry-Activity" required></div>
+
                             <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
                                 <div class="form-group"><label>Contact Name *</label><input type="text" name="Contact-Name" required></div>
-                                <div class="form-group"><label>Email *</label><input type="email" name="Email" required></div>
+                                <div class="form-group"><label>Position / Role *</label><input type="text" name="Position-Role" required></div>
                             </div>
+                            <div class="form-group" style="margin-bottom: 25px;"><label>Email *</label><input type="email" name="Email" required></div>
+
+                            <div class="form-group"><label>Main Products of Interest (optional)</label><input type="text" name="Products-Interest"></div>
                             <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
-                                <div class="form-group"><label>Product of Interest *</label><input type="text" name="Product" required></div>
-                                <div class="form-group"><label>Estimated Volume *</label><input type="text" name="Volume" placeholder="Shipment or annual" required></div>
+                                <div class="form-group"><label>Estimated Annual Volume (optional)</label><input type="text" name="Annual-Volume"></div>
+                                <div class="form-group"><label>Current Sourcing Markets (optional)</label><input type="text" name="Sourcing-Markets"></div>
                             </div>
-                            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
-                                <div class="form-group"><label>Incoterm (FOB / CFR / CIF) *</label><input type="text" name="Incoterm" required></div>
-                                <div class="form-group"><label>Destination Port</label><input type="text" name="Port"></div>
+
+                            <div class="form-group">
+                                <label>Do you currently import from Argentina? (Yes / No)</label>
+                                <input type="text" name="Current-Importer" placeholder="Yes / No">
                             </div>
+                            <div class="form-group">
+                                <label>If yes, describe your experience (optional)</label>
+                                <textarea name="Experience-Description" rows="2"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>What is your main objective in Argentina? (optional)</label>
+                                <textarea name="Objective-Argentina" rows="2"></textarea>
+                            </div>
+
                             <button type="submit" class="btn-submit btn-gold">Initiate Presence</button>
                         </form>
                         <p style="font-size: 9px; margin-top: 15px; text-align: center; color: #666;">ABS operates exclusively on the buyer side. All information is handled under strict confidentiality.</p>
