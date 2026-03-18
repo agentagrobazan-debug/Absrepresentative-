@@ -116,6 +116,13 @@
 
         @media (max-width: 768px) {
             .contact-grid { grid-template-columns: 1fr !important; }
+            .container[style*="justify-content: space-between"] {
+                flex-direction: column !important;
+                text-align: center !important;
+            }
+            .container[style*="justify-content: space-between"] div {
+                text-align: center !important;
+            }
         }
     </style>
 </head>
@@ -191,6 +198,28 @@
             <p style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-style: italic; line-height: 1.4;">
                 "ABS Representative was built on the principle that international buyers deserve a local partner whose interests are strictly and exclusively aligned with their own."
             </p>
+        </div>
+    </section>
+
+    <section style="background: var(--color-bg-light); padding: 30px 0;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <div style="flex: 1; text-align: left;">
+                <a href="mailto:info@absrepresentative.com.ar" style="text-decoration: none; font-weight: 600; color: var(--color-primary); font-size: 14px;">
+                    📧 info@absrepresentative.com.ar
+                </a>
+            </div>
+
+            <div style="flex: 1; text-align: center;">
+                <a href="https://www.linkedin.com/company/abs-representative/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 22px; opacity: 0.8;">
+                </a>
+            </div>
+
+            <div style="flex: 1; text-align: right;">
+                <a href="https://wa.me/5493416552701" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 22px; opacity: 0.8;">
+                </a>
+            </div>
         </div>
     </section>
 
