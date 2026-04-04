@@ -79,55 +79,19 @@
         .card-dark { background: rgba(255,255,255,0.05); border: 1px solid #333; color: white; }
         .card-dark h3 { color: var(--color-accent); }
 
-        /* --- CONTACT SECTION ANCHOR --- */
-        #contact {
-            scroll-margin-top: 40px; 
-        }
-
-        .form-box { 
-            background: rgba(255,255,255,0.04); 
-            border: 1px solid #333; 
-            padding: 30px; 
-            color: white; 
-        }
-        
+        #contact { scroll-margin-top: 40px; }
+        .form-box { background: rgba(255,255,255,0.04); border: 1px solid #333; padding: 30px; color: white; }
         .form-group { margin-bottom: 15px; }
-        
-        label { 
-            display: block; 
-            font-size: 9px; 
-            text-transform: uppercase; 
-            font-weight: 700; 
-            margin-bottom: 5px; 
-            color: #bbb; 
-        }
-        
-        input, textarea { 
-            width: 100%; 
-            padding: 12px; 
-            border: 1px solid #d6d6d6; 
-            font-family: 'Inter', sans-serif; 
-            font-size: 14px; 
-            background: rgba(255,255,255,0.9); 
-            color: #111; 
-        }
-
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--color-accent);
-            background: #ffffff;
-        }
-
+        label { display: block; font-size: 9px; text-transform: uppercase; font-weight: 700; margin-bottom: 5px; color: #bbb; }
+        input, textarea { width: 100%; padding: 12px; border: 1px solid #d6d6d6; font-family: 'Inter', sans-serif; font-size: 14px; background: rgba(255,255,255,0.9); color: #111; }
+        input:focus, textarea:focus { outline: none; border-color: var(--color-accent); background: #ffffff; }
         .btn-submit { background: var(--color-accent); color: var(--color-primary); border: none; padding: 15px; width: 100%; font-weight: 800; text-transform: uppercase; font-size: 10px; cursor: pointer; transition: 0.3s; margin-top: 10px; }
         .btn-submit:hover { background: #b08d1f; }
-        
         footer { padding: 40px; text-align: center; background: #111111; color: #666; font-size: 10px; letter-spacing: 1px; }
-
         @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr !important; } }
     </style>
 </head>
 <body>
-
     <nav>
         <div class="nav-links">
             <a href="index.html">Home</a>
@@ -136,23 +100,20 @@
             <a href="about.html">About / Contact</a>
         </div>
     </nav>
-
     <header class="hero">
         <img src="herobackground.jpeg" class="hero-image" alt="Agri-industrial background">
         <div class="hero-content">
             <img src="absdoras.png" alt="ABS Logo" class="main-logo">
             <h1>Supplier Market Sounding — Argentina</h1>
-            <p class="hero-subtitle">Compare executable supplier market conditions before entering negotiations.</p>
+            <p class="hero-subtitle">Identify exporters capable of executing your demand before entering negotiations.</p>
             <a onclick="scrollToForm()" class="btn-main">Request Supplier Market Conditions</a>
         </div>
     </header>
-
     <section id="access">
         <div class="container">
-            <span class="label">Supplier Market Access</span>
-            <h2>Fast Access to the Argentine Supplier Market</h2>
-            <p style="margin-bottom: 40px; font-size: 1.1rem; max-width: 800px;">ABS conducts a structured supplier market sounding across Argentina to identify real supply conditions aligned with the trader’s sourcing parameters.</p>
-            
+            <span class="label">Executable Supply</span>
+            <h2>Executable Supply from Argentina</h2>
+            <p style="margin-bottom: 40px; font-size: 1.1rem; max-width: 800px;">ABS identifies exporters capable of executing the requested demand and validates real supply conditions before negotiations begin.</p>
             <div class="grid">
                 <div class="card">
                     <h3>Active Exporters</h3>
@@ -177,7 +138,6 @@
             </div>
         </div>
     </section>
-
     <section id="how-it-works" class="section-dark">
         <div class="container">
             <span class="label">Process</span>
@@ -198,26 +158,23 @@
             </div>
         </div>
     </section>
-
     <section id="position">
         <div class="container text-center">
             <div style="max-width: 800px; margin: 0 auto;">
                 <span class="label">Independent Position</span>
                 <h2>Independent Buyer-Side Position</h2>
-                <p style="font-size: 1.1rem; color: var(--color-primary);">ABS does not intermediate transactions and does not represent sellers. We operate exclusively on the buyer side, providing independent supplier visibility and local execution support in Argentina.</p>
+                <p style="font-size: 1.1rem; color: var(--color-primary);">ABS does not represent sellers and does not add margins to supplier prices. We operate exclusively on the buyer side, providing independent supplier visibility and local execution support in Argentina.</p>
             </div>
         </div>
     </section>
-
     <section id="contact" class="section-dark">
         <div class="container">
             <div class="grid contact-grid" style="grid-template-columns: 1fr 1.5fr; gap: 60px;">
                 <div>
                     <span class="label">Inquiry</span>
-                    <h2>Request Supplier Market Sounding</h2>
+                    <h2>Request Supplier Availability</h2>
                     <p style="font-size: 15px; opacity: 0.8;">Provide your sourcing parameters and ABS will conduct a scan to identify executable conditions aligned with your trading requirements.</p>
                 </div>
-
                 <div>
                     <div class="form-box" id="sourcing-form">
                         <form action="https://formsubmit.co/leandrobazan@absrepresentative.com.ar" method="POST">
@@ -238,18 +195,16 @@
                                 <div class="form-group"><label>Contact Email *</label><input type="email" name="Email" required></div>
                             </div>
                             <div class="form-group"><label>Technical Specifications *</label><textarea name="Specs" rows="3" required placeholder="Quality parameters, grades, etc."></textarea></div>
-                            <button type="submit" class="btn-submit">Submit Sounding Request</button>
+                            <button type="submit" class="btn-submit">Submit Supply Inquiry</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <footer>
         © 2026 ABS Representative — Structured Buyer-Side Access | Argentina
     </footer>
-
     <script>
         function scrollToForm() {
             const formElement = document.getElementById('sourcing-form');
@@ -259,6 +214,5 @@
             });
         }
     </script>
-
 </body>
 </html>
