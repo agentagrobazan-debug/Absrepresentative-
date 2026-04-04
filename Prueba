@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ABS Representative | Strategic Buyer-Side Control | Argentina Agri-Sourcing</title>
+    <link rel="canonical" href="https://absrepresentative.com.ar/">
+
+    <meta name="description" content="International sourcing in Argentina fails due to lack of control at origin. ABS provides the technical execution structure required for independent buyer-side representation.">
+    <meta property="og:title" content="ABS Representative | Authority at Origin">
+    <meta property="og:description" content="Defining structured access to the Argentine commodity market. We are structurally unable to represent sellers.">
+    <meta property="og:image" content="https://absrepresentative.com.ar/og-image.jpg.png">
+    <meta property="og:url" content="https://absrepresentative.com.ar/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-44K7ZV4WVB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-44K7ZV4WVB');
+    </script>
+
+    <script type="application/ld+json">
+    { 
+      "@context": "https://schema.org", 
+      "@type": "Organization", 
+      "name": "ABS Representative", 
+      "url": "https://absrepresentative.com.ar", 
+      "logo": "https://absrepresentative.com.ar/absdoras.png", 
+      "description": "Buyer-side sourcing and market access for agricultural suppliers in Argentina.", 
+      "sameAs": [ "https://www.linkedin.com/company/abs-representative/" ] 
+    }
+    </script>
+
+    <link rel="icon" type="image/png" href="/Favicon.png">
+    <link rel="shortcut icon" href="/Favicon.png">
+    <link rel="apple-touch-icon" href="/Favicon.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-primary: #1a1a1a;
+            --color-accent: #c9a227;
+            --color-linkedin: #0077b5;
+            --color-bg-light: #efeae1;
+            --color-bg-soft: #efeae1;
+            --color-card-base: #e6e1d8; 
+            --color-card-highlight: #e9e6db;
+            --border-standard: 1px solid #d6d6d6;
+            --max-width: 1100px;
+            --color-text-gray: #5a5a5a; 
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: var(--color-primary); background-color: #111111; line-height: 1.6; }
+
+        .text-center { text-align: center; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+
+        nav { 
+            position: absolute; top: 0; left: 0; right: 0; z-index: 100; padding: 25px 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+        }
+        .nav-links { display: flex; justify-content: center; gap: clamp(10px, 3vw, 40px); flex-wrap: wrap; }
+        .nav-links a { text-decoration: none; color: white; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; opacity: 0.8; }
+
+        .hero { position: relative; width: 100%; background-color: #111111; display: flex; flex-direction: column; overflow: hidden; }
+        .hero-image { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            filter: brightness(0.55) contrast(1.05); 
+        }
+        .hero-content { background-color: #111111; padding: 40px 20px; text-align: center; color: white; width: 100%; }
+
+        @media (min-width: 769px) {
+            .hero-content { 
+                position: absolute; 
+                top: 45%; 
+                left: 50%; 
+                transform: translate(-50%, -45%); 
+                background-color: transparent; 
+                padding: 0; 
+            }
+        }
+        
+        .main-logo { width: clamp(120px, 15vw, 180px); height: auto; margin-bottom: 15px; background: transparent; padding: 0; display: inline-block; }
+        .hero h1 { font-size: clamp(1.6rem, 4vw, 3.5rem); line-height: 1.1; margin-bottom: 15px; font-weight: 700; }
+        
+        .hero-location { 
+            font-size: 16px; 
+            text-transform: uppercase; 
+            letter-spacing: 4px; 
+            color: #fff; 
+            opacity: 0.8; 
+            margin-bottom: 25px; 
+            display: block; 
+            font-weight: 600;
+        }
+
+        .hero-prelead {
+            font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+            max-width: 850px;
+            margin-inline: auto;
+            line-height: 1.4;
+            font-weight: 500;
+            color: #fff;
+            opacity: 0.95;
+        }
+
+        .btn-main { background: var(--color-accent); color: var(--color-primary); padding: 18px 35px; text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 1.5px; display: inline-block; width: 100%; max-width: 400px; transition: 0.3s; text-align: center; }
+
+        section { padding: 80px 0; background: var(--color-bg-soft); }
+        .section-dark { background: #111111; color: white; border-top: 1px solid #222; }
+        
+        section:not(.section-dark) .label { color: var(--color-text-gray); }
+        section:not(.section-dark) h3 { color: var(--color-text-gray); }
+
+        .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 25px; }
+        .label { color: var(--color-accent); font-size: 10px; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; display: block; margin-bottom: 20px; }
+        h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 30px; line-height: 1.2; }
+        h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 15px; color: var(--color-accent); }
+        
+        .grid { display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        
+        .card { 
+            border: var(--border-standard); 
+            background: var(--color-card-base); 
+            border-radius: 4px; 
+            color: var(--color-primary); 
+            box-sizing: border-box;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card p { flex-grow: 1; }
+
+        .card-01-fix { border: 1px solid #d6d6d6 !important; }
+        
+        .card-02-fix { 
+            background: #ece6da !important; 
+            border: 4px solid var(--color-accent) !important; 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.18); 
+            transform: translateY(-3px);
+        }
+
+        .card-03-fix {
+            background: #ddd4bf !important;
+            border: 3px solid #6f5c35 !important;
+            box-shadow: 0 25px 55px rgba(0,0,0,0.28);
+            transform: translateY(-8px);
+        }
+
+        footer { padding: 40px; text-align: center; background: #111111; color: #666; font-size: 10px; letter-spacing: 1px; }
+
+        @media (max-width: 768px) {
+            .card-01-fix, .card-02-fix, .card-03-fix { 
+                transform: none !important; 
+                margin-top: 0 !important; 
+                border-width: 1px !important; 
+            }
+            .card-02-fix { border-color: var(--color-accent) !important; border-width: 3px !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="traders.html">For Traders</a>
+            <a href="companies.html">For Companies</a>
+            <a href="about.html">About / Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <img src="herobackground.jpeg" class="hero-image" alt="Agri-industrial background">
+        <div class="hero-content">
+            <img src="absdoras.png" alt="ABS Logo" class="main-logo">
+            <h1>Strategic Presence at Origin</h1>
+            <span class="hero-location">ARGENTINA</span>
+            <p class="hero-prelead">International sourcing in Argentina does not fail due to lack of supply — it fails due to lack of control at origin.</p>
+        </div>
+    </header>
+
+    <section id="contrast">
+        <div class="container text-center">
+            <div class="grid" style="align-items: center; gap: 60px;">
+                <div style="text-align: left;">
+                    <span class="label">The Execution Gap</span>
+                    <p style="font-size: 1.1rem; line-height: 1.8;">
+                        Most buyers operate based on indicative offers, limited supplier visibility and no local execution control. <br><br>
+                        <strong>ABS operates on validated supply, real commercial conditions and direct presence at origin.</strong>
+                    </p>
+                </div>
+                <div style="background: var(--color-primary); color: white; padding: 40px; border-radius: 4px; text-align: left;">
+                    <h3 style="color: var(--color-accent);">Direct Mandate</h3>
+                    <p style="font-size: 14px; opacity: 0.9;">We eliminate the noise of intermediation. We provide the technical structure required to ensure what is contracted is actually executable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="who-we-work-with" class="section-dark">
+        <div class="container text-center">
+            <span class="label">Structural Alignment</span>
+            <h2>Buyer-Side Entry Points</h2>
+            <div class="grid" style="text-align: left; margin-top: 50px;">
+                <div class="card" style="border-top: 3px solid var(--color-accent);">
+                    <h3>For Traders</h3>
+                    <p style="font-size: 14px; color: #444; margin-bottom: 25px;">Validated market sounding. We replace remote speculation with a direct map of executable supply and real commercial scenarios.</p>
+                    <a href="traders.html" class="btn-main">Map the Market</a>
+                </div>
+                <div class="card" style="border-top: 3px solid var(--color-accent);">
+                    <h3>For Companies</h3>
+                    <p style="font-size: 14px; color: #444; margin-bottom: 25px;">Embedded origin control. A technical commercial office in Argentina to manage supplier alignment and risk from within.</p>
+                    <a href="companies.html" class="btn-main">Establish Origin Control</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="concept">
+        <div class="container">
+            <span class="label">Independence</span>
+            <h2>Structurally Aligned to the Buyer.</h2>
+            <div class="grid">
+                <div>
+                    <p style="margin-bottom: 25px; font-size: 1.1rem;">ABS is not a broker. To solve the inherent conflict of interest at origin, <strong>we are structurally unable to represent sellers.</strong></p>
+                    <ul style="list-style: none; opacity: 0.8; font-size: 14px; line-height: 2;">
+                        <li>— No intermediation of spread</li>
+                        <li>— No seller commissions</li>
+                        <li>— No competition with the buyer</li>
+                    </ul>
+                </div>
+                <div style="border-left: 2px solid var(--color-accent); padding-left: 30px;">
+                    <h3 style="text-transform: uppercase; font-size: 1.1rem; letter-spacing: 1px;">Authority at Origin</h3>
+                    <p style="margin-bottom: 15px; font-size: 14px;"><strong>Technical Presence:</strong> We validate volume, quality, and timeframe before you commit capital.</p>
+                    <p style="margin-bottom: 15px; font-size: 14px;"><strong>Risk Mitigation:</strong> We manage the friction of origin execution so you don't have to.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="structure" class="section-dark">
+        <div class="container text-center">
+            <span class="label">Methodology</span>
+            <h2>The Sourcing Protocol</h2>
+            <div class="grid" style="text-align: left; align-items: stretch; margin-top: 50px;">
+                <div class="card card-01-fix">
+                    <span style="font-size: 2rem; font-weight: 700; color: var(--color-accent);">01</span>
+                    <h3>Sourcing Discipline</h3>
+                    <p style="font-size: 14px; color: #444;">Clarification of technical requirements and purchasing structure. We only engage the market when the mandate is technically sound.</p>
+                </div>
+
+                <div class="card card-02-fix">
+                    <span style="font-size: 2rem; font-weight: 700; color: var(--color-primary);">02</span>
+                    <h3>Origin Sounding</h3>
+                    <p style="font-size: 14px; color: #444;">Direct mapping of executable conditions across the Argentine supplier network. We identify where the real supply is, not where the promises are.</p>
+                </div>
+
+                <div class="card card-03-fix">
+                    <span style="font-size: 2rem; font-weight: 700; color: #6f5c35;">03</span>
+                    <h3>Execution Authority</h3>
+                    <p style="font-size: 14px; color: #444;">Full representation and tracking. We manage the supplier due diligence and quality coordination required for a successful shipment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="coverage">
+        <div class="container">
+            <span class="label">Scope</span>
+            <h2>Market Coverage</h2>
+            <div class="grid">
+                <div>
+                    <p style="margin-bottom: 25px; font-size: 1.1rem;">ABS operates at the center of the Argentine agri-industrial sector.</p>
+                    <p style="margin-bottom: 15px; font-size: 14px; opacity: 0.9;">We bridge the gap for international requirements in:</p>
+                    <ul style="list-style: none; opacity: 0.8; font-size: 14px; line-height: 2;">
+                        <li>— Soybeans, Corn & Wheat</li>
+                        <li>— Vegetable Oils & Oilseeds</li>
+                        <li>— Agri-industrial Derivatives</li>
+                    </ul>
+                </div>
+                <div style="border-left: 2px solid var(--color-accent); padding-left: 30px; display: flex; align-items: center;">
+                    <p style="font-size: 1.1rem; font-style: italic; opacity: 0.9;">"This is not an alternative way to source — it is how sourcing becomes executable in Argentina."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 ABS REPRESENTATIVE. STRUCTURED BUYER-SIDE ACCESS | ARGENTINA.
+    </footer>
+
+</body>
+</html>
