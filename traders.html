@@ -37,6 +37,9 @@
             --color-card-highlight: #e9e6db;
             --border-standard: 1px solid #d6d6d6;
             --max-width: 1100px;
+            /* Colores de validación */
+            --color-valid-bg: #e8f5e9;
+            --color-valid-border: #2e7d32;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -84,9 +87,23 @@
         .form-group { margin-bottom: 15px; }
         .form-section-title { font-size: 11px; letter-spacing: 1px; color: var(--color-accent); border-bottom: 1px solid #333; padding-bottom: 5px; margin: 25px 0 15px 0; text-transform: uppercase; font-weight: 700; }
         label { display: block; font-size: 9px; text-transform: uppercase; font-weight: 700; margin-bottom: 5px; color: #bbb; }
-        input, textarea, select { width: 100%; padding: 12px; border: 1px solid #d6d6d6; font-family: 'Inter', sans-serif; font-size: 14px; background: rgba(255,255,255,0.9); color: #111; }
+        
+        /* Estilos base de inputs */
+        input, textarea, select { 
+            width: 100%; padding: 12px; border: 1px solid #d6d6d6; font-family: 'Inter', sans-serif; 
+            font-size: 14px; background: rgba(255,255,255,0.9); color: #111;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
         select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; }
         input:focus, textarea:focus, select:focus { outline: none; border-color: var(--color-accent); background: #ffffff; }
+
+        /* Clase de Validación (Verde) */
+        .is-valid {
+            background-color: var(--color-valid-bg) !important;
+            border-color: var(--color-valid-border) !important;
+            color: #1b5e20 !important;
+        }
+
         .btn-submit { background: var(--color-accent); color: var(--color-primary); border: none; padding: 15px; width: 100%; font-weight: 800; text-transform: uppercase; font-size: 10px; cursor: pointer; transition: 0.3s; margin-top: 20px; }
         .btn-submit:hover { background: #b08d1f; }
         footer { padding: 40px; text-align: center; background: #111111; color: #666; font-size: 10px; letter-spacing: 1px; }
@@ -139,7 +156,7 @@
                         <p style="font-size:12px; margin-bottom:20px; opacity:0.8;">
                             This form allows ABS to evaluate whether the proposed sourcing structure is commercially executable from Argentina before engaging suppliers.
                         </p>
-                        <form action="https://formsubmit.co/leandrobazan@absrepresentative.com.ar" method="POST">
+                        <form id="main-sourcing-form" action="https://formsubmit.co/leandrobazan@absrepresentative.com.ar" method="POST">
                             
                             <div class="form-section-title" style="margin-top: 0;">Section 1 — Product</div>
                             <div class="form-group">
@@ -395,6 +412,27 @@
                 block: 'center'
             });
         }
+
+        // Lógica de validación visual en verde
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('main-sourcing-form');
+            const inputs = form.querySelectorAll('input, select, textarea');
+
+            const validateInput = (el) => {
+                if (el.value.trim() !== "" && el.checkValidity()) {
+                    el.classList.add('is-valid');
+                } else {
+                    el.classList.remove('is-valid');
+                }
+            };
+
+            inputs.forEach(input => {
+                input.addEventListener('input', () => validateInput(input));
+                input.addEventListener('change', () => validateInput(input));
+                // Ejecución inicial por si hay autocompletado
+                validateInput(input);
+            });
+        });
     </script>
 </body>
 </html>
