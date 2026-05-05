@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Origin-Side Execution & Counterparty Validation | ABS Representative</title>
+    <title>Trader Execution & Counterparty Validation | ABS Representative</title>
     <link rel="canonical" href="https://absrepresentative.com.ar/traders.html">
 
-    <meta name="description" content="Validate real export liquidity in Argentina. Eliminate execution risk by filtering non-performing counterparties through origin-side intelligence.">
-    <meta property="og:title" content="ABS Representative | Origin Execution Filter">
-    <meta property="og:description" content="Secure executable supply positions. Origin-side validation for international commodity traders.">
+    <meta name="description" content="Institutional origin-side execution gate for professional trading desks. Counterparty validation and liquidity verification for Argentine commodities.">
+    <meta property="og:title" content="ABS Representative | Execution Gate">
+    <meta property="og:description" content="Restricted access to validated origin-side liquidity. Execution only.">
     <meta property="og:image" content="https://absrepresentative.com.ar/og-image.jpg.png">
     <meta property="og:url" content="https://absrepresentative.com.ar/traders.html">
     <meta property="og:type" content="website">
@@ -52,9 +52,10 @@
         }
         .nav-links { display: flex; justify-content: center; gap: clamp(10px, 3vw, 40px); flex-wrap: wrap; }
         .nav-links a { text-decoration: none; color: white; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; opacity: 0.8; }
+        .nav-links a.active { color: var(--color-accent); opacity: 1; border-bottom: 1px solid var(--color-accent); }
 
         .hero { position: relative; width: 100%; background-color: #111111; display: flex; flex-direction: column; overflow: hidden; }
-        .hero-image { width: 100%; height: auto; display: block; filter: brightness(0.55) contrast(1.05); }
+        .hero-image { width: 100%; height: auto; display: block; filter: brightness(0.4) contrast(1.1); }
         
         .hero-content { background-color: #111111; padding: 30px 20px; text-align: center; color: white; width: 100%; }
 
@@ -67,7 +68,7 @@
         .hero h1 { font-size: clamp(1.6rem, 4vw, 3.5rem); line-height: 1.1; margin-bottom: 10px; font-weight: 700; }
         .hero-subtitle { font-size: clamp(0.9rem, 1.5vw, 1.1rem); margin-bottom: 25px; max-width: 700px; margin-inline: auto; opacity: 0.85; }
         
-        .btn-main { background: var(--color-accent); color: var(--color-primary); padding: 18px 35px; text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 1.5px; display: inline-block; width: 100%; max-width: 400px; transition: 0.3s; cursor: pointer; }
+        .btn-main { background: var(--color-accent); color: var(--color-primary); padding: 18px 35px; text-decoration: none; font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 1.5px; display: inline-block; width: 100%; max-width: 400px; transition: 0.3s; cursor: pointer; border: none; }
 
         section { padding: 80px 0; background: var(--color-bg-soft); }
         .section-dark { background: #111111; color: white; border-top: 1px solid #222; }
@@ -117,18 +118,21 @@
     <nav>
         <div class="nav-links">
             <a href="index.html">Direct Access</a>
-            <a href="traders.html">Execution Protocol</a>
-            <a href="companies.html">Buyer Representation</a>
-            <a href="about.html">Network Intelligence</a>
+            <a href="traders.html" class="active">Execution Gate</a>
+            <a href="companies.html">Buyer Mandate</a>
+            <a href="about.html">Network Audit</a>
         </div>
     </nav>
     <header class="hero">
-        <img src="herobackground.jpeg" class="hero-image" alt="Agri-industrial background">
+        <img src="herobackground.jpeg" class="hero-image" alt="Agri-industrial execution">
         <div class="hero-content">
             <img src="absdoras.png" alt="ABS Logo" class="main-logo">
-            <h1>Eliminate Non-Performing Counterparties Before Contract Exposure</h1>
-            <p class="hero-subtitle">Not all supply is executable. Entering the Argentine market without origin-side validation exposes capital to non-performance, false liquidity, and contract failure.</p>
-            <a onclick="scrollToForm()" class="btn-main">Trigger Counterparty Validation</a>
+            <h1>Absolute Origin-Side Validation. Execution Ready.</h1>
+            <p class="hero-subtitle">Unvalidated origin positions are excluded. Access is restricted to verified execution capacity only.</p>
+            <button onclick="scrollToForm()" class="btn-main">Submit for Execution Validation</button>
+            <p style="font-size:11px; opacity:0.6; margin-top:10px;">
+                Validated submissions proceed directly to origin-side execution interface.
+            </p>
         </div>
     </header>
 
@@ -136,21 +140,29 @@
         <div class="container">
             <div class="grid contact-grid" style="grid-template-columns: 1fr 1.5fr; gap: 60px;">
                 <div class="left-panel">
-                    <span class="label">Operational Intake</span>
-                    <h2>Eliminate Counterparty Failure Risk</h2>
-                    <p style="font-size: 15px; opacity: 0.8;">Trading without origin-side validation in Argentina exposes capital to non-performing counterparties, false supply positions, and execution failure at contract stage. We filter speculative noise to secure real liquidity.</p>
+                    <span class="label">System Access</span>
+                    <h2>Restricted Execution Intake</h2>
+                    <p style="font-size: 15px; opacity: 0.8; margin-bottom: 20px;"><strong>This is not an inquiry form.</strong> Access is conditional upon technical alignment and institutional verification.</p>
+                    <p style="font-size: 14px; opacity: 0.7; line-height: 1.4; border-top: 1px solid #333; padding-top: 20px;">
+                        • Non-executable demand is rejected.<br>
+                        • Speculative positions are excluded.<br>
+                        • Capital exposure is mitigated via origin-side audit.
+                    </p>
+                    <p style="font-size: 14px; opacity: 0.7; margin-top:15px;">
+                        Access is granted only after validation.
+                    </p>
                     
-                    <h3 style="margin-top:30px;">Origin-Side Execution Workflow</h3>
+                    <h3 style="margin-top:40px;">Verification Chain</h3>
                     <p style="font-size:14px; opacity:0.85;">
-                    1. **Technical Mapping**: Specification and financial instrument alignment.<br>
-                    2. **Position Validation**: Filtering verified liquidity from paper-only positions.<br>
-                    3. **Execution Delivery**: Formal entry into the market with verified origin principals.
+                    1. **Requirement Audit**: Specification and instrument threshold confirmation.<br>
+                    2. **Counterparty Filtering**: Removal of non-performing export licenses.<br>
+                    3. **Execution Delivery**: Formal market interaction with verified principals.
                     </p>
                 </div>
                 <div>
                     <div class="form-box" id="sourcing-form">
-                        <p style="font-size:12px; margin-bottom:20px; opacity:0.8; border-left: 2px solid var(--color-accent); padding-left: 15px;">
-                            CRITICAL: This is a controlled execution validation process. Incomplete, inconsistent, or non-institutional data will result in automatic rejection. Only executable demand is processed.
+                        <p style="font-size:12px; margin-bottom:20px; opacity:0.9; border-left: 2px solid var(--color-accent); padding-left: 15px; color: #fff;">
+                            <strong>CRITICAL:</strong> Institutional verification is mandatory. Incomplete, inconsistent, or retail-level data results in automatic rejection. <strong>No response is issued to non-qualified submissions. Access is not guaranteed.</strong>
                         </p>
                         <form id="main-sourcing-form" action="https://formsubmit.co/leandrobazan@absrepresentative.com.ar" method="POST">
                             
@@ -179,14 +191,14 @@
                                 </select>
                             </div>
 
-                            <div class="form-section-title">Section 2 — Liquidity Requirements</div>
+                            <div class="form-section-title">Section 2 — Execution Parameters</div>
                             <div class="form-group">
                                 <label>Total Contract Volume (MT) *</label>
-                                <input type="text" name="Total-Volume" required placeholder="Required Volume">
+                                <input type="text" name="Total-Volume" required placeholder="Metric Tonnage">
                             </div>
                             <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
                                 <div class="form-group">
-                                    <label>Lot Size per Shipment (MT) *</label>
+                                    <label>Lot Size (MT) *</label>
                                     <select name="Lot-Size" required>
                                         <option value="5,000">5,000</option>
                                         <option value="10,000">10,000</option>
@@ -198,7 +210,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Execution Structure</label>
+                                    <label>Structure</label>
                                     <select name="Purchase-Structure">
                                         <option value="Spot">Spot Position</option>
                                         <option value="Monthly Program">Monthly Allocation</option>
@@ -207,10 +219,10 @@
                                 </div>
                             </div>
 
-                            <div class="form-section-title">Section 3 — Logistics & Origin Handling</div>
+                            <div class="form-section-title">Section 3 — Logistics & Origin Strategy</div>
                             <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
                                 <div class="form-group">
-                                    <label>Packing Protocol</label>
+                                    <label>Packing</label>
                                     <select name="Packing-Type">
                                         <option value="Bulk Vessel">Bulk Vessel</option>
                                         <option value="Flexitank">Flexitank</option>
@@ -218,21 +230,19 @@
                                         <option value="25 kg Bags">25 kg Bags</option>
                                         <option value="50 kg Bags">50 kg Bags</option>
                                         <option value="1 MT Big Bags (FIBC)">1 MT Big Bags (FIBC)</option>
-                                        <option value="Drums">Drums</option>
                                         <option value="Other">Other</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Shipping Mode</label>
+                                    <label>Mode</label>
                                     <select name="Shipment-Mode">
                                         <option value="Bulk Vessel">Bulk Vessel</option>
                                         <option value="Containers">Containerized</option>
-                                        <option value="Flexible">Flexible</option>
                                     </select>
                                 </div>
                             </div>
 
-                            <div class="form-section-title">Section 4 — Commercial & Settlement Compliance</div>
+                            <div class="form-section-title">Section 4 — Commercial Settlement</div>
                             <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
                                 <div class="form-group">
                                     <label>Incoterm *</label>
@@ -245,8 +255,6 @@
                                 <div class="form-group">
                                     <label>Discharge Port *</label>
                                     <input type="text" name="Destination-Port" required>
-                                    <label style="margin-top:10px;">Preferred Load Terminal</label>
-                                    <input type="text" name="Loading-Port" placeholder="e.g. San Lorenzo / Rosales">
                                 </div>
                             </div>
                             <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
@@ -257,78 +265,31 @@
                                         <option value="SBLC">SBLC</option>
                                         <option value="CAD">CAD</option>
                                         <option value="TT">TT</option>
-                                        <option value="Other">Other</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>LC Issuing Bank / Rating</label>
-                                    <input type="text" name="LC-Issuing-Bank" placeholder="Bank Tier">
-                                    <label style="margin-top:10px;">Entry Price (USD/MT)</label>
-                                    <input type="text" name="Target-Price" placeholder="Market Reference">
+                                    <label>Issuing Bank / Rating</label>
+                                    <input type="text" name="LC-Issuing-Bank" placeholder="Tier Rating">
                                 </div>
                             </div>
 
-                            <div class="form-section-title">Section 5 — Execution Window</div>
-                            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
-                                <div class="form-group">
-                                    <label>Target Shipment Window *</label>
-                                    <input type="text" name="Shipment-Window" required placeholder="e.g. Q4 2026">
-                                </div>
-                                <div class="form-group">
-                                    <label>Operational Flexibility</label>
-                                    <select name="Shipment-Flexibility">
-                                        <option value="±15 Days">±15 Days</option>
-                                        <option value="±30 Days">±30 Days</option>
-                                        <option value="Fixed Schedule">Fixed (Zero Offset)</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-section-title">Section 6 — Technical Specification Thresholds</div>
+                            <div class="form-section-title">Section 5 — Technical Specifications</div>
                             <div class="form-group">
-                                <label>Required Quality Parameters *</label>
-                                <textarea name="Specs" rows="4" required placeholder="List FFA, Moisture, Protein, Impurities, etc. Technical precision is mandatory."></textarea>
+                                <label>Operational Thresholds *</label>
+                                <textarea name="Specs" rows="4" required placeholder="Mandatory technical precision required."></textarea>
                             </div>
 
-                            <div class="form-section-title">Section 7 — Principal Track Record</div>
-                            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
-                                <div class="form-group">
-                                    <label>Active Import History</label>
-                                    <select name="Import-History">
-                                        <option value="Yes">Active</option>
-                                        <option value="No">No Origin History</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>End-User Status (Refinery/Facility)</label>
-                                    <select name="Operates-Facility">
-                                        <option value="Yes">Owner/Operator</option>
-                                        <option value="No">Trading House</option>
-                                    </select>
-                                </div>
-                            </div>
+                            <div class="form-section-title">Section 6 — Desk / Entity Identification</div>
                             <div class="form-group">
-                                <label>Recent Execution Origins</label>
-                                <input type="text" name="Previous-Origins" placeholder="e.g. Brazil, USA, Regional">
-                            </div>
-
-                            <div class="form-section-title">Section 8 — Counterparty Profile</div>
-                            <div class="form-group">
-                                <label>Full Legal Entity Name *</label>
+                                <label>Legal Entity Name *</label>
                                 <input type="text" name="Company-Name" required>
                             </div>
                             <div class="form-group">
-                                <label>Corporate Domain Email *</label>
+                                <label>Institutional Domain Email *</label>
                                 <input type="email" name="Email" required>
                             </div>
 
-                            <div class="form-section-title">Section 9 — Closing Technical Notes</div>
-                            <div class="form-group">
-                                <label>Additional Operational Constraints</label>
-                                <textarea name="Comments" rows="3"></textarea>
-                            </div>
-
-                            <button type="submit" class="btn-submit">Trigger Counterparty Validation</button>
+                            <button type="submit" class="btn-submit">Submit for Execution Validation</button>
                         </form>
                     </div>
                 </div>
@@ -338,29 +299,29 @@
 
     <section id="access">
         <div class="container">
-            <span class="label">Execution Intelligence</span>
-            <h2>Verified Liquidity & Execution Certainty</h2>
-            <p style="margin-bottom: 40px; font-size: 1.1rem; max-width: 800px;">ABS connects international desk demand with verified Argentine export capacity, ensuring that every position is technically executable and commercially solvent.</p>
+            <span class="label">Systemic Integrity</span>
+            <h2>Liquidity & Execution Certainty</h2>
+            <p style="margin-bottom: 40px; font-size: 1.1rem; max-width: 800px;">Direct access to Argentine export capacity is filtered through hard-data verification. Only technically executable and commercially solvent positions proceed.</p>
             <div class="grid">
                 <div class="card">
-                    <h3>Counterparty Audit</h3>
-                    <p style="font-size: 14px; opacity: 0.85;">Direct verification of exporter licenses, fiscal health, and actual contract performance history at origin.</p>
+                    <h3>Origin-Side Audit</h3>
+                    <p style="font-size: 14px; opacity: 0.85;">Counterparties are verified at origin. Licenses, fiscal status, and performance history are audited before access is granted.</p>
                 </div>
                 <div class="card">
-                    <h3>Liquidity Verification</h3>
-                    <p style="font-size: 14px; opacity: 0.85;">Hard-data confirmation of physical inventory and forward allocation capacity before entering negotiation cycles.</p>
+                    <h3>Inventory Validation</h3>
+                    <p style="font-size: 14px; opacity: 0.85;">Physical liquidity is confirmed. Speculative positions are eliminated through crushing and storage chain verification.</p>
                 </div>
                 <div class="card">
-                    <h3>Position Benchmarking</h3>
-                    <p style="font-size: 14px; opacity: 0.85;">Comparative analysis of executable positions across the crushing and export chain to eliminate chain-of-broker noise.</p>
+                    <h3>Market Benchmarking</h3>
+                    <p style="font-size: 14px; opacity: 0.85;">Execution positions are benchmarked against real export data to eliminate broker-chain inflation.</p>
                 </div>
                 <div class="card">
-                    <h3>Execution Risk Mapping</h3>
-                    <p style="font-size: 14px; opacity: 0.85;">Real-time intelligence on logistical bottlenecks, port operations, and regulatory shifts affecting Argentine exports.</p>
+                    <h3>Risk Mapping</h3>
+                    <p style="font-size: 14px; opacity: 0.85;">Logistical bottlenecks and terminal availability are mapped in real-time to ensure execution feasibility.</p>
                 </div>
                 <div class="card">
-                    <h3>Contract Certainty</h3>
-                    <p style="font-size: 14px; opacity: 0.85;">Elimination of counterparty failure by confirming technical and financial alignment before contract finalization.</p>
+                    <h3>Contract Finality</h3>
+                    <p style="font-size: 14px; opacity: 0.85;">Counterparty failure is eliminated via technical and financial alignment prior to contract issuance.</p>
                 </div>
             </div>
         </div>
@@ -368,20 +329,20 @@
 
     <section id="how-it-works" class="section-dark">
         <div class="container">
-            <span class="label">Protocol</span>
-            <h2>Validation Protocol</h2>
+            <span class="label">Gate Protocol</span>
+            <h2>Execution Sequence</h2>
             <div class="grid">
                 <div class="card card-dark">
-                    <h3>Market Mapping</h3>
-                    <p style="font-size: 14px; opacity: 0.8;">We cross-reference your trade parameters with origin-side export regulations to confirm real position feasibility.</p>
+                    <h3>Structure Mapping</h3>
+                    <p style="font-size: 14px; opacity: 0.8;">Trade parameters are cross-referenced against current origin-side export regulations.</p>
                 </div>
                 <div class="card card-dark">
-                    <h3>Execution Blueprint</h3>
-                    <p style="font-size: 14px; opacity: 0.8;">ABS delivers a structured analysis of validated counterparties capable of executing the requested volume and structure.</p>
+                    <h3>Execution Audit</h3>
+                    <p style="font-size: 14px; opacity: 0.8;">Audit of validated counterparties capable of volume and structure delivery is finalized.</p>
                 </div>
                 <div class="card card-dark">
                     <h3>Principal Interface</h3>
-                    <p style="font-size: 14px; opacity: 0.8;">Following validation, traders are granted direct entry into the negotiation cycle with confirmed origin principals.</p>
+                    <p style="font-size: 14px; opacity: 0.8;">Validated entities transition to direct market interaction with confirmed origin principals.</p>
                 </div>
             </div>
         </div>
@@ -390,9 +351,9 @@
     <section id="engagement">
         <div class="container text-center">
             <div style="max-width: 800px; margin: 0 auto;">
-                <span class="label">Alignment</span>
-                <h2>Performance-Based Validation</h2>
-                <p style="font-size: 1.1rem; color: var(--color-primary);">ABS operates as a counterparty validation gate. We do not process speculative demand. Only executable structures with verified financial and operational alignment proceed to market interaction. Our participation is triggered via a pre-defined commission only upon successful contract performance.</p>
+                <span class="label">Institutional Filter</span>
+                <h2>Conditional Access Policy</h2>
+                <p style="font-size: 1.1rem; color: var(--color-primary);">ABS operates as an execution gate. Speculative or non-institutional demand is not processed. Market interaction is reserved for executable structures with verified financial alignment. Participation is triggered only upon confirmed contract performance.</p>
             </div>
         </div>
     </section>
